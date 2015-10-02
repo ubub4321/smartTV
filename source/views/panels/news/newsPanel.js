@@ -62,9 +62,6 @@ enyo.kind({
 	],
 	gonews : function(inSender, inEvent)
 	{
-		var name = inSender.name;
- 		this.bubbleUp("onShowPanel", {name:name});
- 		return true;
 		var index = this.$.carousel.getIndex();
 		var name = inSender.name;
 		alert(inSender.name);

@@ -2,7 +2,6 @@
  * 
  */enyo.kind({
 	name:"controlPanel",
-	kind : "moon.Panels",
 	style: "background-color:white;",
 	components:[
 	    {kind:"FittableColumns", fit:true,  style:"height:150px; padding-top:20px;",classes:"news_title", components:[
