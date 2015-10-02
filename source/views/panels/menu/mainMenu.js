@@ -56,7 +56,7 @@ enyo.kind({
 										components:[{
 														kind: "FittableRows",
 														components:[{
-																	name: "play",kind:"moon.Image",classes :"playb", onclick: "imageClick"
+																	name: "play",kind:"moon.Image",classes :"playb", onclick: "imageClick",
 																	}]
 													}]
 									},

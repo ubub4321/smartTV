@@ -16,16 +16,21 @@ enyo.kind({
 	            ]}
 	    	    
 	    	],
+	    	
 		showPanel: function(inSender, inEvent) { 
 		var panelKind = inEvent.name+"Panel";   // addBff������  addBffPanel      	
 		var model = inEvent.model;
-		this.$.panels.popPanels(1);
+		//if(inEvent.name == "news" | inEvent.name == "popup")
+			//{
+			this.$.panels.popPanels(-1);
+			//}
 		this.$.panels.pushPanel({kind: panelKind, model: model});
 		alert(panelKind);
 		return true;
 	},
 	goHome: function() {
-		this.$.panels.set("index", 0); // return home view
+		
+		this.$.panels.set("index",0); // return home view
 		return true;
 	}
 });

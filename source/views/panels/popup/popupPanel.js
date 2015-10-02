@@ -1,13 +1,14 @@
 enyo.kind({
 	name:"popupPanel",
-	//kind : "moon.Panels",
+	kind : "moon.Panel",
 	style: "background-color:white;",
 	spotlight: true,
 	components:[
-	    {kind:"FittableColumns", fit:true,  style:"height:150px; padding-top:20px;",classes:"news_title", components:[
+	    {kind:"FittableColumns",classes:"news_title", 
+	    	components:[ //height:150px; style:"padding-top:20px;"
 	        {name:"title", fit:true, },
-	        {kind: "moon.Item", style:"width:120px; margin-right:10px;",  ontap: "goBack", components: [
-	            {name:"backButton", kind:"Image", classes: "buttonback"}
+	        {kind: "moon.Item", style:"width:120px; margin-right:15px;",  ontap: "goBack", components: [
+	            {name:"backButton", kind:"moon.Image", classes: "buttonback"}
 	        ]},
 	        {kind: "moon.Item", style:"width:120px; margin-right:35px",  ontap: "goHome", components: [
 	            {name:"homeButton", kind:"moon.Image", classes : "buttonhome"}
@@ -15,7 +16,7 @@ enyo.kind({
 	    ]},
 	    {kind:"FittableRows", components:[
 	        {style:"text-align:center; margin-top:20px;", components:[
-	            {name:"image", kind:"Image"}
+	            {name:"image", kind:"moon.Image"}
 	        ]},
 		    {kind: "moon.Scroller", classes: "news_scroller", vertical:"scroll", components:[
 		        {name:"spinner", kind:"moon.Spinner", center:true, style:"margin-left:960px; margin-top:200px;"},      
@@ -63,7 +64,7 @@ enyo.kind({
 		return true;
 	},
 	goBack: function(inSender, inEvent) {
-		this.bubbleUp("onShowPanel", {name:"newsPanel"});
+		this.bubbleUp("onShowPanel", {name:"news"});
 		return true;
 	},
 });
