@@ -2,25 +2,31 @@ enyo.kind({
 	name:"newsPanel",
 	classes:"News_background",
 	kind : "moon.Panels",
+	spotlight: true,
 	components:[
 	     {kind: "FittableColumns", style:"margin-left: 100px; margin-top : 150px;",  //제일 왼쪽 부분, 윗부분 띄우기
 	    	components: [
-	    	             {kind: "moon.Image",classes:"home",ontap : "gohome"},
-	    
-	    {kind: "FittableColumns", style:" margin-left: -50px; margin-top : 50px;",  //제일 왼쪽 부분, 윗부분 띄우기
+	    	             {kind: "moon.Image",classes:"home",ontap : "gohome",style:"background-color : black;"},
+	    	             
+	    {kind: "FittableColumns",  //제일 왼쪽 부분, 윗부분 띄우기
 	    	components: [
             {kind: "FittableColumns", // 왼쪽 띄워진 부분부터 column으로 묶어줌
             	components: [
-	            {kind: "FittableRows",style:"",
+	            {kind: "FittableRows",
 	            	components: [
-	                {style:"width : 650px; height : 700px;margin-top : 100px;", fit : true, //background-color: black;
+	                {name : "popup",style:"width : 650px; height :300px;margin-top : 100px;", fit : true, //background-color: black;
 	                	components: [
-		                {name:"carousel", kind:"ImageCarousel", style:"height:450px;"},
+		                {name:"carousel", kind:"ImageCarousel", style:"height:430px;"},
 		                {name : "head" ,classes:"head_back", onload : "changedHeadLineText"},
-		                {kind: "moon.Icon", icon: "arrowsmallleft", style:"margin-top : 10px;margin-left : 250px;",small: false, classes:"headLine_arrow", small: false, ontap: "previous"},
-		                {kind: "moon.Icon", icon: "arrowsmallright", style:"margin-top : 10px;",small: false, classes:"headLine_arrow", small: false, ontap: "next"},
+		                
 		                ],  
-		                ondown: "gonews"}, 
+		                ondown: "gonews"},
+		                {style : "margin-top : -100px;",
+		                	components :[
+		                	             {kind: "moon.Icon", icon: "arrowsmallleft", style:"margin-top : 10px;margin-left : 250px;",small: false, classes:"headLine_arrow", small: false, ontap: "previous"},
+		         		                 {kind: "moon.Icon", icon: "arrowsmallright", style:"margin-top : 10px;",small: false, classes:"headLine_arrow", small: false, ontap: "next"},
+		         		                ]
+		                }
 	                
 	                ]},
 
@@ -60,17 +66,34 @@ enyo.kind({
 	    ]},   ]}, 
 
 	],
-	gonews : function(inSender, inEvent)
+	gohome : function(inSender, inEvent)
 	{
-		var name = inSender.name;
- 		this.bubbleUp("onShowPanel", {name:name});
- 		return true;
 		var index = this.$.carousel.getIndex();
 		var name = inSender.name;
 		alert(inSender.name);
+		enyo.log(name);
+		this.bubbleUp("onGoHome", {name:name});
+		return true;
+	},
+	gonews : function(inSender, inEvent)
+	{
+		var index = this.$.carousel.getIndex();
+		var name = inSender.name;
+		alert(inSender.name);
+		enyo.log(name);
 		this.bubbleUp("onShowPanel", {name:name});
 		return true;
 	},
+
+	/*gonews: function(inSender, inEvent) {
+		var panelKind = inSender.name+"Panel";   // addBff������  addBffPanel      	
+		var model = inEvent.model;
+		alert(inSender.name);
+		this.$.panels.popPanels(1);
+		this.$.panels.pushPanel({kind: panelKind, model: model});
+		alert(panelKind);
+		return true;
+	},*/
 	
 	changedHeadLineText: function(inSender,inEvent){
 		var index = this.$.carousel.getIndex(); 
@@ -100,7 +123,6 @@ enyo.kind({
 	create: function(inSender, inEvent){
 		this.inherited(arguments);
 		this.fetch();
-		
 		url = [
 		       "http://img.syoff.com/webdata/20150930/20150930183905_5874.jpg",
 		       "http://img.syoff.com/webdata/20150930/20150930174911_1202.jpg",
