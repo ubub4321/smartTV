@@ -1,0 +1,67 @@
+.panels-sample-flickr-panels {
+   color: white;
+   background-image: url('MainBackground.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   width: 1920px;
+   height: 1080px;
+}
+.newsb{
+	background-image: url('news.png');
+	   background-size: contain;
+	background-repeat: no-repeat;
+	margin-top:150px;
+	margin-left:300px;
+	width: 350px;
+   height: 200px;
+}
+.playb{
+	background-image: url('play.png');
+	background-repeat: no-repeat;
+margin-left:355px;
+	margin-top:195px;
+     width: 530px;
+   height: 150px;
+}
+.faceb{
+	background-image: url('face.png');
+	background-repeat: no-repeat;
+	margin-top:70px;
+	margin-left:440px;
+     width: 340px;
+   height: 165px;
+}
+
+
+.twitb{
+	background-image: url('twit.png');
+	background-repeat: no-repeat;
+	margin-top:270px;
+	margin-right:160px;
+     width: 360px;
+   height: 165px;
+}
+.wishb{
+	background-image: url('wish.png');
+	background-repeat: no-repeat;
+	margin-top:120px;
+		margin-left:100px;
+	width: 320px;
+   height: 380px;
+}
+.ani {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
