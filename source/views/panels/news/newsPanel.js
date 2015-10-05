@@ -69,19 +69,7 @@ enyo.kind({
             ]}, 
 
 	],
-	gohome: function(inSender, inEvent){
-		this.bubbleUp("onGoHome");
-		return true;
-	},
-	gonews : function(inSender, inEvent)
-	{
-		var index = this.$.carousel.getIndex();
-		var name = inSender.name;
-		alert(inSender.name);
-		enyo.log(name);
-		this.bubbleUp("onShowPanel", {name:name});
-		return true;
-	},
+	
 
 	/*gonews: function(inSender, inEvent) {
 		var panelKind = inSender.name+"Panel";   // addBff������  addBffPanel      	
@@ -178,7 +166,7 @@ enyo.kind({
 			      
 			      condata = data.substring(data.indexOf("헤드5"));	//substring(3) -> 0~3번째 문자열을 뺀 나머지를 출력
 			      head4 = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
-			      
+			      //index = this.$.carousel.getIndex();
 			      
 			      
 			      
@@ -187,6 +175,19 @@ enyo.kind({
 			      return true;
 			      
 			   },
+			gohome: function(inSender, inEvent){
+					this.bubbleUp("onGoHome");
+					return true;
+				},
+			gonews : function(inSender, inEvent)
+				{
+					index = this.$.carousel.getIndex();
+					var name = inSender.name;
+					alert(inSender.name);
+					enyo.log(name);
+					this.bubbleUp("onShowPanel", {name:name});
+					return true;
+				},
 			   
 });
   

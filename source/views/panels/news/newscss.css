@@ -22,3 +22,30 @@
 	height: 40px;
 	width: 180px;
 }
+.buttonhome
+{
+	background-image: url('homebutton.jpg');
+	background-size: 100px;
+	background-repeat: no-repeat;
+	height: 100px;
+	width: 100px;
+	margin-left : -3px;
+}
+.buttonback
+{
+	background-image: url('back.jpg');
+	background-size: 100px;
+	background-repeat: no-repeat;
+	height: 100px;
+	width: 100px;
+}
+.news_title
+{
+	background-color : #91F8D0;
+	font-size : 48px;
+}
+.popup
+{
+	height: 400px;
+	width: 600px;
+}

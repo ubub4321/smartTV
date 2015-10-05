@@ -4,7 +4,7 @@ enyo.kind({
 	style: "background-color:white;",
 	spotlight: true,
 	components:[
-	    {kind:"FittableColumns",classes:"news_title", 
+	    {kind:"FittableColumns",classes:"news_title",  
 	    	components:[ //height:150px; style:"padding-top:20px;"
 	        {name:"title", fit:true, },
 	        {kind: "moon.Item", style:"width:120px; margin-right:15px;",  ontap: "goBack", components: [
@@ -14,13 +14,16 @@ enyo.kind({
 	            {name:"homeButton", kind:"moon.Image", classes : "buttonhome"}
 	        ]}
 	    ]},
-	    {kind:"FittableRows", components:[
-	        {style:"text-align:center; margin-top:20px;", components:[
-	            {name:"image", kind:"moon.Image"}
+	    {kind:"FittableRows",
+	    	components:[
+	        {style:"text-align:center; margin-top:10px;", 
+	        	components:[
+	            {name:"image", kind:"Image", style:"background-color:black;zoom:80%;",},
+	            
 	        ]},
-		    {kind: "moon.Scroller", classes: "news_scroller", vertical:"scroll", components:[
-		        {name:"spinner", kind:"moon.Spinner", center:true, style:"margin-left:960px; margin-top:200px;"},      
-	            {name:"detail", allowHtml:true,}
+		   {kind: "moon.Scroller", classes: "news_scroller", vertical:"scroll", components:[
+		        {name:"spinner", kind:"moon.Spinner", center:true},      
+	            {name:"detail"}
 	        ]}
         ]}
     ],
@@ -47,7 +50,9 @@ enyo.kind({
 		return true;
 	},
 	parserNewsPage: function(){
-		condata = dataNews.substring(dataNews.indexOf("헤드1"));	//substring(3) -> 0~3번째 문자열을 뺀 나머지를 출력
+		getin = '헤드'+(index+1);
+		enyo.log(getin);
+		condata = dataNews.substring(dataNews.indexOf(getin));	//substring(3) -> 0~3번째 문자열을 뺀 나머지를 출력
 	    head = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
 	    content = condata.substring(condata.indexOf("content")+11,condata.indexOf("...")+1);
     	
@@ -56,7 +61,7 @@ enyo.kind({
 	},
 	updateUI: function(){
 		this.$.title.setContent(head);
-		//this.$.image.setSrc(url[index]);
+		this.$.image.setSrc(url[index]);
 		this.$.detail.setContent(content);
 	},
 	goHome: function(inSender, inEvent){

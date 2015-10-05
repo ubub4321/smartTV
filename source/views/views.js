@@ -25,7 +25,7 @@ enyo.kind({
 			this.$.panels.popPanels(-1);
 			//}
 		this.$.panels.pushPanel({kind: panelKind, model: model});
-		alert(panelKind);
+		//alert(panelKind);
 		return true;
 	},
 	goHome: function() {
