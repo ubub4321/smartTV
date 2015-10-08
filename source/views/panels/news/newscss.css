@@ -49,3 +49,19 @@
 	height: 400px;
 	width: 600px;
 }
+.fsnew
+{
+	margin-left:-2400px;
+	padding-top : 1320px;
+	zoom:25%;
+	height: 100px;
+	width: 100px;
+	
+}
+.fstext
+{
+	margin-left : 270px;
+	font-size: 16px;
+	width: 340px;
+	color : #000000;
+}

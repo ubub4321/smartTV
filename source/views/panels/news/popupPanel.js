@@ -51,11 +51,10 @@ enyo.kind({
 	},
 	parserNewsPage: function(){
 		getin = '헤드'+(index+1);
-		enyo.log(getin);
 		condata = dataNews.substring(dataNews.indexOf(getin));	//substring(3) -> 0~3번째 문자열을 뺀 나머지를 출력
 	    head = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
 	    content = condata.substring(condata.indexOf("content")+11,condata.indexOf("...")+1);
-    	enyo.log(head);
+
 		this.updateUI();
     	return true;
 	},
