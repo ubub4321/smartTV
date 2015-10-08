@@ -15,6 +15,15 @@
 	width: 350px;
    height: 200px;
 }
+.newtsb{
+	background-image: url('newst.png');
+	   background-size: contain;
+	background-repeat: no-repeat;
+	margin-top:-200px;
+	margin-left:500px;
+	width: 350px;
+   height: 200px;
+}
 .playb{
 	background-image: url('play.png');
 	background-repeat: no-repeat;

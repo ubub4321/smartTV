@@ -8,6 +8,7 @@ enyo.kind({
 	name: "myapp.MainView",
 	handlers: {
 		onShowPanel: "showPanel",
+		onPopup: "Popup",
 		onGoHome: "goHome"
 	},
 	components:[
@@ -21,7 +22,13 @@ enyo.kind({
 		var model = inEvent.model;
 		this.$.panels.popPanels(1);
 		this.$.panels.pushPanel({kind: panelKind, model: model});
-		//alert(panelKind);
+		return true;
+	},
+	Popup: function(inSender, inEvent) { 
+		var panelKind = inEvent.name+"Panel";   // addBff������  addBffPanel      	
+		var model = inEvent.model;
+		this.$.panels.popPanels(1);
+		this.$.panels.pushPanel({kind: panelKind, model: model});
 		return true;
 	},
 	goHome: function() {
