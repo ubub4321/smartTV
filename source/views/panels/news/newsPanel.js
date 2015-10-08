@@ -4,27 +4,30 @@ enyo.kind({
 	kind : "moon.Panels",
 	spotlight: true,
 	components:[
-	     {kind: "FittableColumns", style:"margin-left: 100px; margin-top : 150px;",  //제일 왼쪽 부분, 윗부분 띄우기
+	     {kind: "FittableRows", style:"margin-left: 100px; margin-top : 150px;",  //제일 왼쪽 부분, 윗부분 띄우기
 	    	components: [
-	    	             {kind: "moon.Image",classes:"home",ontap : "gohome",style:"background-color : black;"},
+	    	             {kind: "FittableColumns",
+	    	            	 components:[
+	    	            	             {kind: "FittableRows",
+	    	            	            	 components:[
+	    	            	            	             {kind: "moon.Image",classes:"home",ontap : "gohome"}
+	    	            	            	            ]
+	    	            	             }]},
 	    	             
-	    {kind: "FittableColumns",  //제일 왼쪽 부분, 윗부분 띄우기
-	    	components: [
             {kind: "FittableColumns", // 왼쪽 띄워진 부분부터 column으로 묶어줌
             	components: [
-	            {kind: "FittableRows",
+	            {kind: "FittableRows",style:"margin-left:120px;width : 420px; height :410px;",
 	            	components: [
-	                {name : "popup",style:"width : 650px; height :300px;margin-top : 100px;", fit : true, //background-color: black;
+	                {name : "popup",style:"width : 620px; height :300px;", // style:"background-color: black;"
 	                	components: [
-		                {name:"carousel", kind:"ImageCarousel", style:"height:430px;"},
-		                {name : "head" ,classes:"head_back", onload : "changedHeadLineText"},
-		                
+		                {name:"carousel", kind:"ImageCarousel", style:"width : 620px;height:420px;"},
+		                {name : "head",onload : "changedHeadLineText",},
 		                ],  
 		                ondown: "gonews"},
-		                {style : "margin-top : -100px;",
+		                {style:"margin-top:180px;",
 		                	components :[
-		                	             {kind: "moon.Icon", icon: "arrowsmallleft", style:"margin-top : 10px;margin-left : 250px;",small: false, classes:"headLine_arrow", small: false, ontap: "previous"},
-		         		                 {kind: "moon.Icon", icon: "arrowsmallright", style:"margin-top : 10px;",small: false, classes:"headLine_arrow", small: false, ontap: "next"},
+		                	             {kind: "moon.Icon", icon: "arrowsmallleft", style:"margin-top : 10px;margin-left : 250px;",small: false, ontap: "previous"},
+		         		                 {kind: "moon.Icon", icon: "arrowsmallright", style:"margin-top : 10px;",small: false,small: false, ontap: "next"},
 		         		                ]
 		                }
 	                
@@ -33,7 +36,7 @@ enyo.kind({
             ],
             
             },
-        {kind: "FittableRows",
+       /* {kind: "FittableRows",
             	components: [
             	             {kind: "FittableColumns", style:"margin-left:80px;margin-top:150px;",
             	            	 components: [
@@ -49,10 +52,10 @@ enyo.kind({
             	             {kind: "FittableColumns", style:"margin-top:10px;",
             	            	 components: [
             	             	             {kind : "Image" ,  name : "fashionnews" ,style: "text-align:center;width : 250px; height : 300px;margin-left:80px;", ontap : "fashionnew"},
-            	             	             {/*kind : "moon.LabeledTextItem",*/name : "fashioncontent",classes : "news-font"},
+            	             	             {name : "fashioncontent",classes : "news-font"},
             	             	            { kind: "FittableRows",
             	             	            	 components : [
-            	             	            	               {/*kind : "moon.LabeledTextItem",*/name : "fashiontext",classes : "news-font",style:" margin-left:-370px; margin-top : 50px;"},
+            	             	            	               {name : "fashiontext",classes : "news-font",style:" margin-left:-370px; margin-top : 50px;"},
             	             	            	               //{name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearch", onResults: "searchResults"}
             	             	            	               ]}
             	             	            	 
@@ -62,8 +65,8 @@ enyo.kind({
             	             ]
             
         
-        },            	         
-	    ]},   ]}, 
+        },    */
+            ]}, 
 
 	],
 	gohome : function(inSender, inEvent)
@@ -78,28 +81,27 @@ enyo.kind({
 		this.bubbleUp("onPopup", {name:name});
 		return true;
 	},
-
 	changedHeadLineText: function(inSender,inEvent){
 		var index = this.$.carousel.getIndex(); 
 		if(0 == index%5)
 		{
-	    	this.$.head.setContent(head1); // 
+	    	this.$.head.setContent(head0); // 
 	    }
 		else if(1 == index%5)
 		{
-			this.$.head.setContent(head2); // 
+			this.$.head.setContent(head1); // 
 		}
 		else if(2 == index%5)
 		{
-			this.$.head.setContent(head3); // 
+			this.$.head.setContent(head2); // 
 		}
 		else if(3 == index%5)
 		{
-			this.$.head.setContent(head4); // 
+			this.$.head.setContent(head3); // 
 		}
 		else if(4 == index%5)
 		{
-			this.$.head.setContent(head5); // 
+			this.$.head.setContent(head4); // 
 		}
     	return true;
 	},
@@ -134,54 +136,50 @@ enyo.kind({
 		         callbackName: "callback"
 		      });
 		      // send parameters the remote service using the 'go()' method
-		      jsonp.go({		  q: 'select * from html where url = "http://221.165.119.4/news1.html"'});
+		      jsonp.go({		  q: 'select * from html where url = "http://meeneeon.ddns.net/news1.html"'});
 		      // attach responders to the transaction object
 		      jsonp.response(this, "processResponse");
 		      return true;
 		   },
 		   processResponse: function(inSender, inResponse) {
-			      // do something with it
 			      data = JSON.stringify(inResponse, null, 2);
-			      //alert(data.length);
-			      //this.$.textArea.setValue(data);
-			      // parsing of KBO order inform.
 			      this.parsernews();
 			      return true;
 		   },
 			   parsernews: function(){
 			      
 			      condata = data.substring(data.indexOf("헤드1"));	//substring(3) -> 0~3번째 문자열을 뺀 나머지를 출력
-			      head1 = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
-			      content1 = condata.substring(condata.indexOf("content")+11,condata.indexOf("...")+1);
+			      head0 = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
 			      
 			      condata = data.substring(data.indexOf("헤드2"));	//substring(3) -> 0~3번째 문자열을 뺀 나머지를 출력
-			      head2 = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
-			      content2 = condata.substring(condata.indexOf("content")+11,condata.indexOf("...")+1);
+			      head1 = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
 			      
 			      condata = data.substring(data.indexOf("헤드3"));	//substring(3) -> 0~3번째 문자열을 뺀 나머지를 출력
-			      head3 = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
-			      content3 = condata.substring(condata.indexOf("content")+11,condata.indexOf("...")+1);
+			      head2 = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
 			      
 			      condata = data.substring(data.indexOf("헤드4"));	//substring(3) -> 0~3번째 문자열을 뺀 나머지를 출력
-			      head4 = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
-			      content4 = condata.substring(condata.indexOf("content")+11,condata.indexOf("...")+1);
+			      head3 = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
 			      
 			      condata = data.substring(data.indexOf("헤드5"));	//substring(3) -> 0~3번째 문자열을 뺀 나머지를 출력
-			      head5 = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
-			      content5 = condata.substring(condata.indexOf("content")+11,condata.indexOf("...")+1);
+			      head4 = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
 			      
-			      
-			      
-			      
-			      content1 = content1.substring().replace(/[!,",\\,\\r,\\n,\\"]/gi,'');
-			      content2 = content2.substring().replace(/[!,",\\,\\r,\\n,\\"]/gi,'');
-			      content3 = content3.substring().replace(/[!,",\\,\\r,\\n,\\"]/gi,'');
-			      content4 = content4.substring().replace(/[!,",\\,\\r,\\n,\\"]/gi,'');
-			      content5 = content5.substring().replace(/[!,",\\,\\r,\\n,\\"]/gi,'');
-			      this.$.head.setContent(head1);
+			      this.$.head.setContent(head0);
 			      return true;
 			      
 			   },
+			gohome: function(inSender, inEvent){
+					this.bubbleUp("onGoHome");
+					return true;
+				},
+			gonews : function(inSender, inEvent)
+				{
+					index = this.$.carousel.getIndex();
+					var name = inSender.name;
+					alert(inSender.name);
+					enyo.log(name);
+					this.bubbleUp("onShowPanel", {name:name});
+					return true;
+				},
 			   
 });
   

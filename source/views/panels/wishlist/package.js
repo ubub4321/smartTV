@@ -1,4 +1,5 @@
 enyo.depends(
 	"WishListPanel.js",
-	"detail_1Panel.js"
+	"detail_1Panel.js",
+	"wishcss.css"
 );

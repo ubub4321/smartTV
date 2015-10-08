@@ -1,4 +1,5 @@
 enyo.depends(
 	"newsPanel.js",
-	"newscss.css"
+	"newscss.css",
+	"popupPanel.js"
 );

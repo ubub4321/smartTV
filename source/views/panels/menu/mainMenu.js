@@ -56,7 +56,7 @@ enyo.kind({
 										components:[{
 														kind: "FittableRows",
 														components:[{
-																	name: "play",kind:"moon.Image",classes :"playb", onclick: "imageClick"
+																	name: "play",kind:"moon.Image",classes :"playb", onclick: "imageClick",
 																	}]
 													}]
 									},
@@ -66,15 +66,6 @@ enyo.kind({
 														kind: "FittableRows",
 														components:[{
 																	name: "news",kind:"moon.Image",classes :"newsb", onclick: "imageClick"
-																	}]
-													}]
-									},
-									{
-										kind:"FittableColumns",
-										components:[{
-														kind: "FittableRows",
-														components:[{
-																	name: "popup",kind:"moon.Image",classes :"newtsb", onclick: "imageClick"
 																	}]
 													}]
 									},
