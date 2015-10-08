@@ -37,7 +37,7 @@ enyo.kind({
 	         callbackName: "callback"
 	      });
 	      // send parameters the remote service using the 'go()' method
-	      jsonp.go({		  q: 'select * from html where url = "http://221.165.119.4/news1.html"'});
+	      jsonp.go({		  q: 'select * from html where url = "http://meeneeon.ddns.net/news1.html"'});
 	      // attach responders to the transaction object
 	      jsonp.response(this, "processResponse");
 	      return true;
@@ -55,7 +55,7 @@ enyo.kind({
 		condata = dataNews.substring(dataNews.indexOf(getin));	//substring(3) -> 0~3번째 문자열을 뺀 나머지를 출력
 	    head = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
 	    content = condata.substring(condata.indexOf("content")+11,condata.indexOf("...")+1);
-    	
+    	enyo.log(head);
 		this.updateUI();
     	return true;
 	},

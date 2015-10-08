@@ -20,7 +20,7 @@ enyo.kind({
 	            	components: [
 	                {name : "popup",style:"width : 620px; height :300px;", // style:"background-color: black;"
 	                	components: [
-		                {name:"carousel", kind:"ImageCarousel", style:"width : 620px;height:400px;"},
+		                {name:"carousel", kind:"ImageCarousel", style:"width : 620px;height:420px;"},
 		                {name : "head",onload : "changedHeadLineText",},
 		                ],  
 		                ondown: "gonews"},
@@ -136,7 +136,7 @@ enyo.kind({
 		         callbackName: "callback"
 		      });
 		      // send parameters the remote service using the 'go()' method
-		      jsonp.go({		  q: 'select * from html where url = "http://221.165.119.4/news1.html"'});
+		      jsonp.go({		  q: 'select * from html where url = "http://meeneeon.ddns.net/news1.html"'});
 		      // attach responders to the transaction object
 		      jsonp.response(this, "processResponse");
 		      return true;
@@ -167,7 +167,7 @@ enyo.kind({
 			      condata = data.substring(data.indexOf("헤드5"));	//substring(3) -> 0~3번째 문자열을 뺀 나머지를 출력
 			      head4 = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
 			      //index = this.$.carousel.getIndex();
-			      
+			      enyo.log(head0);
 			      
 			      
 			      //content1 = content1.substring().replace(/[!,",\\,\\r,\\n,\\"]/gi,'');

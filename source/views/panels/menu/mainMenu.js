@@ -69,15 +69,6 @@ enyo.kind({
 																	}]
 													}]
 									},
-									{
-										kind:"FittableColumns",
-										components:[{
-														kind: "FittableRows",
-														components:[{
-																	name: "popup",kind:"moon.Image",classes :"newtsb", onclick: "imageClick"
-																	}]
-													}]
-									},
 									]
 				 }],
 	         	imageClick: function(inSender, inEvent) {
