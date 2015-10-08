@@ -70,17 +70,6 @@ enyo.kind({
 
 	],
 	
-
-	/*gonews: function(inSender, inEvent) {
-		var panelKind = inSender.name+"Panel";   // addBff������  addBffPanel      	
-		var model = inEvent.model;
-		alert(inSender.name);
-		this.$.panels.popPanels(1);
-		this.$.panels.pushPanel({kind: panelKind, model: model});
-		alert(panelKind);
-		return true;
-	},*/
-	
 	changedHeadLineText: function(inSender,inEvent){
 		var index = this.$.carousel.getIndex(); 
 		if(0 == index%5)
@@ -142,11 +131,7 @@ enyo.kind({
 		      return true;
 		   },
 		   processResponse: function(inSender, inResponse) {
-			      // do something with it
 			      data = JSON.stringify(inResponse, null, 2);
-			      //alert(data.length);
-			      //this.$.textArea.setValue(data);
-			      // parsing of KBO order inform.
 			      this.parsernews();
 			      return true;
 		   },
@@ -166,11 +151,7 @@ enyo.kind({
 			      
 			      condata = data.substring(data.indexOf("헤드5"));	//substring(3) -> 0~3번째 문자열을 뺀 나머지를 출력
 			      head4 = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
-			      //index = this.$.carousel.getIndex();
-			      enyo.log(head0);
 			      
-			      
-			      //content1 = content1.substring().replace(/[!,",\\,\\r,\\n,\\"]/gi,'');
 			      this.$.head.setContent(head0);
 			      return true;
 			      
