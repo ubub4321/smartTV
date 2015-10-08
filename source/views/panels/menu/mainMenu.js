@@ -4,12 +4,14 @@
 	into multiple files under this folder.
 */
 
+
 enyo.kind({
+	
 	name: "mainMenuPanel",
 	kind:"FittableColumns",
 	style:"text-align:center;",
 	ontimeupdate : "timeChanged",
-	classes: "panels-sample-flickr-panels",
+	classes: "panels-sample-flickr-panels1",
 	pattern:"activity",
 	components: [{	
 					kind: "FittableRows",
@@ -82,15 +84,14 @@ enyo.kind({
 	        		
 	        		if (Math.floor(inEvent.currentTime)==2)
 	        		{
-	        			this.$.Image.setSrc("http://221.165.119.4/images/lajoonmo_02.PNG");
+	        			this.$.Image.setSrc("http://meeneeon.ddns.net/images/lajoonmo_02.PNG");
 	        		}
 	        		if(Math.floor(inEvent.currentTime)==5)
 	        		{
 	        			this.$.player.setCurrentTime(1)
 	        		}
 	        		return true;
-	        	},
-
+	        	}
 });
 
 

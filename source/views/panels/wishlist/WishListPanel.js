@@ -1,6 +1,6 @@
 var clothesArray;
 enyo.kind({
-   name: "WishListPanel",
+   name: "wishPanel",
    kind: "Panels",
    classes: "main-css",
    arrangerKind: "CollapsingArranger",
@@ -128,6 +128,7 @@ enyo.kind({
            
            xmlhttp.send();
         }
+       this.search();
    }
 });
 
@@ -151,7 +152,7 @@ enyo.kind({
       };
       var req;
       req = new enyo.JsonpRequest({url: this.url, callbackName: "callback"})
-         .response.setCharacterEncoding("UTF-8")
+       //  .response.setCharacterEncoding("UTF-8")
           .response(this, "processResponse")
          .go(params);
       
