@@ -20,7 +20,7 @@ enyo.kind({
 						components:[{
 										kind: "FittableRows",
 										components:[{
-											name: "twit",kind:"moon.Image",classes :"twitb", onclick: "imageClick"
+											name: "twit",kind:"moon.Image",classes :"twitb", onclick: "gotwit"
 													}]
 									}]
 					},
@@ -49,7 +49,7 @@ enyo.kind({
 										components:[{
 														kind: "FittableRows",
 														components:[{
-																	name: "face",kind:"moon.Image",classes :"faceb", onclick: "imageClick"
+																	name: "face",kind:"moon.Image",classes :"faceb", onclick: "goface"
 																	}]
 													}]
 									},
@@ -92,6 +92,16 @@ enyo.kind({
 	        		}
 	        		return true;
 	        	}
+	         	goface : function()
+	         	{
+	         	      location = "https://www.facebook.com/hashtag/%ED%8C%A8%EC%85%98?fref=ts";
+	         	      return true;
+	         	}
+	        	gotwit : function()
+	         	{
+	         	      location = "https://twitter.com/search?q=fashion&src=tyah";
+	         	      return true;
+	         	}
 });
 
 
