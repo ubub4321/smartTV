@@ -91,12 +91,12 @@ enyo.kind({
 	        			this.$.player.setCurrentTime(1)
 	        		}
 	        		return true;
-	        	}
+	        	},
 	         	goface : function()
 	         	{
 	         	      location = "https://www.facebook.com/hashtag/%ED%8C%A8%EC%85%98?fref=ts";
 	         	      return true;
-	         	}
+	         	},
 	        	gotwit : function()
 	         	{
 	         	      location = "https://twitter.com/search?q=fashion&src=tyah";

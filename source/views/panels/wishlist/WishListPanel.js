@@ -11,6 +11,7 @@ enyo.kind({
                            {name: "flickrImage-explain", kind: "Text", content: "", classes: ""},
                            {name: "imageSpinner", kind: "Image", src: "assets/spinner-large.gif", classes: "enyo-fit panels-sample-flickr-center", showing: false}]},
                       {content: "추천리스트", classes: "chocheon-bar-css"},
+                      {kind: "moon.Image", classes: "home", ontap: "gohome"},
                       {kind: "enyo.Button", ontap: "highlight", components: [
                             {kind: "enyo.Image",classes: "highlight-css", src: "assets/highlight.png"}]},
                       {name: "chocheon", kind: "moon.SimplePicker", classes: "chocheon-css", block: false, animate: false, wrap: true, components: [
@@ -26,6 +27,7 @@ enyo.kind({
                                  {name: "item", style: "padding: 10px;", classes: "panels-sample-flickr-item enyo-border-box", ontap: "itemTap", components: [
                                       {name: "thumbnail", kind: "Image", classes: "panels-sample-flickr-thumbnail"},
                                       {name: "title", classes: "panels-sample-flickr-title"},
+                                      {name: "purchase", kind: "moon.IconButton", src: "assets/addtowhishlist.png", classes: "remove-button-css", ontap: "purchaseTap"},
                                       {name: "remove", kind: "moon.IconButton", src: "assets/delete.png", classes: "remove-button-css", ontap: "removeTap"}
                                       ]}]}]},
                 {name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearch1", onResults: "searchResults"}
@@ -82,7 +84,7 @@ enyo.kind({
       var item = clothesArray[i][6];
 
       this.$.flickrImage.setSrc(item);
-      this.$.flickrImage-explain.setContent("aaa");
+      //this.$.flickrImage-explain.setContent("aaa");
       
    },
    imageLoaded: function() {
@@ -129,7 +131,19 @@ enyo.kind({
            xmlhttp.send();
         }
        this.search();
-   }
+   },
+   purchaseTap: function(inSender, inEvent){
+	   if (enyo.Panels.isScreenNarrow()) {
+	         this.setIndex(1);
+	   }
+	   var i = inEvent.index;
+	   var getitem = clothesArray[i][7];
+	   location = getitem;
+   },
+   gohome: function(inSender, inEvent){
+		this.bubbleUp("onGoHome");
+		return true;
+  }
 });
 
 // A simple component to do a Flickr search.
