@@ -17,7 +17,7 @@ enyo.kind({
 	    	             
             {kind: "FittableColumns", //style:"background-color: black;",// 왼쪽 띄워진 부분부터 column으로 묶어줌
             	components: [
-	            {kind: "FittableRows",style:"margin-left:120px;width : 420px; height :410px;",
+	            {kind: "FittableRows",style:"margin-left:220px;padding-top:50px;width : 420px; height :410px;",
 	            	components: [
 	                {name : "popup",style:"width : 620px; height :300px;", // style:"background-color: black;"
 	                	components: [
@@ -25,21 +25,24 @@ enyo.kind({
 		                {name : "head",onload : "changedHeadLineText",},
 		                ],  
 		                ondown: "gonews"},
+		                
 		                {style:"margin-top:180px;",
 		                	components :[
 		                	             {kind: "moon.Icon", icon: "arrowsmallleft", style:"margin-top : 10px;margin-left : 250px;",small: false, ontap: "previous"},
 		         		                 {kind: "moon.Icon", icon: "arrowsmallright", style:"margin-top : 10px;",small: false,small: false, ontap: "next"},
+		         		                 
 		         		                ]
-		                }
+		                },
+		                {kind : "moon.BodyText",name : "info",content:"이미지를 클릭하면 상세정보가 나옵니다.",style:"font-size :15px;padding-top:80px;color : #b45b4b"},
 		                
 	                
 	                ]},
-	                {kind : "moon.Image",name : "img1",style:"margin-left : 750px;padding-top:150px;zoom:30%;",ontap : "Stfashion"},
-	                {kind : "moon.Image",name : "img2",style:"padding-top:150px;zoom:30%;",ontap : "Stfashion"},
-	                {kind : "moon.Image",name : "img3",style:"padding-top:150px;zoom:30%;",ontap : "Stfashion"},
+	                {kind : "moon.Image",name : "img1",style:"margin-left : 800px;padding-top:270px;zoom:30%;",ontap : "Stfashion"},
+	                {kind : "moon.Image",name : "img2",style:"padding-top:270px;zoom:30%;",ontap : "Stfashion"},
+	                {kind : "moon.Image",name : "img3",style:"padding-top:270px;zoom:30%;",ontap : "Stfashion"},
 	                
 	                {kind : "moon.Image",name : "img4",classes : "fsnew",ontap : "fashionnew"},
-	                {kind : "moon.BodyText",name : "text",classes : "fstext",style:"padding-top : 330px;"},
+	                {kind : "moon.BodyText",name : "text",classes : "fstext"},
 
             ],
             },
