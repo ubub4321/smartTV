@@ -46,20 +46,6 @@ enyo.kind({
             ]}, 
 
 	],
-<<<<<<< HEAD
-	gohome : function(inSender, inEvent)
-	{
-		this.bubbleUp("onGoHome");
-		return true;
-	},
-	gonews : function(inSender, inEvent)
-	{
-		var index = this.$.carousel.getIndex();
-		var name = inSender.name;
-		this.bubbleUp("onPopup", {name:name});
-		return true;
-	},
-=======
 	Stfashion : function()
 	   {
 	      location = "http://www.thesartorialist.com/";
@@ -70,7 +56,6 @@ enyo.kind({
 	      location = "http://www.musinsa.com/index.php?m=news&cat=FASHION";
 	      return true;
 	   },
->>>>>>> ebc2aae3442d05918d07fa4d13c56966be7d964d
 	changedHeadLineText: function(inSender,inEvent){
 		var index = this.$.carousel.getIndex(); 
 		if(0 == index%5)
