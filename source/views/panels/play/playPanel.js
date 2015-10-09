@@ -64,11 +64,6 @@ enyo.kind({
 			            	            			  ontap:"realDrawer1"
 			            	            		  },
 			            	            		  {
-			            	            			  kind : "moon.Tooltip",
-			            	            			  content : "상세정보 확인",
-			            	            			  showDelay : 2
-			            	            		  },
-			            	            		  {
 			            	            			  name : "drawer1",
 			            	            			  kind : "enyo.Drawer",
 			            	            			  open : false,
@@ -128,11 +123,6 @@ enyo.kind({
 			            	            			            	   classes : "imagepanel",
 			            	            			            	   style : "margin-left:210px;",
 			            	            			            	   ontap:"realDrawer2"
-			            	            			               },
-			            	            			               {
-			            	            			            	   kind : "moon.Tooltip",
-			            	            			            	   content : "상세정보 확인",
-			            	            			            	   showDelay : 2
 			            	            			               }]
 			            	            		  },
 			            	            		  {
@@ -195,11 +185,6 @@ enyo.kind({
 			            	            			            	   classes : "imagepanel",
 			            	            			            	   style : "margin-left:210px;",
 			            	            			            	   ontap:"realDrawer3"
-			            	            			               },
-			            	            			               {
-			            	            			            	   kind : "moon.Tooltip",
-			            	            			            	   content : "상세정보 확인",
-			            	            			            	   showDelay : 2
 			            	            			               }]
 			            	            		  },
 			            	            		  {
@@ -262,11 +247,6 @@ enyo.kind({
 			            	            			            	   classes : "imagepanel",
 			            	            			            	   style : "margin-left:210px;",
 			            	            			            	   ontap:"realDrawer4"
-			            	            			               },
-			            	            			               {
-			            	            			            	   kind : "moon.Tooltip",
-			            	            			            	   content : "상세정보 확인",
-			            	            			            	   showDelay : 2
 			            	            			               }]
 			            	            		  },
 			            	            		  {
@@ -329,11 +309,6 @@ enyo.kind({
 			            	            			            	   classes : "imagepanel",
 			            	            			            	   style : "margin-left:210px;",
 			            	            			            	   ontap:"realDrawer5"
-			            	            			               },
-			            	            			               {
-			            	            			            	   kind : "moon.Tooltip",
-			            	            			            	   content : "상세정보 확인",
-			            	            			            	   showDelay : 2
 			            	            			               }]
 			            	            		  },
 			            	            		  {
@@ -396,11 +371,6 @@ enyo.kind({
 			            	            			            	   classes : "imagepanel",
 			            	            			            	   style : "margin-left:210px;",
 			            	            			            	   ontap:"realDrawer6"
-			            	            			               },
-			            	            			               {
-			            	            			            	   kind : "moon.Tooltip",
-			            	            			            	   content : "상세정보 확인",
-			            	            			            	   showDelay : 2
 			            	            			               }]
 			            	            		  },
 			            	            		  {
@@ -463,11 +433,6 @@ enyo.kind({
 			            	            			            	   classes : "imagepanel",
 			            	            			            	   style : "margin-left:210px;",
 			            	            			            	   ontap:"realDrawer7"
-			            	            			               },
-			            	            			               {
-			            	            			            	   kind : "moon.Tooltip",
-			            	            			            	   content : "상세정보 확인",
-			            	            			            	   showDelay : 2
 			            	            			               }]
 			            	            		  },
 			            	            		  {
@@ -530,11 +495,6 @@ enyo.kind({
 			            	            			            	   classes : "imagepanel",
 			            	            			            	   style : "margin-left:210px;",
 			            	            			            	   ontap:"realDrawer8"
-			            	            			               },
-			            	            			               {
-			            	            			            	   kind : "moon.Tooltip",
-			            	            			            	   content : "상세정보 확인",
-			            	            			            	   showDelay : 2
 			            	            			               }]
 			            	            		  },
 			            	            		  {
@@ -669,7 +629,6 @@ enyo.kind({
 		var str=""; //= "\'qqqqqqq\'";  //0번째 array를 가져온다
 		for(j=0; j<9; j++)
 		{
-			
 			if(j==8)
 				str = str+ "\'"+clothesArray[num][j]+"\'";
 			else
