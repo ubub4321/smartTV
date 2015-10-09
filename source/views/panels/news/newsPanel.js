@@ -56,7 +56,7 @@ enyo.kind({
 	      location = "http://www.musinsa.com/index.php?m=news&cat=FASHION";
 	      return true;
 	   },
-
+	   
 	changedHeadLineText: function(inSender,inEvent){
 		var index = this.$.carousel.getIndex(); 
 		if(0 == index%5)
