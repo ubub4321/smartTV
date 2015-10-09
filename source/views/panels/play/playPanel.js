@@ -82,18 +82,13 @@ enyo.kind({
 			            	            				                	components: [
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
-			            	            				                	            		 name : "reresult1",
+			            	            				                	            		 name : "reresult1_1",
 			            	            				                	            		 classes : "table",
 			            	            				                	            	 },
 			            	            				                	            	 {
-			            	            				                	            		 name : "reresult2",
+			            	            				                	            		 name : "reresult1_2",
 			            	            				                	            		 classes : "table",
 			            	            				                	            		 content : "가격"
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult3",
-			            	            				                	            		 classes : "table",
-			            	            				                	            		 content : "가테고리"
 			            	            				                	            	 }]
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
@@ -132,7 +127,6 @@ enyo.kind({
 			            	            			            	   kind: "moon.Image",
 			            	            			            	   classes : "imagepanel",
 			            	            			            	   style : "margin-left:210px;",
-			            	            			            	   src: "assets/1.jpg",
 			            	            			            	   ontap:"realDrawer2"
 			            	            			               },
 			            	            			               {
@@ -155,18 +149,13 @@ enyo.kind({
 			            	            				                	components: [
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
-			            	            				                	            		 name : "reresult1",
+			            	            				                	            		 name : "reresult2_1",
 			            	            				                	            		 classes : "table",
 			            	            				                	            	 },
 			            	            				                	            	 {
-			            	            				                	            		 name : "reresult2",
+			            	            				                	            		 name : "reresult2_2",
 			            	            				                	            		 classes : "table",
 			            	            				                	            		 content : "가격"
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult3",
-			            	            				                	            		 classes : "table",
-			            	            				                	            		 content : "가테고리"
 			            	            				                	            	 }]
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
@@ -174,7 +163,7 @@ enyo.kind({
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
 			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage1"
+			            	            				                	            		 ontap:"backtoImage2"
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
@@ -205,7 +194,6 @@ enyo.kind({
 			            	            			            	   kind: "moon.Image",
 			            	            			            	   classes : "imagepanel",
 			            	            			            	   style : "margin-left:210px;",
-			            	            			            	   src: "assets/1.jpg",
 			            	            			            	   ontap:"realDrawer3"
 			            	            			               },
 			            	            			               {
@@ -228,18 +216,13 @@ enyo.kind({
 			            	            				                	components: [
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
-			            	            				                	            		 name : "reresult1",
+			            	            				                	            		 name : "reresult3_1",
 			            	            				                	            		 classes : "table",
 			            	            				                	            	 },
 			            	            				                	            	 {
-			            	            				                	            		 name : "reresult2",
+			            	            				                	            		 name : "reresult3_2",
 			            	            				                	            		 classes : "table",
 			            	            				                	            		 content : "가격"
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult3",
-			            	            				                	            		 classes : "table",
-			            	            				                	            		 content : "가테고리"
 			            	            				                	            	 }]
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
@@ -247,7 +230,7 @@ enyo.kind({
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
 			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage1"
+			            	            				                	            		 ontap:"backtoImage3"
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
@@ -278,7 +261,6 @@ enyo.kind({
 			            	            			            	   kind: "moon.Image",
 			            	            			            	   classes : "imagepanel",
 			            	            			            	   style : "margin-left:210px;",
-			            	            			            	   src: "assets/1.jpg",
 			            	            			            	   ontap:"realDrawer4"
 			            	            			               },
 			            	            			               {
@@ -301,18 +283,13 @@ enyo.kind({
 			            	            				                	components: [
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
-			            	            				                	            		 name : "reresult1",
+			            	            				                	            		 name : "reresult4_1",
 			            	            				                	            		 classes : "table",
 			            	            				                	            	 },
 			            	            				                	            	 {
-			            	            				                	            		 name : "reresult2",
+			            	            				                	            		 name : "reresult4_2",
 			            	            				                	            		 classes : "table",
 			            	            				                	            		 content : "가격"
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult3",
-			            	            				                	            		 classes : "table",
-			            	            				                	            		 content : "가테고리"
 			            	            				                	            	 }]
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
@@ -320,7 +297,7 @@ enyo.kind({
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
 			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage1"
+			            	            				                	            		 ontap:"backtoImage4"
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
@@ -351,7 +328,6 @@ enyo.kind({
 			            	            			            	   kind: "moon.Image",
 			            	            			            	   classes : "imagepanel",
 			            	            			            	   style : "margin-left:210px;",
-			            	            			            	   src: "assets/1.jpg",
 			            	            			            	   ontap:"realDrawer5"
 			            	            			               },
 			            	            			               {
@@ -374,18 +350,13 @@ enyo.kind({
 			            	            				                	components: [
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
-			            	            				                	            		 name : "reresult1",
+			            	            				                	            		 name : "reresult5_1",
 			            	            				                	            		 classes : "table",
 			            	            				                	            	 },
 			            	            				                	            	 {
-			            	            				                	            		 name : "reresult2",
+			            	            				                	            		 name : "reresult5_2",
 			            	            				                	            		 classes : "table",
 			            	            				                	            		 content : "가격"
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult3",
-			            	            				                	            		 classes : "table",
-			            	            				                	            		 content : "가테고리"
 			            	            				                	            	 }]
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
@@ -393,7 +364,7 @@ enyo.kind({
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
 			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage1"
+			            	            				                	            		 ontap:"backtoImage5"
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
@@ -424,7 +395,6 @@ enyo.kind({
 			            	            			            	   kind: "moon.Image",
 			            	            			            	   classes : "imagepanel",
 			            	            			            	   style : "margin-left:210px;",
-			            	            			            	   src: "assets/1.jpg",
 			            	            			            	   ontap:"realDrawer6"
 			            	            			               },
 			            	            			               {
@@ -447,18 +417,13 @@ enyo.kind({
 			            	            				                	components: [
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
-			            	            				                	            		 name : "reresult1",
+			            	            				                	            		 name : "reresult6_1",
 			            	            				                	            		 classes : "table",
 			            	            				                	            	 },
 			            	            				                	            	 {
-			            	            				                	            		 name : "reresult2",
+			            	            				                	            		 name : "reresult6_2",
 			            	            				                	            		 classes : "table",
 			            	            				                	            		 content : "가격"
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult3",
-			            	            				                	            		 classes : "table",
-			            	            				                	            		 content : "가테고리"
 			            	            				                	            	 }]
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
@@ -466,7 +431,7 @@ enyo.kind({
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
 			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage1"
+			            	            				                	            		 ontap:"backtoImage6"
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
@@ -497,7 +462,6 @@ enyo.kind({
 			            	            			            	   kind: "moon.Image",
 			            	            			            	   classes : "imagepanel",
 			            	            			            	   style : "margin-left:210px;",
-			            	            			            	   src: "assets/1.jpg",
 			            	            			            	   ontap:"realDrawer7"
 			            	            			               },
 			            	            			               {
@@ -520,18 +484,13 @@ enyo.kind({
 			            	            				                	components: [
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
-			            	            				                	            		 name : "reresult1",
+			            	            				                	            		 name : "reresult7_1",
 			            	            				                	            		 classes : "table",
 			            	            				                	            	 },
 			            	            				                	            	 {
-			            	            				                	            		 name : "reresult2",
+			            	            				                	            		 name : "reresult7_2",
 			            	            				                	            		 classes : "table",
 			            	            				                	            		 content : "가격"
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult3",
-			            	            				                	            		 classes : "table",
-			            	            				                	            		 content : "가테고리"
 			            	            				                	            	 }]
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
@@ -539,7 +498,7 @@ enyo.kind({
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
 			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage1"
+			            	            				                	            		 ontap:"backtoImage7"
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
@@ -570,7 +529,6 @@ enyo.kind({
 			            	            			            	   kind: "moon.Image",
 			            	            			            	   classes : "imagepanel",
 			            	            			            	   style : "margin-left:210px;",
-			            	            			            	   src: "assets/1.jpg",
 			            	            			            	   ontap:"realDrawer8"
 			            	            			               },
 			            	            			               {
@@ -593,18 +551,13 @@ enyo.kind({
 			            	            				                	components: [
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
-			            	            				                	            		 name : "reresult1",
+			            	            				                	            		 name : "reresult8_1",
 			            	            				                	            		 classes : "table",
 			            	            				                	            	 },
 			            	            				                	            	 {
-			            	            				                	            		 name : "reresult2",
+			            	            				                	            		 name : "reresult8_2",
 			            	            				                	            		 classes : "table",
 			            	            				                	            		 content : "가격"
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult3",
-			            	            				                	            		 classes : "table",
-			            	            				                	            		 content : "가테고리"
 			            	            				                	            	 }]
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
@@ -612,7 +565,7 @@ enyo.kind({
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
 			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage1"
+			            	            				                	            		 ontap:"backtoImage8"
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
@@ -668,7 +621,25 @@ enyo.kind({
 			      this.show();
 			   },
 	show: function(){
-		this.$.reresult1.setContent("dsafkjaleifjaewilj");   //이 위에는, clothes 옷정보 DB를 엔요의 clothesArray변수에 저장하는것
+		this.$.reresult1_1.setContent(clothesArray[0][1]); 
+		this.$.reresult2_1.setContent(clothesArray[1][1]);
+		this.$.reresult3_1.setContent(clothesArray[2][1]);
+		this.$.reresult4_1.setContent(clothesArray[3][1]);
+		this.$.reresult5_1.setContent(clothesArray[4][1]);
+		this.$.reresult6_1.setContent(clothesArray[5][1]);
+		this.$.reresult7_1.setContent(clothesArray[6][1]);
+		this.$.reresult8_1.setContent(clothesArray[7][1]);
+		
+		this.$.reresult1_2.setContent("￦ "+clothesArray[0][6]); 
+		this.$.reresult2_2.setContent("￦ "+clothesArray[1][6]);
+		this.$.reresult3_2.setContent("￦ "+clothesArray[2][6]);
+		this.$.reresult4_2.setContent("￦ "+clothesArray[3][6]);
+		this.$.reresult5_2.setContent("￦ "+clothesArray[4][6]);
+		this.$.reresult6_2.setContent("￦ "+clothesArray[5][6]);
+		this.$.reresult7_2.setContent("￦ "+clothesArray[6][6]);
+		this.$.reresult8_2.setContent("￦ "+clothesArray[7][6]);
+		
+		
 		this.$.detail_1.setSrc(clothesArray[0][4]);
 		this.$.detail_2.setSrc(clothesArray[1][4]);
 		this.$.detail_3.setSrc(clothesArray[2][4]);
@@ -729,15 +700,44 @@ enyo.kind({
 		return true;
 	},
 	backtoImage1 : function(inSender, inEvent){
-		var time = clothesArray[0][1];
+		var time = clothesArray[0][3];
 		time = parseInt(time); 
-		this.$.player.setCurrentTime(1)
+		this.$.player.setCurrentTime(time)
 	},
 	backtoImage2 : function(inSender, inEvent){
-		this.$.player.setCurrentTime(10)
+		var time = clothesArray[1][3];
+		time = parseInt(time); 
+		this.$.player.setCurrentTime(time)
 	},
 	backtoImage3 : function(inSender, inEvent){
-		this.$.player.setCurrentTime(20)
+		var time = clothesArray[2][3];
+		time = parseInt(time); 
+		this.$.player.setCurrentTime(time)
+	},
+	backtoImage4 : function(inSender, inEvent){
+		var time = clothesArray[3][3];
+		time = parseInt(time); 
+		this.$.player.setCurrentTime(time)
+	},
+	backtoImage5 : function(inSender, inEvent){
+		var time = clothesArray[4][3];
+		time = parseInt(time); 
+		this.$.player.setCurrentTime(time)
+	},
+	backtoImage6 : function(inSender, inEvent){
+		var time = clothesArray[5][3];
+		time = parseInt(time); 
+		this.$.player.setCurrentTime(time)
+	},
+	backtoImage7 : function(inSender, inEvent){
+		var time = clothesArray[6][3];
+		time = parseInt(time); 
+		this.$.player.setCurrentTime(time)
+	},
+	backtoImage8 : function(inSender, inEvent){
+		var time = clothesArray[7][3];
+		time = parseInt(time); 
+		this.$.player.setCurrentTime(time)
 	},
 	realDrawer1 : function(inSender, inEvent) {
 		this.$.drawer1.setOpen(true);

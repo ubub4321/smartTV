@@ -28,7 +28,7 @@ enyo.kind({
                                       {name: "title", classes: "panels-sample-flickr-title"},
                                       {name: "remove", kind: "moon.IconButton", src: "assets/delete.png", classes: "remove-button-css", ontap: "removeTap"}
                                       ]}]}]},
-                {name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearch", onResults: "searchResults"}
+                {name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearch1", onResults: "searchResults"}
    ],
    rendered: enyo.inherit(function(sup) {
       return function() {
@@ -135,7 +135,7 @@ enyo.kind({
 // A simple component to do a Flickr search.
 
 enyo.kind({
-   name: "enyo.sample.PanelsFlickrSearch",
+   name: "enyo.sample.PanelsFlickrSearch1",
    kind: "Component",
    published: {
       searchText: ""
