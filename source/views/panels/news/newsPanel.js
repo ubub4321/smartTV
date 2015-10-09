@@ -46,20 +46,6 @@ enyo.kind({
             ]}, 
 
 	],
-<<<<<<< HEAD
-	gohome : function(inSender, inEvent)
-	{
-		this.bubbleUp("onGoHome");
-		return true;
-	},
-	gonews : function(inSender, inEvent)
-	{
-		var index = this.$.carousel.getIndex();
-		var name = inSender.name;
-		this.bubbleUp("onPopup", {name:name});
-		return true;
-	},
-=======
 	Stfashion : function()
 	   {
 	      location = "http://www.thesartorialist.com/";
@@ -70,7 +56,7 @@ enyo.kind({
 	      location = "http://www.musinsa.com/index.php?m=news&cat=FASHION";
 	      return true;
 	   },
->>>>>>> ebc2aae3442d05918d07fa4d13c56966be7d964d
+
 	changedHeadLineText: function(inSender,inEvent){
 		var index = this.$.carousel.getIndex(); 
 		if(0 == index%5)
@@ -167,7 +153,7 @@ enyo.kind({
 			      fshead = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
 			      article = condata.substring(condata.indexOf("기사")+6,condata.indexOf("...")+3);
 			      
-			      
+
 			      this.$.img1.setSrc(img1);
 			      this.$.img2.setSrc(img2);
 			      this.$.img3.setSrc(img3);
