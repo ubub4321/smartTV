@@ -13,8 +13,9 @@ enyo.kind({
 	    	            	            	             {kind: "moon.Image",classes:"home",ontap : "gohome"}
 	    	            	            	            ]
 	    	            	             }]},
+	    	            	             
 	    	             
-            {kind: "FittableColumns", // 왼쪽 띄워진 부분부터 column으로 묶어줌
+            {kind: "FittableColumns", //style:"background-color: black;",// 왼쪽 띄워진 부분부터 column으로 묶어줌
             	components: [
 	            {kind: "FittableRows",style:"margin-left:120px;width : 420px; height :410px;",
 	            	components: [
@@ -30,45 +31,22 @@ enyo.kind({
 		         		                 {kind: "moon.Icon", icon: "arrowsmallright", style:"margin-top : 10px;",small: false,small: false, ontap: "next"},
 		         		                ]
 		                }
+		                
 	                
 	                ]},
+	                {kind : "moon.Image",name : "img1",style:"margin-left : 750px;padding-top:150px;zoom:30%;",ontap : "Stfashion"},
+	                {kind : "moon.Image",name : "img2",style:"padding-top:150px;zoom:30%;",ontap : "Stfashion"},
+	                {kind : "moon.Image",name : "img3",style:"padding-top:150px;zoom:30%;",ontap : "Stfashion"},
+	                
+	                {kind : "moon.Image",name : "img4",classes : "fsnew",ontap : "fashionnew"},
+	                {kind : "moon.BodyText",name : "text",classes : "fstext",style:"padding-top : 330px;"},
 
             ],
-            
             },
-       /* {kind: "FittableRows",
-            	components: [
-            	             {kind: "FittableColumns", style:"margin-left:80px;margin-top:150px;",
-            	            	 components: [
-            	            	              {kind : "Image" ,  name : "street" ,style: "text-align:center;width : 250px; height : 300px;", ontap : "Stfashion"},
-            	            	              {content: "Street Fashion",style:"margin-left:80px;"},
-            	            	              { kind: "FittableRows",
-             	             	            	 components : [
-             	             	            	               {name : "StFashion",style:"margin-top:30px;margin-left:-200px;"},
-             	             	            	               ]}
-            	            	              
-                                              ]
-            	             },
-            	             {kind: "FittableColumns", style:"margin-top:10px;",
-            	            	 components: [
-            	             	             {kind : "Image" ,  name : "fashionnews" ,style: "text-align:center;width : 250px; height : 300px;margin-left:80px;", ontap : "fashionnew"},
-            	             	             {name : "fashioncontent",classes : "news-font"},
-            	             	            { kind: "FittableRows",
-            	             	            	 components : [
-            	             	            	               {name : "fashiontext",classes : "news-font",style:" margin-left:-370px; margin-top : 50px;"},
-            	             	            	               //{name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearch", onResults: "searchResults"}
-            	             	            	               ]}
-            	             	            	 
-            	             	             ]
-            	             },
-
-            	             ]
-            
-        
-        },    */
             ]}, 
 
 	],
+<<<<<<< HEAD
 	gohome : function(inSender, inEvent)
 	{
 		this.bubbleUp("onGoHome");
@@ -81,6 +59,18 @@ enyo.kind({
 		this.bubbleUp("onPopup", {name:name});
 		return true;
 	},
+=======
+	Stfashion : function()
+	   {
+	      location = "http://www.thesartorialist.com/";
+	      return true;
+	   },
+	fashionnew :  function()
+	   {
+	      location = "http://www.musinsa.com/index.php?m=news&cat=FASHION";
+	      return true;
+	   },
+>>>>>>> ebc2aae3442d05918d07fa4d13c56966be7d964d
 	changedHeadLineText: function(inSender,inEvent){
 		var index = this.$.carousel.getIndex(); 
 		if(0 == index%5)
@@ -163,6 +153,27 @@ enyo.kind({
 			      condata = data.substring(data.indexOf("헤드5"));	//substring(3) -> 0~3번째 문자열을 뺀 나머지를 출력
 			      head4 = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
 			      
+			      condata = data.substring(data.indexOf("스트릿1"));
+			      img1 = condata.substring(condata.indexOf("스트릿사진")+9,condata.indexOf("jpg")+3);
+			      
+			      condata = data.substring(data.indexOf("스트릿2"));
+			      img2 = condata.substring(condata.indexOf("스트릿사진")+9,condata.indexOf("jpg")+3);
+			      
+			      condata = data.substring(data.indexOf("스트릿3"));
+			      img3 = condata.substring(condata.indexOf("스트릿사진")+9,condata.indexOf("jpg")+3);
+			      
+			      condata = data.substring(data.indexOf("패션뉴스"));
+			      fsimg = condata.substring(condata.indexOf("패션뉴스사진")+10,condata.indexOf("jpg")+3);
+			      fshead = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
+			      article = condata.substring(condata.indexOf("기사")+6,condata.indexOf("...")+3);
+			      
+			      
+			      this.$.img1.setSrc(img1);
+			      this.$.img2.setSrc(img2);
+			      this.$.img3.setSrc(img3);
+			      this.$.img4.setSrc(fsimg);
+			      this.$.text.setContent(fshead);
+			      
 			      this.$.head.setContent(head0);
 			      return true;
 			      
@@ -175,8 +186,6 @@ enyo.kind({
 				{
 					index = this.$.carousel.getIndex();
 					var name = inSender.name;
-					alert(inSender.name);
-					enyo.log(name);
 					this.bubbleUp("onShowPanel", {name:name});
 					return true;
 				},
