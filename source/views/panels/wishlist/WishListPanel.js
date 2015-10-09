@@ -68,7 +68,7 @@ enyo.kind({
       var i = inEvent.index;
       
       this.$.item.addRemoveClass("onyx-selected", inSender.isSelected(inEvent.index));
-      this.$.thumbnail.setSrc(clothesArray[i][4]); //4//11
+      this.$.thumbnail.setSrc(clothesArray[i][6]); //4//11
       this.$.title.setContent(clothesArray[i][1]);
      // this.$.remove.setSrc("assets/delete.png");
       return true;
@@ -79,7 +79,7 @@ enyo.kind({
       }
       var i = inEvent.index;
       this.$.imageSpinner.show();
-      var item = clothesArray[i][4];
+      var item = clothesArray[i][6];
 
       this.$.flickrImage.setSrc(item);
       this.$.flickrImage-explain.setContent("aaa");
@@ -105,7 +105,7 @@ enyo.kind({
    },
    removeTap: function(inSender, inEvent){
        var i = inEvent.index;
-       var str = '\''+clothesArray[i][4]+'\'';
+       var str = '\''+clothesArray[i][6]+'\'';
        
        if (str == "") {
            document.getElementById("txtHint").innerHTML = "";
@@ -181,7 +181,7 @@ enyo.kind({
          }
       clothesArray = new Array(tableCount);
       for(i=0; i<tableCount; i++)
-         clothesArray[i] = new Array(7);
+         clothesArray[i] = new Array(9);
       //'produsa'프로그램을 뽑아서 clothesArray를 할당한다.
       
       data2 = data;
@@ -189,9 +189,9 @@ enyo.kind({
       {
          data2 = data2.substring(data2.indexOf("td"));
          data2 = data2.substring(data2.indexOf("["));
-         for(j=0; j<7; j++)
+         for(j=0; j<9; j++)
          {
-            if(j == 6)
+            if(j == 8)
             {
                clothesArray[i][j] = data2.substring(data2.indexOf("\"")+1, data2.indexOf("]")-18);
                break;

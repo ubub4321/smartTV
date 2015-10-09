@@ -102,7 +102,7 @@ enyo.kind({
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped"
+			            	            				                	            		 ontap:"buttonTapped1"
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
@@ -169,7 +169,7 @@ enyo.kind({
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped"
+			            	            				                	            		 ontap:"buttonTapped2"
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
@@ -236,7 +236,7 @@ enyo.kind({
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped"
+			            	            				                	            		 ontap:"buttonTapped3"
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
@@ -303,7 +303,7 @@ enyo.kind({
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped"
+			            	            				                	            		 ontap:"buttonTapped4"
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
@@ -370,7 +370,7 @@ enyo.kind({
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped"
+			            	            				                	            		 ontap:"buttonTapped5"
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
@@ -437,7 +437,7 @@ enyo.kind({
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped"
+			            	            				                	            		 ontap:"buttonTapped6"
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
@@ -504,7 +504,7 @@ enyo.kind({
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped"
+			            	            				                	            		 ontap:"buttonTapped7"
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
@@ -571,7 +571,7 @@ enyo.kind({
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped"
+			            	            				                	            		 ontap:"buttonTapped8"
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
@@ -630,33 +630,47 @@ enyo.kind({
 		this.$.reresult7_1.setContent(clothesArray[6][1]);
 		this.$.reresult8_1.setContent(clothesArray[7][1]);
 		
-		this.$.reresult1_2.setContent("￦ "+clothesArray[0][6]); 
-		this.$.reresult2_2.setContent("￦ "+clothesArray[1][6]);
-		this.$.reresult3_2.setContent("￦ "+clothesArray[2][6]);
-		this.$.reresult4_2.setContent("￦ "+clothesArray[3][6]);
-		this.$.reresult5_2.setContent("￦ "+clothesArray[4][6]);
-		this.$.reresult6_2.setContent("￦ "+clothesArray[5][6]);
-		this.$.reresult7_2.setContent("￦ "+clothesArray[6][6]);
-		this.$.reresult8_2.setContent("￦ "+clothesArray[7][6]);
+		this.$.reresult1_2.setContent("￦ "+clothesArray[0][8]); 
+		this.$.reresult2_2.setContent("￦ "+clothesArray[1][8]);
+		this.$.reresult3_2.setContent("￦ "+clothesArray[2][8]);
+		this.$.reresult4_2.setContent("￦ "+clothesArray[3][8]);
+		this.$.reresult5_2.setContent("￦ "+clothesArray[4][8]);
+		this.$.reresult6_2.setContent("￦ "+clothesArray[5][8]);
+		this.$.reresult7_2.setContent("￦ "+clothesArray[6][8]);
+		this.$.reresult8_2.setContent("￦ "+clothesArray[7][8]);
 		
 		
-		this.$.detail_1.setSrc(clothesArray[0][4]);
-		this.$.detail_2.setSrc(clothesArray[1][4]);
-		this.$.detail_3.setSrc(clothesArray[2][4]);
-		this.$.detail_4.setSrc(clothesArray[3][4]);
-		this.$.detail_5.setSrc(clothesArray[4][4]);
-		this.$.detail_6.setSrc(clothesArray[5][4]);
-		this.$.detail_7.setSrc(clothesArray[6][4]);
-		this.$.detail_8.setSrc(clothesArray[7][4]);
+		this.$.detail_1.setSrc(clothesArray[0][6]);
+		this.$.detail_2.setSrc(clothesArray[1][6]);
+		this.$.detail_3.setSrc(clothesArray[2][6]);
+		this.$.detail_4.setSrc(clothesArray[3][6]);
+		this.$.detail_5.setSrc(clothesArray[4][6]);
+		this.$.detail_6.setSrc(clothesArray[5][6]);
+		this.$.detail_7.setSrc(clothesArray[6][6]);
+		this.$.detail_8.setSrc(clothesArray[7][6]);
 		//----------------------------------------------------------------------------------------------------------	
-	},buttonTapped: function(inSender, inEvent) {              //장바구니 추가 버튼을 누르면, 옷이 몇번째 꺼 인지 정보를 주어 wishList DB에 추가.
-		var num = 1; //사진의 id값 을 주어, 그 행을 통채로 wishList에 추가.
-		this.ajaxFunction(num);
+	},buttonTapped1: function(inSender, inEvent) {            
+		this.ajaxFunction(0);
+	},buttonTapped2: function(inSender, inEvent) { 
+		this.ajaxFunction(1);
+	},buttonTapped3: function(inSender, inEvent) {   
+		this.ajaxFunction(2);
+	},buttonTapped4: function(inSender, inEvent) { 
+		this.ajaxFunction(3);
+	},buttonTapped5: function(inSender, inEvent) {   
+		this.ajaxFunction(4);
+	},buttonTapped6: function(inSender, inEvent) {   
+		this.ajaxFunction(5);
+	},buttonTapped7: function(inSender, inEvent) {   
+		this.ajaxFunction(6);
+	},buttonTapped8: function(inSender, inEvent) {   
+		this.ajaxFunction(7);
 	},ajaxFunction : function(num){
 		var str=""; //= "\'qqqqqqq\'";  //0번째 array를 가져온다
-		for(j=0; j<7; j++)
+		for(j=0; j<9; j++)
 		{
-			if(j==6)
+			
+			if(j==8)
 				str = str+ "\'"+clothesArray[num][j]+"\'";
 			else
 				str = str+ "\'"+clothesArray[num][j]+"\',";
@@ -700,49 +714,49 @@ enyo.kind({
 		return true;
 	},
 	backtoImage1 : function(inSender, inEvent){
-		var time = clothesArray[0][3];
+		var time = clothesArray[0][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	backtoImage2 : function(inSender, inEvent){
-		var time = clothesArray[1][3];
+		var time = clothesArray[1][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	backtoImage3 : function(inSender, inEvent){
-		var time = clothesArray[2][3];
+		var time = clothesArray[2][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	backtoImage4 : function(inSender, inEvent){
-		var time = clothesArray[3][3];
+		var time = clothesArray[3][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	backtoImage5 : function(inSender, inEvent){
-		var time = clothesArray[4][3];
+		var time = clothesArray[4][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	backtoImage6 : function(inSender, inEvent){
-		var time = clothesArray[5][3];
+		var time = clothesArray[5][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	backtoImage7 : function(inSender, inEvent){
-		var time = clothesArray[6][3];
+		var time = clothesArray[6][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	backtoImage8 : function(inSender, inEvent){
-		var time = clothesArray[7][3];
+		var time = clothesArray[7][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	realDrawer1 : function(inSender, inEvent) {
 		this.$.drawer1.setOpen(true);
 		playerinput = inSender.getContent();
-		//var data_player_url1 = player.indexOf(playerinput);
+		var data_player_url1 = player.indexOf(playerinput);
 	},
 	realDrawer2 : function(inSender, inEvent) {
 		this.$.drawer2.setOpen(true);
@@ -859,7 +873,7 @@ enyo.kind({
 	         }
 	      clothesArray = new Array(tableCount);
 	      for(i=0; i<tableCount; i++)
-	         clothesArray[i] = new Array(7);
+	         clothesArray[i] = new Array(9);
 	      //'produsa'프로그램을 뽑아서 clothesArray를 할당한다.
 	      
 	      data2 = data;
@@ -867,9 +881,9 @@ enyo.kind({
 	      {
 	         data2 = data2.substring(data2.indexOf("td"));
 	         data2 = data2.substring(data2.indexOf("["));
-	         for(j=0; j<7; j++)
+	         for(j=0; j<9; j++)
 	         {
-	            if(j == 6)
+	            if(j == 8)
 	            {
 	               clothesArray[i][j] = data2.substring(data2.indexOf("\"")+1, data2.indexOf("]")-18);
 	               break;
