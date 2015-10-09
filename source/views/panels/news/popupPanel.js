@@ -1,11 +1,7 @@
 
 enyo.kind({
 	name:"popupPanel",
-<<<<<<< HEAD:source/views/panels/popup/popupPanel.js
-	classes:"backg",
-=======
 	kind : "moon.Panel",
->>>>>>> 17a57f88c13b37a7bef05f49a145f733759379e0:source/views/panels/news/popupPanel.js
 	style: "background-color:white;",
 	spotlight: true,
 	components:[
