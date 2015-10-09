@@ -51,17 +51,18 @@
 }
 .fsnew
 {
-	margin-left:-2400px;
-	padding-top : 1320px;
-	zoom:25%;
+	margin-left:-2000px;
+	padding-top : 1230px;
+	zoom:30%;
 	height: 100px;
 	width: 100px;
 	
 }
 .fstext
 {
-	margin-left : 270px;
-	font-size: 16px;
-	width: 340px;
-	color : #000000;
+	margin-left : 320px;
+	padding-top : 380px;
+	font-size: 18px;
+	width: 280px;
+	color : #898176;
 }
