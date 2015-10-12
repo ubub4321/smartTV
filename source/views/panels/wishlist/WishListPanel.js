@@ -1,7 +1,7 @@
 var clothesArray;
 enyo.kind({
    name: "wishPanel",
-   kind: "Panels",
+   kind: "moon.Panels",
    classes: "main-css",
    arrangerKind: "CollapsingArranger",
    components: [{name: "pictureView", fit: true, kind: "FittableRows", classes: "RoadPan-css", style: "opacity: 0.9;", components: [

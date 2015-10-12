@@ -115,7 +115,7 @@ enyo.kind({
 		         callbackName: "callback"
 		      });
 		      // send parameters the remote service using the 'go()' method
-		      jsonp.go({		  q: 'select * from html where url = "http://meeneeon.ddns.net/news1.html"'});
+		      jsonp.go({		  q: 'select * from html where url = "http://meeneeon.ddns.net:8080/news1.html"'});
 		      // attach responders to the transaction object
 		      jsonp.response(this, "processResponse");
 		      return true;
@@ -154,7 +154,7 @@ enyo.kind({
 			      condata = data.substring(data.indexOf("패션뉴스"));
 			      fsimg = condata.substring(condata.indexOf("패션뉴스사진")+10,condata.indexOf("jpg")+3);
 			      fshead = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
-			      article = condata.substring(condata.indexOf("기사")+6,condata.indexOf("...")+3);
+			      //article = condata.substring(condata.indexOf("기사")+6,condata.indexOf("...")+3);
 			      
 
 			      this.$.img1.setSrc(img1);
@@ -162,7 +162,6 @@ enyo.kind({
 			      this.$.img3.setSrc(img3);
 			      this.$.img4.setSrc(fsimg);
 			      this.$.text.setContent(fshead);
-			      
 			      this.$.head.setContent(head0);
 			      return true;
 			      
@@ -178,6 +177,7 @@ enyo.kind({
 					this.bubbleUp("onShowPanel", {name:name});
 					return true;
 				},
+				
 			   
 });
   
