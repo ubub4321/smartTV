@@ -13,6 +13,7 @@ enyo.kind({
 	ontimeupdate : "timeChanged",
 	classes: "panels-sample-flickr-panels1",
 	pattern:"activity",
+	spotlight: true,
 	components: [{	
 					kind: "FittableRows",
 					components:[{

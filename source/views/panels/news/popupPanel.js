@@ -38,7 +38,7 @@ enyo.kind({
 	         callbackName: "callback"
 	      });
 	      // send parameters the remote service using the 'go()' method
-	      jsonp.go({		  q: 'select * from html where url = "http://meeneeon.ddns.net/news1.html"'});
+	      jsonp.go({		  q: 'select * from html where url = "http://meeneeon.ddns.net:8080/news1.html"'});
 	      // attach responders to the transaction object
 	      jsonp.response(this, "processResponse");
 	      return true;
@@ -55,13 +55,11 @@ enyo.kind({
 	    head = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
 	    content = condata.substring(condata.indexOf("content")+11,condata.indexOf("...")+1);
 
-		this.updateUI();
-    	return true;
-	},
-	updateUI: function(){
-		this.$.title.setContent(head);
+	    this.$.title.setContent(head);
 		this.$.image.setSrc(url[index]);
+		//같은 폴더 내에 이미 한번 실행된 js파일에서 gonews의 index변수로 해당 js파일에서 변수가 없어도 사용 가능하다.
 		this.$.detail.setContent(content);
+    	return true;
 	},
 	goHome: function(inSender, inEvent){
 		this.bubbleUp("onGoHome");
