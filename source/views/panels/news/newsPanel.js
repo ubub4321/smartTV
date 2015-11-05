@@ -4,45 +4,48 @@ enyo.kind({
 	kind : "moon.Panels",
 	spotlight: true,
 	components:[
-	     {kind: "FittableRows", style:"margin-left: 100px; margin-top : 150px;",  //제일 왼쪽 부분, 윗부분 띄우기
+	     {kind: "FittableRows",// style:"background-color: black;",  //제일 왼쪽 부분, 윗부분 띄우기
 	    	components: [
-	    	             {kind: "FittableColumns",
+	    	             {kind: "FittableColumns", style: "padding-left : 1700px;",
 	    	            	 components:[
 	    	            	             {kind: "FittableRows",
 	    	            	            	 components:[
-	    	            	            	             {kind: "moon.Image",classes:"home",ontap : "gohome"}
+	    	            	            	             {kind: "moon.Image",classes:"home",ontap : "gohome"} //홈 버튼
 	    	            	            	            ]
 	    	            	             }]},
 	    	            	             
 	    	             
             {kind: "FittableColumns", //style:"background-color: black;",// 왼쪽 띄워진 부분부터 column으로 묶어줌
             	components: [
+            	             {kind : "moon.Image",name : "img1", classes:"Photos",ontap : "Stfashion"}, //사진 1
+         	                {kind : "moon.Image",name : "img2",classes:"Photos",ontap : "Stfashion"}, // 사진 2
+         	                {kind : "moon.Image",name : "img3",classes:"Photos",ontap : "Stfashion"}, // 사진 3
+         	               {kind : "moon.Image",name : "img5",classes:"Photos",ontap : "Stfashion"}, // 사진 3
+
+        	                {kind : "moon.Image",name : "img4",classes : "fsnew",ontap : "fashionnew"}, // 사진 4
+        	                {kind : "moon.BodyText",name : "text",classes : "fstext"},					// 사진 4 기사
 	            {kind: "FittableRows",style:"margin-left:220px;padding-top:50px;width : 420px; height :410px;",
 	            	components: [
 	                {name : "popup",style:"width : 620px; height :300px;", // style:"background-color: black;"
 	                	components: [
-		                {name:"carousel", kind:"ImageCarousel", style:"width : 620px;height:420px;"},
-		                {name : "head",onload : "changedHeadLineText",},
+		                {name:"carousel", kind:"ImageCarousel", style:"width : 620px;height:420px;"}, // 이미지 넘기는 화면
+		                {name : "head",onload : "changedHeadLineText",}, // 기사 헤드라인
 		                ],  
 		                ondown: "gonews"},
 		                
 		                {style:"margin-top:180px;",
 		                	components :[
-		                	             {kind: "moon.Icon", icon: "arrowsmallleft", style:"margin-top : 10px;margin-left : 250px;",small: false, ontap: "previous"},
-		         		                 {kind: "moon.Icon", icon: "arrowsmallright", style:"margin-top : 10px;",small: false,small: false, ontap: "next"},
-		         		                 
+		                	             {kind: "moon.Icon", icon: "arrowsmallleft", style:"margin-top : 10px;margin-left : 250px; color : black;",small: false, ontap: "previous"},
+		         		                 {kind: "moon.Icon", icon: "arrowsmallright", style:"margin-top : 10px; color : black;",small: false,small: false, ontap: "next"},
+		         		                  // 화살표
 		         		                ]
 		                },
+
 		                {kind : "moon.BodyText",name : "info",content:"이미지를 클릭하면 상세정보가 나옵니다.",style:"font-size :15px;padding-top:80px;color : #b45b4b"},
 		                
 	                
 	                ]},
-	                {kind : "moon.Image",name : "img1",style:"margin-left : 800px;padding-top:270px;zoom:30%;",ontap : "Stfashion"},
-	                {kind : "moon.Image",name : "img2",style:"padding-top:270px;zoom:30%;",ontap : "Stfashion"},
-	                {kind : "moon.Image",name : "img3",style:"padding-top:270px;zoom:30%;",ontap : "Stfashion"},
-	                
-	                {kind : "moon.Image",name : "img4",classes : "fsnew",ontap : "fashionnew"},
-	                {kind : "moon.BodyText",name : "text",classes : "fstext"},
+	               
 
             ],
             },
@@ -89,11 +92,11 @@ enyo.kind({
 		this.inherited(arguments);
 		this.fetch();
 		url = [
-		       "http://img.syoff.com/webdata/20150930/20150930183905_5874.jpg",
-		       "http://img.syoff.com/webdata/20150930/20150930174911_1202.jpg",
-		       "http://img.syoff.com/webdata/20150930/20150930123315_2427.jpg",
-		       "http://img.syoff.com/webdata/20150925/20150925191841_8965.jpg",
-		       "http://img.syoff.com/webdata/20150925/20150925160522_5799.jpg"
+		       "http://pic.styleindex.co.kr/syof/editor/201511/f84cf01c6910d115a8deb8221b95310e.jpg",
+		       "http://pic.styleindex.co.kr/syof/editor/201511/3f1e4005787c15350f41a985cf99fa4e.jpg",
+		       "http://pic.styleindex.co.kr/syof/editor/201511/dcc1697942720ae4db36bd6ab0182372.jpg",
+		       "http://pic.styleindex.co.kr/syof/editor/201511/8a4b20193652f689268eedd925fd3262.jpg",
+		       "http://pic.styleindex.co.kr/syof/editor/201511/ce3d593dcdc1b4915702e2575becc66f.jpg"
 		       ];
 		this.$.carousel.setImages(url);
 				
@@ -160,6 +163,7 @@ enyo.kind({
 			      this.$.img1.setSrc(img1);
 			      this.$.img2.setSrc(img2);
 			      this.$.img3.setSrc(img3);
+			      this.$.img5.setSrc(img3);
 			      this.$.img4.setSrc(fsimg);
 			      this.$.text.setContent(fshead);
 			      this.$.head.setContent(head0);
