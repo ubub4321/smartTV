@@ -79,19 +79,6 @@ enyo.kind({
 	         		this.bubbleUp("onShowPanel", {name:name});
 	         		return true;
 	         	},
-	         	timeChanged: function(inSender, inEvent) {
-	        		this.$.videoPosition.setContent(Math.floor(inEvent.currentTime) + "s");
-	        		
-	        		if (Math.floor(inEvent.currentTime)==2)
-	        		{
-	        			this.$.Image.setSrc("http://meeneeon.ddns.net/images/lajoonmo_02.PNG");
-	        		}
-	        		if(Math.floor(inEvent.currentTime)==5)
-	        		{
-	        			this.$.player.setCurrentTime(1)
-	        		}
-	        		return true;
-	        	},
 	         	goface : function()
 	         	{
 	         	      location = "https://www.facebook.com/hashtag/%ED%8C%A8%EC%85%98?fref=ts";

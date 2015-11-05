@@ -1,37 +1,37 @@
-var clothesArray;
+var wishListArray;
 enyo.kind({
    name: "wishPanel",
-   kind: "Panels",
+   kind: "moon.Panels",
    classes: "main-css",
    arrangerKind: "CollapsingArranger",
    components: [{name: "pictureView", fit: true, kind: "FittableRows", classes: "RoadPan-css", style: "opacity: 0.9;", components: [
-                      {name: "backToolbar", kind: "onyx.Toolbar", fit: true, showing: false},
-                      {fit: true, style: "position: relative;", components: [
-                           {name: "flickrImage", kind: "Image", classes: "enyo-fit panels-sample-flickr-center panels-sample-flickr-image", showing: false, onload: "imageLoaded", onerror: "imageLoaded"},
-                           {name: "flickrImage-explain", kind: "Text", content: "", classes: ""},
-                           {name: "imageSpinner", kind: "Image", src: "assets/spinner-large.gif", classes: "enyo-fit panels-sample-flickr-center", showing: false}]},
-                      {content: "추천리스트", classes: "chocheon-bar-css"},
-                      {kind: "moon.Image", classes: "home", ontap: "gohome"},
-                      {kind: "enyo.Button", ontap: "highlight", components: [
-                            {kind: "enyo.Image",classes: "highlight-css", src: "assets/highlight.png"}]},
-                      {name: "chocheon", kind: "moon.SimplePicker", classes: "chocheon-css", block: false, animate: false, wrap: true, components: [
-                            {kind: "Image", src: "assets/clothes1.jpg"},
-                            {kind: "Image", src: "assets/clothes2.jpg"},
-                            {kind: "Image", src: "assets/clothes3.jpg"}]}]},
-                {kind: "FittableRows"/*layoutKind: "FittableRowsLayout"*/, classes: "ListPan-css", style: "opacity: 0.9;", components: [
-                            //{kind: "moon.BodyText", name:"console", content: "No change yet"},
-                            {kind: "onyx.Toolbar", components: [
-                                 {kind: "onyx.InputDecorator", style: "width: 90%;", layoutKind: "FittableColumnsLayout", components: [
-                                      {content: "장바구니", onResults: "search"}]}]},
-                            {kind: "List", fit: true, touch: true, onSetupItem: "setupItem", components: [
-                                 {name: "item", style: "padding: 10px;", classes: "panels-sample-flickr-item enyo-border-box", ontap: "itemTap", components: [
-                                      {name: "thumbnail", kind: "Image", classes: "panels-sample-flickr-thumbnail"},
-                                      {name: "title", classes: "panels-sample-flickr-title"},
-                                      {name: "purchase", kind: "moon.IconButton", src: "assets/addtowhishlist.png", classes: "remove-button-css", ontap: "purchaseTap"},
-                                      {name: "remove", kind: "moon.IconButton", src: "assets/delete.png", classes: "remove-button-css", ontap: "removeTap"}
-                                      ]}]}]},
-                {name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearch1", onResults: "searchResults"}
-   ],
+                                                                                                                                    {name: "backToolbar", kind: "onyx.Toolbar", fit: true, showing: false},
+                                                                                                                                    {fit: true, style: "position: relative;", components: [
+                                                                                                                                         {name: "flickrImage", kind: "Image", classes: "enyo-fit panels-sample-flickr-center panels-sample-flickr-image", showing: false, onload: "imageLoaded", onerror: "imageLoaded"},
+                                                                                                                                         {name: "flickrImage-explain", kind: "Text", content: "", classes: ""},
+                                                                                                                                         {name: "imageSpinner", kind: "Image", src: "assets/spinner-large.gif", classes: "enyo-fit panels-sample-flickr-center", showing: false}]},
+                                                                                                                                    {content: "추천리스트", classes: "chocheon-bar-css"},
+                                                                                                                                    {kind: "moon.Image", classes: "home", ontap: "gohome"},
+                                                                                                                                    {kind: "enyo.Button", ontap: "highlight", components: [
+                                                                                                                                          {kind: "enyo.Image",classes: "highlight-css", src: "assets/highlight.png"}]},
+                                                                                                                                    {name: "chocheon", kind: "moon.SimplePicker", classes: "chocheon-css", block: false, animate: false, wrap: true, components: [
+                                                                                                                                          {kind: "Image", src: "assets/clothes1.jpg"},
+                                                                                                                                          {kind: "Image", src: "assets/clothes2.jpg"},
+                                                                                                                                          {kind: "Image", src: "assets/clothes3.jpg"}]}]},
+                                                                                                                              {kind: "FittableRows"/*layoutKind: "FittableRowsLayout"*/, classes: "ListPan-css", style: "opacity: 0.9;", components: [
+                                                                                                                                          //{kind: "moon.BodyText", name:"console", content: "No change yet"},
+                                                                                                                                          {kind: "onyx.Toolbar", components: [
+                                                                                                                                               {kind: "onyx.InputDecorator", style: "width: 90%;", layoutKind: "FittableColumnsLayout", components: [
+                                                                                                                                                    {content: "장바구니", onResults: "search"}]}]},
+                                                                                                                                          {kind: "List", fit: true, touch: true, onSetupItem: "setupItem", components: [
+                                                                                                                                               {name: "item", style: "padding: 10px;", classes: "panels-sample-flickr-item enyo-border-box", ontap: "itemTap", components: [
+                                                                                                                                                    {name: "thumbnail", kind: "Image", classes: "panels-sample-flickr-thumbnail"},
+                                                                                                                                                    {name: "title", classes: "panels-sample-flickr-title"},
+                                                                                                                                                    {name: "purchase", kind: "moon.IconButton", src: "assets/addtowhishlist.png", classes: "remove-button-css", ontap: "purchaseTap"},
+                                                                                                                                                    {name: "remove", kind: "moon.IconButton", src: "assets/delete.png", classes: "remove-button-css", ontap: "removeTap"}
+                                                                                                                                                    ]}]}]},
+                                                                                                                              {name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearch1", onResults: "searchResults"}
+                                                                                                                 ],
    rendered: enyo.inherit(function(sup) {
       return function() {
          sup.apply(this, arguments);
@@ -70,8 +70,11 @@ enyo.kind({
       var i = inEvent.index;
       
       this.$.item.addRemoveClass("onyx-selected", inSender.isSelected(inEvent.index));
-      this.$.thumbnail.setSrc(clothesArray[i][6]); //4//11
-      this.$.title.setContent(clothesArray[i][1]);
+      this.$.thumbnail.setSrc(wishListArray[i][6]); //4//11
+      this.$.title.setContent(wishListArray[i][1]);
+      this.$.programtitle.setContent(wishListArray[i][4]);
+     // this.$.url.setContent(wishListArray[i][7]);
+      this.$.price.setContent(wishListArray[i][8]);
      // this.$.remove.setSrc("assets/delete.png");
       return true;
    },
@@ -81,7 +84,7 @@ enyo.kind({
       }
       var i = inEvent.index;
       this.$.imageSpinner.show();
-      var item = clothesArray[i][6];
+      var item = wishListArray[i][6];
 
       this.$.flickrImage.setSrc(item);
       //this.$.flickrImage-explain.setContent("aaa");
@@ -107,7 +110,7 @@ enyo.kind({
    },
    removeTap: function(inSender, inEvent){
        var i = inEvent.index;
-       var str = '\''+clothesArray[i][6]+'\'';
+       var str = '\''+wishListArray[i][6]+'\'';
        
        if (str == "") {
            document.getElementById("txtHint").innerHTML = "";
@@ -126,7 +129,7 @@ enyo.kind({
                }
            }
            //%26
-           xmlhttp.open("GET","http://meeneeon.ddns.net/delete_sora.php?q="+str,true);
+           xmlhttp.open("GET","http://meeneeon.ddns.net:8080/delete_sora.php?q="+str,true);
            
            xmlhttp.send();
         }
@@ -137,7 +140,7 @@ enyo.kind({
 	         this.setIndex(1);
 	   }
 	   var i = inEvent.index;
-	   var getitem = clothesArray[i][7];
+	   var getitem = wishListArray[i][7];
 	   location = getitem;
    },
    gohome: function(inSender, inEvent){
@@ -162,7 +165,7 @@ enyo.kind({
     // username:  decodeURIComponent($('#username').val());
       
       var params = {
-         q: 'select * from html where url = "http://meeneeon.ddns.net/wishList.php"'
+         q: 'select * from html where url = "http://meeneeon.ddns.net:8080/wishList.php"'
       };
       var req;
       req = new enyo.JsonpRequest({url: this.url, callbackName: "callback"})
@@ -193,10 +196,10 @@ enyo.kind({
                data2 = data2.substring(data2.indexOf("["));
             }
          }
-      clothesArray = new Array(tableCount);
+      wishListArray = new Array(tableCount);
       for(i=0; i<tableCount; i++)
-         clothesArray[i] = new Array(9);
-      //'produsa'프로그램을 뽑아서 clothesArray를 할당한다.
+         wishListArray[i] = new Array(9);
+      //'produsa'프로그램을 뽑아서 wishListArray를 할당한다.
       
       data2 = data;
       for(i=0; i<tableCount; i++)
@@ -207,15 +210,15 @@ enyo.kind({
          {
             if(j == 8)
             {
-               clothesArray[i][j] = data2.substring(data2.indexOf("\"")+1, data2.indexOf("]")-18);
+               wishListArray[i][j] = data2.substring(data2.indexOf("\"")+1, data2.indexOf("]")-18);
                break;
             }   
-            clothesArray[i][j] = data2.substring(data2.indexOf("\"")+1, data2.indexOf("\","));
-            data2 = data2.substring(data2.indexOf(clothesArray[i][j])+clothesArray[i][j].length+2);
+            wishListArray[i][j] = data2.substring(data2.indexOf("\"")+1, data2.indexOf("\","));
+            data2 = data2.substring(data2.indexOf(wishListArray[i][j])+wishListArray[i][j].length+2);
          }
-      } //웹에 출력된 DB를 파싱하여 clothesArray에 저장한다.
-      this.doResults(clothesArray);
-      return clothesArray;
+      } //웹에 출력된 DB를 파싱하여 wishListArray에 저장한다.
+      this.doResults(wishListArray);
+      return wishListArray;
    }      
    
 });
