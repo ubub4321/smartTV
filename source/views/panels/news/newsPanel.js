@@ -6,7 +6,7 @@ enyo.kind({
 	components:[
 	     {kind: "FittableRows",// style:"background-color: black;",  //제일 왼쪽 부분, 윗부분 띄우기
 	    	components: [
-	    	             {kind: "FittableColumns", style: "padding-left : 1700px;",
+	    	             {kind: "FittableColumns",style: "padding-left : 1730px;padding-top : 50px",
 	    	            	 components:[
 	    	            	             {kind: "FittableRows",
 	    	            	            	 components:[
@@ -15,7 +15,7 @@ enyo.kind({
 	    	            	             }]},
 	    	            	             
 	    	             
-            {kind: "FittableColumns", //style:"background-color: black;",// 왼쪽 띄워진 부분부터 column으로 묶어줌
+            {kind: "FittableColumns", style: "padding-left : 105px;",// 왼쪽 띄워진 부분부터 column으로 묶어줌
             	components: [
             	             {kind : "moon.Image",name : "img1", classes:"Photos",ontap : "Stfashion"}, //사진 1
          	                {kind : "moon.Image",name : "img2",classes:"Photos",ontap : "Stfashion"}, // 사진 2
@@ -24,16 +24,17 @@ enyo.kind({
 
         	                {kind : "moon.Image",name : "img4",classes : "fsnew",ontap : "fashionnew"}, // 사진 4
         	                {kind : "moon.BodyText",name : "text",classes : "fstext"},					// 사진 4 기사
-	            {kind: "FittableRows",style:"margin-left:220px;padding-top:50px;width : 420px; height :410px;",
+        	                {kind : "moon.Image",name : "img6",classes:"bottomPhoto",ontap : "Stfashion"},
+	            {kind: "FittableRows",style:"margin-left:200px;width : 620px; height :480px;",
 	            	components: [
-	                {name : "popup",style:"width : 620px; height :300px;", // style:"background-color: black;"
+	                {name : "popup",style:"width : 620px; height :300px;",  //style:"background-color: black;",
 	                	components: [
-		                {name:"carousel", kind:"ImageCarousel", style:"width : 620px;height:420px;"}, // 이미지 넘기는 화면
+		                {name:"carousel", kind:"ImageCarousel", style:"width : 620px;height:400px;"}, // 이미지 넘기는 화면
 		                {name : "head",onload : "changedHeadLineText",}, // 기사 헤드라인
 		                ],  
-		                ondown: "gonews"},
+		                ondown: "gonews"}, 
 		                
-		                {style:"margin-top:180px;",
+		                {style:"margin-top:150px;padding-left :10px",
 		                	components :[
 		                	             {kind: "moon.Icon", icon: "arrowsmallleft", style:"margin-top : 10px;margin-left : 250px; color : black;",small: false, ontap: "previous"},
 		         		                 {kind: "moon.Icon", icon: "arrowsmallright", style:"margin-top : 10px; color : black;",small: false,small: false, ontap: "next"},
@@ -41,14 +42,23 @@ enyo.kind({
 		         		                ]
 		                },
 
-		                {kind : "moon.BodyText",name : "info",content:"이미지를 클릭하면 상세정보가 나옵니다.",style:"font-size :15px;padding-top:80px;color : #b45b4b"},
+		                {kind : "moon.BodyText",name : "info",content:"이미지를 클릭하면 상세정보가 나옵니다.",style:"font-size :15px;color : #b45b4b"},
+		                {style:"margin-top:10px;",//style:"background-color: black;",
+		                	components :[
+		                {kind : "moon.Image",name : "img7", classes:"Photos",ontap : "Stfashion"},
+		                {kind : "moon.Image",name : "img8", classes:"Photos",ontap : "Stfashion"},
 		                
-	                
+		                ]},
+		                {kind : "moon.BodyText",name : "info",content:"침대는 과학입니다. 라꾸라꾸.",style:"font-size :15px;padding-left:250px;color : #0080ff"},
 	                ]},
+	                
+	                	             
+	                	            
 	               
 
             ],
             },
+
             ]}, 
 
 	],
@@ -161,9 +171,12 @@ enyo.kind({
 			      
 
 			      this.$.img1.setSrc(img1);
-			      this.$.img2.setSrc(img2);
+			      this.$.img2.setSrc(img2);// this.$.img2.setSrc("assets/3.jpg");
 			      this.$.img3.setSrc(img3);
-			      this.$.img5.setSrc(img3);
+			      this.$.img5.setSrc(img2);
+			      this.$.img6.setSrc("assets/3.jpg");
+			      this.$.img7.setSrc("assets/5.jpg");
+			      this.$.img8.setSrc("assets/5.jpg");
 			      this.$.img4.setSrc(fsimg);
 			      this.$.text.setContent(fshead);
 			      this.$.head.setContent(head0);

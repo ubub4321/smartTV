@@ -1,5 +1,5 @@
 .News_background{
-	background-image: url('background.png');
+	background-image: url('background2.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: 1080px;
@@ -8,8 +8,15 @@
 }
 .Photos
 {
-	zoom:35%;
+	zoom:30%;
 }
+.bottomPhoto
+{
+	padding-left: 300px;
+	padding-top : 1700px;
+	zoom:30%;
+}
+
 .news-font
 {
 	font-style: normal;
@@ -19,11 +26,11 @@
 
 .home
 {
-	background-image: url('home.jpg');
-	background-size: 200px;
+	background-image: url('home_150x100.png');
+	background-size: 150px;
 	background-repeat: no-repeat;
-	height: 40px;
-	width: 180px;
+	height: 100px;
+	width: 150px;
 }
 .buttonhome
 {
@@ -55,7 +62,7 @@
 .fsnew
 {
 	margin-left:-2000px;
-	padding-top : 1230px;
+	padding-top : 1700px;
 	zoom:30%;
 	height: 100px;
 	width: 100px;
@@ -63,8 +70,8 @@
 }
 .fstext
 {
-	margin-left : 320px;
-	padding-top : 380px;
+	margin-left : -40px;
+	padding-top : 750px;
 	font-size: 18px;
 	width: 280px;
 	color : #898176;
