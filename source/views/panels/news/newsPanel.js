@@ -3,6 +3,7 @@ enyo.kind({
 	classes:"News_background",
 	kind : "moon.Panels",
 	spotlight: true,
+	
 	components:[
 	     {kind: "FittableRows",// style:"background-color: black;",  //제일 왼쪽 부분, 윗부분 띄우기
 	    	components: [
