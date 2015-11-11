@@ -129,7 +129,7 @@ enyo.kind({
                }
            }
            //%26
-           xmlhttp.open("GET","http://meeneeon.ddns.net:8080/delete_sora.php?q="+str,true);
+           xmlhttp.open("GET","http://192.168.0.59/delete_sora.php?q="+str,true);
            
            xmlhttp.send();
         }
@@ -165,7 +165,7 @@ enyo.kind({
     // username:  decodeURIComponent($('#username').val());
       
       var params = {
-         q: 'select * from html where url = "http://meeneeon.ddns.net:8080/wishList.php"'
+         q: 'select * from html where url = "http://192.168.0.59/wishList.php"'
       };
       var req;
       req = new enyo.JsonpRequest({url: this.url, callbackName: "callback"})

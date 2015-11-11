@@ -128,7 +128,7 @@ enyo.kind({
     // username:  decodeURIComponent($('#username').val());
       
       var params = {
-    		  q: 'select * from html where url = "http://meeneeon.ddns.net:8080/vods.php"'
+    		  q: 'select * from html where url = "http://192.168.0.59/vods.php"'
       };
       var req;
       req = new enyo.JsonpRequest({url: this.url, callbackName: "callback"})

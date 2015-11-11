@@ -128,7 +128,7 @@ enyo.kind({
 		         callbackName: "callback"
 		      });
 		      // send parameters the remote service using the 'go()' method
-		      jsonp.go({		  q: 'select * from html where url = "http://meeneeon.ddns.net:8080/news1.html"'});
+		      jsonp.go({		  q: 'select * from html where url = "http://192.168.0.59/news1.html"'});
 		      // attach responders to the transaction object
 		      jsonp.response(this, "processResponse");
 		      return true;
