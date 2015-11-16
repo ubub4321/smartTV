@@ -11,7 +11,7 @@ enyo.kind({
 	        {kind: "moon.Item", style:"width:120px; margin-right:15px;",  ontap: "goBack", components: [
 	            {name:"backButton", kind:"moon.Image", classes: "buttonback"}
 	        ]},
-	        {kind: "moon.Item", style:"width:120px; margin-right:35px",  ontap: "goHome", components: [
+	        {kind: "moon.Item", style:"width:120px; margin-right:35px",  ontap: "goHome"pu, components: [
 	            {name:"homeButton", kind:"moon.Image", classes : "buttonhome"}
 	        ]}
 	    ]},

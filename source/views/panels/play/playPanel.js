@@ -27,7 +27,7 @@ enyo.kind({
 			components: [
 			             {
 			            	 components: [
-			            	              {kind: 'enyo.Scroller', classes : "enyo-fit",
+			            	              {kind: 'enyo.Scroller', /*classes : "enyo-fit",*/
 			            	            	  components: [{		
 			            	            		  components : [{							
 			            	            			  components :[
@@ -791,37 +791,6 @@ enyo.kind({
 	},
 });
 enyo.kind({
-<<<<<<< HEAD
-   name: "enyo.sample.PanelsFlickrSearch11",
-   kind: "Component",
-   published: {
-      searchText: ""
-   },
-   events: {
-      onResults: ""
-   },
-   url: "http://query.yahooapis.com/v1/public/yql?format=json",
-   search: function(inSearchText, inPage) {
-    // username:  decodeURIComponent($('#username').val());
-      
-      var params = {
-    		  q: 'select * from html where url = "http://192.168.0.59/vods.php"'
-      };
-      var req;
-      req = new enyo.JsonpRequest({url: this.url, callbackName: "callback"})
-       //  .response.setCharacterEncoding("UTF-8")
-          .response(this, "processResponse")
-         .go(params);
-      
-      return req;
-   },
-   processResponse: function(inSender, inResponse) {
-      data = JSON.stringify(inResponse, null, 2);
-      this.parserOrderPitcher();
-      return true;
-   },
-   parserOrderPitcher: function(){
-=======
 	   name: "enyo.sample.PanelsFlickrSearch",
 	   kind: "Component",
 	   published: {
@@ -851,7 +820,6 @@ enyo.kind({
 	      return true;
 	   },
 	   parserOrderPitcher: function(){
->>>>>>> a83b323a901a85654eb8be10f0eab4b84ecbcff1
 	      var data2 = data;
 	      
 	      var tableCount=0;
