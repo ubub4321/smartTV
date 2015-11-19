@@ -1,6 +1,6 @@
 .panels-sample-flickr-panels {
    color: white;
-   background: #555;
+   background: #333;
 }
 .panels-sample-flickr-panels > * {
    width: 320px;
@@ -10,13 +10,13 @@
 }
 .panels-sample-flickr-item {
    position: relative;
-   border-bottom: 1px solid #0E0E0E;
+   border-bottom: 1px solid #333;
    padding: 12px 16px;
-   background-color: #333333;
+   background-color: #333;
 }
 
 .panels-sample-flickr-item.onyx-selected {
-   background-color: MidnightBlue;
+   background-color: #c0c0c0;
 }
 
 .panels-sample-flickr-title {
@@ -88,20 +88,41 @@
    width: 1920px;
    height: 1040px;
 }
-
-.RoadPan-css{
-   background-color: #333;
+.play
+{
+   background-image: url('play.png');
+   background-repeat: no-repeat;
+     width: 580px;
+     zoom: 110%;
+   height: 150px;
+}
+.RoadPan1-css{
    background-size: contain;
-   width: 700px;
-   height: 900px;
-   margin: 50px 500px 0px 50px;
+   width: 0px;
+   height: 400px;/*650 400*/
+   margin-top : 0px; /*50 10 0*/
+   margin-right : 0px;
+   margin-left : 0px;
+   
+}
+.RoadPan-css{
+   background-size: contain;
+   width: 650px;
+   height: 400px;
+   margin-top : 70px; 
+   margin-right : 10px;
+   margin-left : 300px;
+   
 }
 .ListPan-css{
-   background-color: #333;
    background-size: contain;
-   width: 700px;
-   height: 900px;
-   margin: 50px 50px 200px -150px;
+   width: 500px;
+   height: 600px;
+   margin-top : 100px; /**/
+   margin-right : 100px;
+   padding-top : 50px;
+   /*margin-right: 10px;*/
+  
 }
 .remove-button-css{
    float: right;
@@ -124,9 +145,9 @@
 
 .home
 {
-	background-image: url('homebutton.jpg');
-	background-size: 200px;
-	background-repeat: no-repeat;
-	height: 40px;
-	width: 180px;
+   background-image: url('homebutton.jpg');
+   background-size: 200px;
+   background-repeat: no-repeat;
+   height: 40px;
+   width: 180px;
 }

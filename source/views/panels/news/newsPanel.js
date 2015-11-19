@@ -24,7 +24,7 @@ enyo.kind({
          	               {kind : "moon.Image",name : "img5",classes:"Photos",ontap : "Stfashion"}, // 사진 3
 
         	                {kind : "moon.Image",name : "img4",classes : "fsnew",ontap : "fashionnew"}, // 사진 4
-        	                {kind : "moon.BodyText",name : "text",classes : "fstext"},					// 사진 4 기사
+        	                {kind : "moon.BodyText",name : "text1",classes : "fstext"},					// 사진 4 기사
         	                {kind : "moon.Image",name : "img6",classes:"bottomPhoto",ontap : "Stfashion"},
 	            {kind: "FittableRows",style:"margin-left:200px;width : 620px; height :480px;",
 	            	components: [
@@ -32,7 +32,7 @@ enyo.kind({
 	                	components: [
 		                {name:"carousel", kind:"ImageCarousel", style:"width : 620px;height:400px;"}, // 이미지 넘기는 화면
 		                {name : "head",onload : "changedHeadLineText",}, // 기사 헤드라인
-		                ],  
+		                ],
 		                ondown: "gonews"}, 
 		                
 		                {style:"margin-top:150px;padding-left :10px",
@@ -50,7 +50,7 @@ enyo.kind({
 		                {kind : "moon.Image",name : "img8", classes:"Photos",ontap : "Stfashion"},
 		                
 		                ]},
-		                {kind : "moon.BodyText",name : "info",content:"침대는 과학입니다. 라꾸라꾸.",style:"font-size :15px;padding-left:250px;color : #0080ff"},
+		                {kind : "moon.BodyText",name : "info1",content:"침대는 과학입니다. 라꾸라꾸.",style:"font-size :15px;padding-left:250px;color : #0080ff"},
 	                ]},
 	                
 	                	             
@@ -103,11 +103,11 @@ enyo.kind({
 		this.inherited(arguments);
 		this.fetch();
 		url = [
-		       "http://pic.styleindex.co.kr/syof/editor/201511/f84cf01c6910d115a8deb8221b95310e.jpg",
-		       "http://pic.styleindex.co.kr/syof/editor/201511/3f1e4005787c15350f41a985cf99fa4e.jpg",
-		       "http://pic.styleindex.co.kr/syof/editor/201511/dcc1697942720ae4db36bd6ab0182372.jpg",
-		       "http://pic.styleindex.co.kr/syof/editor/201511/8a4b20193652f689268eedd925fd3262.jpg",
-		       "http://pic.styleindex.co.kr/syof/editor/201511/ce3d593dcdc1b4915702e2575becc66f.jpg"
+		       "http://pic.styleindex.co.kr/syof/editor/201511/8881fa1e8f90227426c25f935f77b1d2.jpg",
+		       "http://pic.styleindex.co.kr/syof/editor/201511/5be09fcf8aadbbe65fc281d42ccd6021.jpg",
+		       "http://pic.styleindex.co.kr/syof/editor/201511/66375737f941ce5da22441d24d88234c.jpg",
+		       "http://pic.styleindex.co.kr/syof/editor/201511/3a6dcb3c70923dbea4314dd2b15c9be8.jpg",
+		       "http://pic.styleindex.co.kr/syof/editor/201511/dbad2eb2494a93c2050e879869473a75.jpg"
 		       ];
 		this.$.carousel.setImages(url);
 				
@@ -129,7 +129,7 @@ enyo.kind({
 		         callbackName: "callback"
 		      });
 		      // send parameters the remote service using the 'go()' method
-		      jsonp.go({		  q: 'select * from html where url = "http://192.168.0.59/news1.html"'});
+		      jsonp.go({		  q: 'select * from html where url = "http://meeneeon.ddns.net/news1.html"'});
 		      // attach responders to the transaction object
 		      jsonp.response(this, "processResponse");
 		      return true;
@@ -174,16 +174,16 @@ enyo.kind({
 			      this.$.img1.setSrc(img1);
 			      this.$.img2.setSrc(img2);// this.$.img2.setSrc("assets/3.jpg");
 			      this.$.img3.setSrc(img3);
-			      this.$.img5.setSrc(img2);
+			      this.$.img5.setSrc("assets/3.jpg");
 			      this.$.img6.setSrc("assets/3.jpg");
-			      this.$.img7.setSrc("assets/5.jpg");
+			      this.$.img7.setSrc("assets/4.jpg");
 			      this.$.img8.setSrc("assets/5.jpg");
 			      this.$.img4.setSrc(fsimg);
-			      this.$.text.setContent(fshead);
+			      this.$.text1.setContent(fshead);
 			      this.$.head.setContent(head0);
 			      return true;
-			      
 			   },
+			   
 			gohome: function(inSender, inEvent){
 					this.bubbleUp("onGoHome");
 					return true;

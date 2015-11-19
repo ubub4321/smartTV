@@ -3,35 +3,54 @@ enyo.kind({
    name: "wishPanel",
    kind: "moon.Panels",
    classes: "main-css",
-   arrangerKind: "CollapsingArranger",
-   components: [{name: "pictureView", fit: true, kind: "FittableRows", classes: "RoadPan-css", style: "opacity: 0.9;", components: [
-                                                                                                                                    {name: "backToolbar", kind: "onyx.Toolbar", fit: true, showing: false},
-                                                                                                                                    {fit: true, style: "position: relative;", components: [
-                                                                                                                                         {name: "flickrImage", kind: "Image", classes: "enyo-fit panels-sample-flickr-center panels-sample-flickr-image", showing: false, onload: "imageLoaded", onerror: "imageLoaded"},
-                                                                                                                                         {name: "flickrImage-explain", kind: "Text", content: "", classes: ""},
-                                                                                                                                         {name: "imageSpinner", kind: "Image", src: "assets/spinner-large.gif", classes: "enyo-fit panels-sample-flickr-center", showing: false}]},
-                                                                                                                                    {content: "추천리스트", classes: "chocheon-bar-css"},
-                                                                                                                                    {kind: "moon.Image", classes: "home", ontap: "gohome"},
-                                                                                                                                    {kind: "enyo.Button", ontap: "highlight", components: [
-                                                                                                                                          {kind: "enyo.Image",classes: "highlight-css", src: "assets/highlight.png"}]},
-                                                                                                                                    {name: "chocheon", kind: "moon.SimplePicker", classes: "chocheon-css", block: false, animate: false, wrap: true, components: [
-                                                                                                                                          {kind: "Image", src: "assets/clothes1.jpg"},
-                                                                                                                                          {kind: "Image", src: "assets/clothes2.jpg"},
-                                                                                                                                          {kind: "Image", src: "assets/clothes3.jpg"}]}]},
-                                                                                                                              {kind: "FittableRows"/*layoutKind: "FittableRowsLayout"*/, classes: "ListPan-css", style: "opacity: 0.9;", components: [
-                                                                                                                                          //{kind: "moon.BodyText", name:"console", content: "No change yet"},
-                                                                                                                                          {kind: "onyx.Toolbar", components: [
-                                                                                                                                               {kind: "onyx.InputDecorator", style: "width: 90%;", layoutKind: "FittableColumnsLayout", components: [
-                                                                                                                                                    {content: "장바구니", onResults: "search"}]}]},
-                                                                                                                                          {kind: "List", fit: true, touch: true, onSetupItem: "setupItem", components: [
-                                                                                                                                               {name: "item", style: "padding: 10px;", classes: "panels-sample-flickr-item enyo-border-box", ontap: "itemTap", components: [
-                                                                                                                                                    {name: "thumbnail", kind: "Image", classes: "panels-sample-flickr-thumbnail"},
-                                                                                                                                                    {name: "title", classes: "panels-sample-flickr-title"},
-                                                                                                                                                    {name: "purchase", kind: "moon.IconButton", src: "assets/addtowhishlist.png", classes: "remove-button-css", ontap: "purchaseTap"},
-                                                                                                                                                    {name: "remove", kind: "moon.IconButton", src: "assets/delete.png", classes: "remove-button-css", ontap: "removeTap"}
-                                                                                                                                                    ]}]}]},
-                                                                                                                              {name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearch1", onResults: "searchResults"}
-                                                                                                                 ],
+ //  arrangerKind: "CollapsingArranger",
+   spotlight: true,
+   components: [
+                
+                {kind : "FittableColumns", components : [
+                {name: "pictureView1", kind: "FittableRows", classes: "RoadPan1-css", style: "opacity: 0.9;",
+                   components :[
+                                {kind: "FittableRows", classes: "RoadPan1-css", style: "opacity: 0.9;background-color : black;"},
+                                {kind: "FittableRows", classes: "RoadPan1-css", style: "opacity: 0.9;background-color : red;"},
+                                ]},
+                {name: "pictureView", fit: true, kind: "FittableRows", classes: "RoadPan-css", style: "opacity: 0.9;", 
+                    components: [
+                                {kind: "FittableRows", classes: "RoadPan-css", style: "opacity: 0.9;background-color : black;"},
+                                {kind: "FittableRows", classes: "RoadPan-css", style: "opacity: 0.9;background-color : red;",
+                                   components: [
+                                                {kind: "moon.Image", classes: "home", ontap: "gohome"},
+                      {kind: "enyo.Button", ontap: "highlight", components: [
+                            {kind: "enyo.Image",classes: "highlight-css", src: "assets/highlight.png"}]}
+                                                ]},
+                      {name: "backToolbar", kind: "onyx.Toolbar", fit: true, showing: false},
+                     
+                      {fit: true, style: "position: relative;", components: [
+                           {name: "flickrImage", kind: "Image", classes: "enyo-fit panels-sample-flickr-center panels-sample-flickr-image", showing: false, onload: "imageLoaded", onerror: "imageLoaded"},
+                           {name: "flickrImage-explain", kind: "Text", content: "", classes: ""},
+                           {name: "imageSpinner", kind: "Image", src: "assets/spinner-large.gif", classes: "enyo-fit panels-sample-flickr-center", showing: false}]},
+                      {name : "nani", content: "추천리스트", classes: "chocheon-bar-css"},
+                      ]},
+                      {kind: "FittableRows", classes: "ListPan-css", style: "opacity: 0.8;", 
+                    	  components: [
+                    	               {kind: "onyx.Toolbar", 
+                    	            	   components: [
+                    	            	                {kind: "onyx.InputDecorator", layoutKind: "FittableColumnsLayout", 
+                    	            	                	components: [
+                    	            	                	             {content: "장바구니", onResults: "search"}]}]},
+                    	            	                	             {kind: "List", fit: true, touch: true, onSetupItem: "setupItem", style : "background-color : black;",
+                    	            	                	            	 components: [
+                    	            	                	            	              {name: "item", classes: "panels-sample-flickr-item enyo-border-box", ontap: "itemTap", 
+                    	            	                	            	            	  components: [
+                    	            	                	            	            	               {name: "thumbnail", kind: "Image", classes: "panels-sample-flickr-thumbnail"},
+                    	            	                	            	            	               {name: "title", classes: "panels-sample-flickr-title"},
+                    	            	                	            	            	               {name: "purchase", kind: "moon.IconButton", src: "assets/addtowhishlist.png", classes: "remove-button-css", ontap: "purchaseTap"},
+                    	            	                	            	            	               {name: "remove", kind: "moon.IconButton", src: "assets/delete.png", classes: "remove-button-css", ontap: "removeTap"}
+                    	            	                	            	            	               ]}]}]},
+                                ]},
+                            
+                
+                {name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearch22", onResults: "searchResults"}
+   ],
    rendered: enyo.inherit(function(sup) {
       return function() {
          sup.apply(this, arguments);
@@ -42,14 +61,19 @@ enyo.kind({
       return function() {
          sup.apply(this, arguments);
          var backShowing = this.$.backToolbar.showing;
+        // var backShowing1 = this.$.backToolbar1.showing;
          this.$.backToolbar.setShowing(enyo.Panels.isScreenNarrow());
+        // this.$.backToolbar1.setShowing(enyo.Panels.isScreenNarrow());
          if (this.$.backToolbar.showing != backShowing) {
             this.$.pictureView.resize();
          }
+         //if (this.$.backToolbar1.showing != backShowing) {
+        //     this.$.pictureView1.resize();
+        // }
       };
    }),
    search: function() {
-      //this.searchText = this.$.searchInput.getValue();
+     // this.searchText = this.$.searchInput.getValue();
       this.page = 0;
       this.results = [];
       //this.$.searchSpinner.show();
@@ -72,9 +96,6 @@ enyo.kind({
       this.$.item.addRemoveClass("onyx-selected", inSender.isSelected(inEvent.index));
       this.$.thumbnail.setSrc(wishListArray[i][6]); //4//11
       this.$.title.setContent(wishListArray[i][1]);
-      this.$.programtitle.setContent(wishListArray[i][4]);
-     // this.$.url.setContent(wishListArray[i][7]);
-      this.$.price.setContent(wishListArray[i][8]);
      // this.$.remove.setSrc("assets/delete.png");
       return true;
    },
@@ -87,8 +108,6 @@ enyo.kind({
       var item = wishListArray[i][6];
 
       this.$.flickrImage.setSrc(item);
-      //this.$.flickrImage-explain.setContent("aaa");
-      
    },
    imageLoaded: function() {
       var img = this.$.flickrImage;
@@ -130,29 +149,29 @@ enyo.kind({
            }
            //%26
            xmlhttp.open("GET","http://192.168.0.59/delete_sora.php?q="+str,true);
-           
+          // http://meeneeon.ddns.net:8080/wishList.php
            xmlhttp.send();
         }
        this.search();
    },
    purchaseTap: function(inSender, inEvent){
-	   if (enyo.Panels.isScreenNarrow()) {
-	         this.setIndex(1);
-	   }
-	   var i = inEvent.index;
-	   var getitem = wishListArray[i][7];
-	   location = getitem;
+      if (enyo.Panels.isScreenNarrow()) {
+            this.setIndex(1);
+      }
+      var i = inEvent.index;
+      var getitem = wishListArray[i][7];
+      location = getitem;
    },
    gohome: function(inSender, inEvent){
-		this.bubbleUp("onGoHome");
-		return true;
+      this.bubbleUp("onGoHome");
+      return true;
   }
 });
 
 // A simple component to do a Flickr search.
 
 enyo.kind({
-   name: "enyo.sample.PanelsFlickrSearch1",
+   name: "enyo.sample.PanelsFlickrSearch22",
    kind: "Component",
    published: {
       searchText: ""
@@ -166,10 +185,10 @@ enyo.kind({
       
       var params = {
          q: 'select * from html where url = "http://192.168.0.59/wishList.php"'
-      };
+      }; 
       var req;
       req = new enyo.JsonpRequest({url: this.url, callbackName: "callback"})
-       //  .response.setCharacterEncoding("UTF-8")
+        // .response.setCharacterEncoding("UTF-8")
           .response(this, "processResponse")
          .go(params);
       
@@ -219,6 +238,5 @@ enyo.kind({
       } //웹에 출력된 DB를 파싱하여 wishListArray에 저장한다.
       this.doResults(wishListArray);
       return wishListArray;
-   }      
-   
+   }
 });

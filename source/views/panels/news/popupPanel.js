@@ -19,10 +19,10 @@ enyo.kind({
 	    	components:[
 	        {style:"text-align:center; margin-top:10px;", 
 	        	components:[
-	            {name:"image", kind:"Image", style:"background-color:black;zoom:80%;",},
+	            {name:"image", kind:"Image", style:"zoom:50%;",},
 	            
 	        ]},
-		   {kind: "moon.Scroller", classes: "news_scroller", vertical:"scroll", components:[
+		   {kind: "moon.Scroller", classes: "news_scroller", components:[
 		        {name:"spinner", kind:"moon.Spinner", center:true},      
 	            {name:"detail"}
 	        ]}
@@ -38,7 +38,7 @@ enyo.kind({
 	         callbackName: "callback"
 	      });
 	      // send parameters the remote service using the 'go()' method
-	      jsonp.go({		  q: 'select * from html where url = "http://meeneeon.ddns.net:8080/news1.html"'});
+	      jsonp.go({		  q: 'select * from html where url = "http://meeneeon.ddns.net/news1.html"'});
 	      // attach responders to the transaction object
 	      jsonp.response(this, "processResponse");
 	      return true;
@@ -54,7 +54,6 @@ enyo.kind({
 		condata = dataNews.substring(dataNews.indexOf(getin));	//substring(3) -> 0~3번째 문자열을 뺀 나머지를 출력
 	    head = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
 	    content = condata.substring(condata.indexOf("content")+11,condata.indexOf("...")+1);
-
 	    this.$.title.setContent(head);
 		this.$.image.setSrc(url[index]);
 		//같은 폴더 내에 이미 한번 실행된 js파일에서 gonews의 index변수로 해당 js파일에서 변수가 없어도 사용 가능하다.
