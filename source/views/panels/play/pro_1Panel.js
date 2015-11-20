@@ -4,13 +4,13 @@ var wishList;
 var tableCount;
 
 enyo.kind({
-	name: "playPanel",
+	name: "pro_1Panel",
 	classes: "moon enyo-fit enyo-unselectable",
 	components: [{
 		name : "player",
 		kind : "enyo.Video",
 		classes:"container-video",
-		src : "pro.mp4", 
+		src : "pro_1.mp4", 
 		preload : "auto",
 		autoplay : true,
 	}, 
@@ -26,24 +26,18 @@ enyo.kind({
 			autoNumber : false,
 			components: [
 			             {
+			            	 /*classes : "palyback",*/
 			            	 components: [
-			            	              {kind: 'enyo.Scroller', /*classes : "enyo-fit",*/
+			            	              {kind: 'enyo.Scroller', classes : "enyo-fit",
 			            	            	  components: [{		
 			            	            		  components : [{							
 			            	            			  components :[
 
 			            	            			               {
 			            	            			            	   name : "homeButton",
-			            	            			            	   kind : "moon.Image",
-			            	            			            	   style : "margin-top:50px : 40px;margin-left:680px;",
-			            	            			            	   src : "assets/HomeButton.png",
-			            	            			            	   ontap : "goHome"
-			            	            			               },
-			            	            			               {
-			            	            			            	   kind : "moon.Tooltip",
-			            	            			            	   content : "홈",
-			            	            			            	   showDelay : 2
-			            	            			               },
+			            	            			            	   classes:"resize_back",
+			            	            			            	   ontap : "goBack"
+			            	            			               }
 			            	            			               ]
 			            	            		  },
 			            	            		  {	  
@@ -164,7 +158,7 @@ enyo.kind({
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
+			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/close.png",
 			            	            				                	            		 ontap:"closeDrawer2"
 			            	            				                	            	 }]
@@ -226,7 +220,7 @@ enyo.kind({
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
+			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/close.png",
 			            	            				                	            		 ontap:"closeDrawer3"
 			            	            				                	            	 }]
@@ -288,7 +282,7 @@ enyo.kind({
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
+			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/close.png",
 			            	            				                	            		 ontap:"closeDrawer4"
 			            	            				                	            	 }]
@@ -350,7 +344,7 @@ enyo.kind({
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
+			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/close.png",
 			            	            				                	            		 ontap:"closeDrawer5"
 			            	            				                	            	 }]
@@ -412,7 +406,7 @@ enyo.kind({
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
+			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/close.png",
 			            	            				                	            		 ontap:"closeDrawer6"
 			            	            				                	            	 }]
@@ -474,7 +468,7 @@ enyo.kind({
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
+			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/close.png",
 			            	            				                	            		 ontap:"closeDrawer7"
 			            	            				                	            	 }]
@@ -536,17 +530,21 @@ enyo.kind({
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
+			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/close.png",
 			            	            				                	            		 ontap:"closeDrawer8"
 			            	            				                	            	 },
-			            	            				                	            	  {name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearch", onResults: "searchResults"} 
+			            	            				                	            	  {name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearchForClothes", onResults: "searchResults"} 
 			            	            				                	            	 ]
 			            	            				                	             }
 			            	            				                	             ]
 			            	            				                }]
 			            	            			  } ]
 			            	            		  },
+			            	            		  {
+			            	            			  kind: "moon.Divider", spotlight: true,
+			            	            		  },
+
 			            	            		  ],
 
 
@@ -674,7 +672,9 @@ enyo.kind({
 		return true;
 	},
 	goBack: function(inSender, inEvent) {
+		this.$.player.unload();
 		this.bubbleUp("onShowPanel", {name:"select"});
+		
 		return true;
 	},
 	backtoImage1 : function(inSender, inEvent){
@@ -791,35 +791,35 @@ enyo.kind({
 	},
 });
 enyo.kind({
-   name: "enyo.sample.PanelsFlickrSearch",
-   kind: "Component",
-   published: {
-      searchText: ""
-   },
-   events: {
-      onResults: ""
-   },
-   url: "http://query.yahooapis.com/v1/public/yql?format=json",
-   search: function(inSearchText, inPage) {
-    // username:  decodeURIComponent($('#username').val());
-      
-      var params = {
-    		  q: 'select * from html where url = "http://192.168.0.59/vods.php"'
-      };
-      var req;
-      req = new enyo.JsonpRequest({url: this.url, callbackName: "callback"})
-       //  .response.setCharacterEncoding("UTF-8")
-          .response(this, "processResponse")
-         .go(params);
-      
-      return req;
-   },
-   processResponse: function(inSender, inResponse) {
-      data = JSON.stringify(inResponse, null, 2);
-      this.parserOrderPitcher();
-      return true;
-   },
-   parserOrderPitcher: function(){
+	   name: "enyo.sample.PanelsFlickrSearchForClothes",
+	   kind: "Component",
+	   published: {
+	      searchText: ""
+	   },
+	   events: {
+	      onResults: ""
+	   },
+	   url: "http://query.yahooapis.com/v1/public/yql?format=json",
+	   search: function(inSearchText, inPage) {
+	    // username:  decodeURIComponent($('#username').val());
+	      
+	      var params = {                        //http://meeneeon.ddns.net:8080/wishList.php
+	         q: 'select * from html where url = "http://meeneeon.ddns.net/clothes.php"'
+	      };
+	      var req;
+	      req = new enyo.JsonpRequest({url: this.url, callbackName: "callback"})
+	       //  .response.setCharacterEncoding("UTF-8")
+	          .response(this, "processResponse")
+	         .go(params);
+	      
+	      return req;
+	   },
+	   processResponse: function(inSender, inResponse) {
+	      data = JSON.stringify(inResponse, null, 2);
+	      this.parserOrderPitcher();
+	      return true;
+	   },
+	   parserOrderPitcher: function(){
 	      var data2 = data;
 	      
 	      var tableCount=0;

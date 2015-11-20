@@ -1,16 +1,18 @@
-//프로듀사 영상의 옷이 저장된 DB //num, program, program_start_time, program_end_time, imgSrc, address, price
+/**
+ * 
+ *///프로듀사 영상의 옷이 저장된 DB //num, program, program_start_time, program_end_time, imgSrc, address, price
 var clothesArray
 var wishList;
 var tableCount;
 
 enyo.kind({
-	name: "playPanel",
+	name: "she_1Panel",
 	classes: "moon enyo-fit enyo-unselectable",
 	components: [{
 		name : "player",
 		kind : "enyo.Video",
 		classes:"container-video",
-		src : "pro.mp4", 
+		src : "she_1.mp4", 
 		preload : "auto",
 		autoplay : true,
 	}, 
@@ -26,24 +28,18 @@ enyo.kind({
 			autoNumber : false,
 			components: [
 			             {
+			            	 /*classes : "palyback",*/
 			            	 components: [
-			            	              {kind: 'enyo.Scroller', /*classes : "enyo-fit",*/
+			            	              {kind: 'enyo.Scroller', classes : "enyo-fit",
 			            	            	  components: [{		
 			            	            		  components : [{							
 			            	            			  components :[
 
 			            	            			               {
 			            	            			            	   name : "homeButton",
-			            	            			            	   kind : "moon.Image",
-			            	            			            	   style : "margin-top:50px : 40px;margin-left:680px;",
-			            	            			            	   src : "assets/HomeButton.png",
-			            	            			            	   ontap : "goHome"
-			            	            			               },
-			            	            			               {
-			            	            			            	   kind : "moon.Tooltip",
-			            	            			            	   content : "홈",
-			            	            			            	   showDelay : 2
-			            	            			               },
+			            	            			            	   classes:"resize_back",
+			            	            			            	   ontap : "goBack"
+			            	            			               }
 			            	            			               ]
 			            	            		  },
 			            	            		  {	  
@@ -164,7 +160,7 @@ enyo.kind({
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
+			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/close.png",
 			            	            				                	            		 ontap:"closeDrawer2"
 			            	            				                	            	 }]
@@ -226,7 +222,7 @@ enyo.kind({
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
+			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/close.png",
 			            	            				                	            		 ontap:"closeDrawer3"
 			            	            				                	            	 }]
@@ -288,265 +284,18 @@ enyo.kind({
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
+			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/close.png",
 			            	            				                	            		 ontap:"closeDrawer4"
-			            	            				                	            	 }]
-			            	            				                	             }
-			            	            				                	             ]
-			            	            				                }]
-			            	            			  } ]
-			            	            		  },
-			            	            		  {
-			            	            			  kind: "moon.Divider", spotlight: true,
-			            	            		  },
-			            	            		  {
-			            	            			  kind : "moon.TooltipDecorator",
-			            	            			  style : "display:inline-block",
-			            	            			  components :[
-			            	            			               {
-			            	            			            	   name: "detail_5",
-			            	            			            	   kind: "moon.Image",
-			            	            			            	   classes : "imagepanel",
-			            	            			            	   style : "margin-left:210px;",
-			            	            			            	   ontap:"realDrawer5"
-			            	            			               }]
-			            	            		  },
-			            	            		  {
-			            	            			  name : "drawer5",
-			            	            			  kind : "enyo.Drawer",
-			            	            			  open : false,
-			            	            			  components : [ {
-			            	            				  classes : "moon-hspacing fittable-sample-box fittable-sample-mtb",
-			            	            				  style : "height : 500px; color: white;",
-			            	            				  components : [
-			            	            				                {
-			            	            				                	kind: 'FittableRows',
-			            	            				                	classes: 'enyo-fit',
-			            	            				                	components: [
-			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
-			            	            				                	            	 components: [{
-			            	            				                	            		 name : "reresult5_1",
-			            	            				                	            		 classes : "table",
 			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult5_2",
-			            	            				                	            		 classes : "table",
-			            	            				                	            		 content : "가격"
-			            	            				                	            	 }]
-			            	            				                	             },
-			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
-			            	            				                	            	 components: [{
-			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
-			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage5"
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped5"
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/close.png",
-			            	            				                	            		 ontap:"closeDrawer5"
-			            	            				                	            	 }]
-			            	            				                	             }
-			            	            				                	             ]
-			            	            				                }]
-			            	            			  } ]
-			            	            		  },
-			            	            		  {
-			            	            			  kind: "moon.Divider", spotlight: true,
-			            	            		  },
-			            	            		  {
-			            	            			  kind : "moon.TooltipDecorator",
-			            	            			  style : "display:inline-block",
-			            	            			  components :[
-			            	            			               {
-			            	            			            	   name: "detail_6",
-			            	            			            	   kind: "moon.Image",
-			            	            			            	   classes : "imagepanel",
-			            	            			            	   style : "margin-left:210px;",
-			            	            			            	   ontap:"realDrawer6"
-			            	            			               }]
-			            	            		  },
-			            	            		  {
-			            	            			  name : "drawer6",
-			            	            			  kind : "enyo.Drawer",
-			            	            			  open : false,
-			            	            			  components : [ {
-			            	            				  classes : "moon-hspacing fittable-sample-box fittable-sample-mtb",
-			            	            				  style : "height : 500px; color: white;",
-			            	            				  components : [
-			            	            				                {
-			            	            				                	kind: 'FittableRows',
-			            	            				                	classes: 'enyo-fit',
-			            	            				                	components: [
-			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
-			            	            				                	            	 components: [{
-			            	            				                	            		 name : "reresult6_1",
-			            	            				                	            		 classes : "table",
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult6_2",
-			            	            				                	            		 classes : "table",
-			            	            				                	            		 content : "가격"
-			            	            				                	            	 }]
-			            	            				                	             },
-			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
-			            	            				                	            	 components: [{
-			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
-			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage6"
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped6"
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/close.png",
-			            	            				                	            		 ontap:"closeDrawer6"
-			            	            				                	            	 }]
-			            	            				                	             }
-			            	            				                	             ]
-			            	            				                }]
-			            	            			  } ]
-			            	            		  },
-			            	            		  {
-			            	            			  kind: "moon.Divider", spotlight: true,
-			            	            		  },
-			            	            		  {
-			            	            			  kind : "moon.TooltipDecorator",
-			            	            			  style : "display:inline-block",
-			            	            			  components :[
-			            	            			               {
-			            	            			            	   name: "detail_7",
-			            	            			            	   kind: "moon.Image",
-			            	            			            	   classes : "imagepanel",
-			            	            			            	   style : "margin-left:210px;",
-			            	            			            	   ontap:"realDrawer7"
-			            	            			               }]
-			            	            		  },
-			            	            		  {
-			            	            			  name : "drawer7",
-			            	            			  kind : "enyo.Drawer",
-			            	            			  open : false,
-			            	            			  components : [ {
-			            	            				  classes : "moon-hspacing fittable-sample-box fittable-sample-mtb",
-			            	            				  style : "height : 500px; color: white;",
-			            	            				  components : [
-			            	            				                {
-			            	            				                	kind: 'FittableRows',
-			            	            				                	classes: 'enyo-fit',
-			            	            				                	components: [
-			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
-			            	            				                	            	 components: [{
-			            	            				                	            		 name : "reresult7_1",
-			            	            				                	            		 classes : "table",
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult7_2",
-			            	            				                	            		 classes : "table",
-			            	            				                	            		 content : "가격"
-			            	            				                	            	 }]
-			            	            				                	             },
-			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
-			            	            				                	            	 components: [{
-			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
-			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage7"
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped7"
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/close.png",
-			            	            				                	            		 ontap:"closeDrawer7"
-			            	            				                	            	 }]
-			            	            				                	             }
-			            	            				                	             ]
-			            	            				                }]
-			            	            			  } ]
-			            	            		  },
-			            	            		  {
-			            	            			  kind: "moon.Divider", spotlight: true,
-			            	            		  },
-			            	            		  {
-			            	            			  kind : "moon.TooltipDecorator",
-			            	            			  style : "display:inline-block",
-			            	            			  components :[
-			            	            			               {
-			            	            			            	   name: "detail_8",
-			            	            			            	   kind: "moon.Image",
-			            	            			            	   classes : "imagepanel",
-			            	            			            	   style : "margin-left:210px;",
-			            	            			            	   ontap:"realDrawer8"
-			            	            			               }]
-			            	            		  },
-			            	            		  {
-			            	            			  name : "drawer8",
-			            	            			  kind : "enyo.Drawer",
-			            	            			  open : false,
-			            	            			  components : [ {
-			            	            				  classes : "moon-hspacing fittable-sample-box fittable-sample-mtb",
-			            	            				  style : "height : 500px; color: white;",
-			            	            				  components : [
-			            	            				                {
-			            	            				                	kind: 'FittableRows',
-			            	            				                	classes: 'enyo-fit',
-			            	            				                	components: [
-			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
-			            	            				                	            	 components: [{
-			            	            				                	            		 name : "reresult8_1",
-			            	            				                	            		 classes : "table",
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult8_2",
-			            	            				                	            		 classes : "table",
-			            	            				                	            		 content : "가격"
-			            	            				                	            	 }]
-			            	            				                	             },
-			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
-			            	            				                	            	 components: [{
-			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
-			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage8"
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped8"
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/close.png",
-			            	            				                	            		 ontap:"closeDrawer8"
-			            	            				                	            	 },
-			            	            				                	            	  {name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearch", onResults: "searchResults"} 
+			            	            				                	            	 {name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearchForShe7", onResults: "searchResults"}
 			            	            				                	            	 ]
 			            	            				                	             }
 			            	            				                	             ]
 			            	            				                }]
 			            	            			  } ]
 			            	            		  },
+			            	            		  
 			            	            		  ],
 
 
@@ -586,29 +335,17 @@ enyo.kind({
 		this.$.reresult2_1.setContent(clothesArray[1][1]);
 		this.$.reresult3_1.setContent(clothesArray[2][1]);
 		this.$.reresult4_1.setContent(clothesArray[3][1]);
-		this.$.reresult5_1.setContent(clothesArray[4][1]);
-		this.$.reresult6_1.setContent(clothesArray[5][1]);
-		this.$.reresult7_1.setContent(clothesArray[6][1]);
-		this.$.reresult8_1.setContent(clothesArray[7][1]);
 		
 		this.$.reresult1_2.setContent("￦ "+clothesArray[0][8]); 
 		this.$.reresult2_2.setContent("￦ "+clothesArray[1][8]);
 		this.$.reresult3_2.setContent("￦ "+clothesArray[2][8]);
 		this.$.reresult4_2.setContent("￦ "+clothesArray[3][8]);
-		this.$.reresult5_2.setContent("￦ "+clothesArray[4][8]);
-		this.$.reresult6_2.setContent("￦ "+clothesArray[5][8]);
-		this.$.reresult7_2.setContent("￦ "+clothesArray[6][8]);
-		this.$.reresult8_2.setContent("￦ "+clothesArray[7][8]);
 		
 		
 		this.$.detail_1.setSrc(clothesArray[0][6]);
 		this.$.detail_2.setSrc(clothesArray[1][6]);
 		this.$.detail_3.setSrc(clothesArray[2][6]);
 		this.$.detail_4.setSrc(clothesArray[3][6]);
-		this.$.detail_5.setSrc(clothesArray[4][6]);
-		this.$.detail_6.setSrc(clothesArray[5][6]);
-		this.$.detail_7.setSrc(clothesArray[6][6]);
-		this.$.detail_8.setSrc(clothesArray[7][6]);
 		//----------------------------------------------------------------------------------------------------------	
 	},buttonTapped1: function(inSender, inEvent) {            
 		this.ajaxFunction(0);
@@ -618,14 +355,6 @@ enyo.kind({
 		this.ajaxFunction(2);
 	},buttonTapped4: function(inSender, inEvent) { 
 		this.ajaxFunction(3);
-	},buttonTapped5: function(inSender, inEvent) {   
-		this.ajaxFunction(4);
-	},buttonTapped6: function(inSender, inEvent) {   
-		this.ajaxFunction(5);
-	},buttonTapped7: function(inSender, inEvent) {   
-		this.ajaxFunction(6);
-	},buttonTapped8: function(inSender, inEvent) {   
-		this.ajaxFunction(7);
 	},ajaxFunction : function(num){
 		var str=""; //= "\'qqqqqqq\'";  //0번째 array를 가져온다
 		for(j=0; j<9; j++)
@@ -674,7 +403,9 @@ enyo.kind({
 		return true;
 	},
 	goBack: function(inSender, inEvent) {
+		this.$.player.unload();
 		this.bubbleUp("onShowPanel", {name:"select"});
+		
 		return true;
 	},
 	backtoImage1 : function(inSender, inEvent){
@@ -694,26 +425,6 @@ enyo.kind({
 	},
 	backtoImage4 : function(inSender, inEvent){
 		var time = clothesArray[3][5];
-		time = parseInt(time); 
-		this.$.player.setCurrentTime(time)
-	},
-	backtoImage5 : function(inSender, inEvent){
-		var time = clothesArray[4][5];
-		time = parseInt(time); 
-		this.$.player.setCurrentTime(time)
-	},
-	backtoImage6 : function(inSender, inEvent){
-		var time = clothesArray[5][5];
-		time = parseInt(time); 
-		this.$.player.setCurrentTime(time)
-	},
-	backtoImage7 : function(inSender, inEvent){
-		var time = clothesArray[6][5];
-		time = parseInt(time); 
-		this.$.player.setCurrentTime(time)
-	},
-	backtoImage8 : function(inSender, inEvent){
-		var time = clothesArray[7][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
@@ -737,26 +448,6 @@ enyo.kind({
 		playerinput = inSender.getContent();
 		var data_player_url1 = player.indexOf(playerinput);
 	},
-	realDrawer5 : function(inSender, inEvent) {
-		this.$.drawer5.setOpen(true);
-		playerinput = inSender.getContent();
-		var data_player_url1 = player.indexOf(playerinput);
-	},
-	realDrawer6 : function(inSender, inEvent) {
-		this.$.drawer6.setOpen(true);
-		playerinput = inSender.getContent();
-		var data_player_url1 = player.indexOf(playerinput);
-	},
-	realDrawer7 : function(inSender, inEvent) {
-		this.$.drawer7.setOpen(true);
-		playerinput = inSender.getContent();
-		var data_player_url1 = player.indexOf(playerinput);
-	},
-	realDrawer8 : function(inSender, inEvent) {
-		this.$.drawer8.setOpen(true);
-		playerinput = inSender.getContent();
-		var data_player_url1 = player.indexOf(playerinput);
-	},
 	closeDrawer1 : function(inSender, inEvent) {
 		this.$.drawer1.setOpen(false);
 		return true;
@@ -773,53 +464,37 @@ enyo.kind({
 		this.$.drawer4.setOpen(false);
 		return true;
 	},
-	closeDrawer5 : function(inSender, inEvent) {
-		this.$.drawer5.setOpen(false);
-		return true;
-	},
-	closeDrawer6 : function(inSender, inEvent) {
-		this.$.drawer6.setOpen(false);
-		return true;
-	},
-	closeDrawer7 : function(inSender, inEvent) {
-		this.$.drawer7.setOpen(false);
-		return true;
-	},
-	closeDrawer8 : function(inSender, inEvent) {
-		this.$.drawer8.setOpen(false);
-		return true;
-	},
 });
 enyo.kind({
-   name: "enyo.sample.PanelsFlickrSearch",
-   kind: "Component",
-   published: {
-      searchText: ""
-   },
-   events: {
-      onResults: ""
-   },
-   url: "http://query.yahooapis.com/v1/public/yql?format=json",
-   search: function(inSearchText, inPage) {
-    // username:  decodeURIComponent($('#username').val());
-      
-      var params = {
-    		  q: 'select * from html where url = "http://192.168.0.59/vods.php"'
-      };
-      var req;
-      req = new enyo.JsonpRequest({url: this.url, callbackName: "callback"})
-       //  .response.setCharacterEncoding("UTF-8")
-          .response(this, "processResponse")
-         .go(params);
-      
-      return req;
-   },
-   processResponse: function(inSender, inResponse) {
-      data = JSON.stringify(inResponse, null, 2);
-      this.parserOrderPitcher();
-      return true;
-   },
-   parserOrderPitcher: function(){
+	   name: "enyo.sample.PanelsFlickrSearchForShe7",
+	   kind: "Component",
+	   published: {
+	      searchText: ""
+	   },
+	   events: {
+	      onResults: ""
+	   },
+	   url: "http://query.yahooapis.com/v1/public/yql?format=json",
+	   search: function(inSearchText, inPage) {
+	    // username:  decodeURIComponent($('#username').val());
+	      
+	      var params = {                        //http://meeneeon.ddns.net:8080/wishList.php
+	         q: 'select * from html where url = "http://meeneeon.ddns.net/ShewasBeautiful7.php"'
+	      };
+	      var req;
+	      req = new enyo.JsonpRequest({url: this.url, callbackName: "callback"})
+	       //  .response.setCharacterEncoding("UTF-8")
+	          .response(this, "processResponse")
+	         .go(params);
+	      
+	      return req;
+	   },
+	   processResponse: function(inSender, inResponse) {
+	      data = JSON.stringify(inResponse, null, 2);
+	      this.parserOrderPitcher();
+	      return true;
+	   },
+	   parserOrderPitcher: function(){
 	      var data2 = data;
 	      
 	      var tableCount=0;

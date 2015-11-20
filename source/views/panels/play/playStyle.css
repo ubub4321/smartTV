@@ -20,6 +20,24 @@
 	color : white;
 	Text-align:center;
 }
+.resize_back{
+	 background-image: url('back.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   margin-top:50px : 40px;
+   margin-left:700px;
+   width: 90px;
+   height: 90px;
+	
+}
+.S_Home{
+   background-image: url('HomeButton.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   margin-left : 1680px;
+   width: 40px;
+   height: 40px;
+}
 .story-bar-css{
    width: 700px;
    height: 50px;
@@ -90,7 +108,21 @@
 	width : 400px;
 	margin-left:160px;
 }
+.palyback{
+  background-image: url('imsi.jpg');
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+.divider_{
+  background-image: url('divider2.png');
+   background-size: contain;
+   margin-left: 50px;
+   	height : 90px;
+	width : 1100px;
+   background-repeat: no-repeat;
+}
 .moon-panels.always-viewing .moon-panel {
+
 	background-color: #434141;
 	margin-left:2000px;
 	overflow-y:auto;
