@@ -21,16 +21,16 @@ enyo.kind({
             	             {kind : "moon.Image",name : "img1", classes:"Photos",ontap : "Stfashion"}, //사진 1
          	                {kind : "moon.Image",name : "img2",classes:"Photos",ontap : "Stfashion"}, // 사진 2
          	                {kind : "moon.Image",name : "img3",classes:"Photos",ontap : "Stfashion"}, // 사진 3
-         	               {kind : "moon.Image",name : "img5",classes:"Photos",ontap : "Stfashion"}, // 사진 3
+         	                {kind : "moon.Image",name : "img5",classes:"Photos",ontap : "Stfashion"}, // 사진 3
 
-        	                {kind : "moon.Image",name : "img4",classes : "fsnew",ontap : "fashionnew"}, // 사진 4
-        	                {kind : "moon.BodyText",name : "text1",classes : "fstext"},					// 사진 4 기사
+
         	                {kind : "moon.Image",name : "img6",classes:"bottomPhoto",ontap : "Stfashion"},
+         	                {kind : "moon.Image",name : "img7",style:"padding-top : 1300px;zoom : 37%;",ontap : "Stfashion"},
 	            {kind: "FittableRows",style:"margin-left:200px;width : 620px; height :480px;",
 	            	components: [
 	                {name : "popup",style:"width : 620px; height :300px;",  //style:"background-color: black;",
 	                	components: [
-		                {name:"carousel", kind:"ImageCarousel", style:"width : 620px;height:400px;"}, // 이미지 넘기는 화면
+		                {name:"carousel", kind:"ImageCarousel", style:"width : 620px;height:400px;margin-top : -50px;"}, // 이미지 넘기는 화면
 		                {name : "head",onload : "changedHeadLineText",}, // 기사 헤드라인
 		                ],
 		                ondown: "gonews"}, 
@@ -43,23 +43,15 @@ enyo.kind({
 		         		                ]
 		                },
 
-		                {kind : "moon.BodyText",name : "info",content:"이미지를 클릭하면 상세정보가 나옵니다.",style:"font-size :15px;color : #b45b4b"},
 		                {style:"margin-top:10px;",//style:"background-color: black;",
 		                	components :[
-		                {kind : "moon.Image",name : "img7", classes:"Photos",ontap : "Stfashion"},
 		                {kind : "moon.Image",name : "img8", classes:"Photos",ontap : "Stfashion"},
 		                
 		                ]},
-		                {kind : "moon.BodyText",name : "info1",content:"침대는 과학입니다. 라꾸라꾸.",style:"font-size :15px;padding-left:250px;color : #0080ff"},
+		                {kind : "moon.BodyText",name : "info",content:"이미지를 클릭하면 상세정보가 나옵니다.",style:"font-size :15px;color : #b45b4b"},
 	                ]},
-	                
-	                	             
-	                	            
-	               
-
             ],
             },
-
             ]}, 
 
 	],
@@ -183,15 +175,15 @@ enyo.kind({
 			      //article = condata.substring(condata.indexOf("기사")+6,condata.indexOf("...")+3);
 			      
 
-			      this.$.img1.setSrc(img1);
-			      this.$.img2.setSrc(img2);// this.$.img2.setSrc("assets/3.jpg");
-			      this.$.img3.setSrc(img3);
-			      this.$.img5.setSrc("assets/3.jpg");
-			      this.$.img6.setSrc("assets/3.jpg");
-			      this.$.img7.setSrc("assets/4.jpg");
-			      this.$.img8.setSrc("assets/5.jpg");
-			      this.$.img4.setSrc(fsimg);
-			      this.$.text1.setContent(fshead);
+			      this.$.img1.setSrc("assets/1.jpg");
+			      this.$.img2.setSrc("assets/2.jpg");// this.$.img2.setSrc("assets/3.jpg");
+			      this.$.img3.setSrc("assets/3.jpg");
+			      this.$.img5.setSrc("assets/4.jpg");
+			      this.$.img6.setSrc("assets/5.jpg");
+			      this.$.img7.setSrc("assets/7.jpg");
+			      this.$.img8.setSrc("assets/6.jpg");
+			      //this.$.img4.setSrc(fsimg);
+			      //this.$.text1.setContent(fshead);
 			      this.$.head.setContent(head0);
 			      return true;
 			   },

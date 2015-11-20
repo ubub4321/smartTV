@@ -8,13 +8,13 @@
 }
 .Photos
 {
-	zoom:30%;
+	zoom:37%;
 }
 .bottomPhoto
 {
-	padding-left: 300px;
-	padding-top : 1700px;
-	zoom:30%;
+	margin-left : -1700px;
+	padding-top : 1300px;
+	zoom:37%;
 }
 
 .news-font
