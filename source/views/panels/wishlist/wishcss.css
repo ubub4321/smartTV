@@ -1,22 +1,12 @@
 .panels-sample-flickr-panels {
    color: white;
-   background: #333;
+   background: #555;
 }
 .panels-sample-flickr-panels > * {
    width: 320px;
    box-shadow: -4px 0px 4px rgba(0,0,0,0.3);
    -moz-box-shadow: -4px 0px 4px rgba(0,0,0,0.3);
    -webkit-box-shadow: -4px 0px 4px rgba(0,0,0,0.3);
-}
-.panels-sample-flickr-item {
-   position: relative;
-   border-bottom: 1px solid #333;
-   padding: 12px 16px;
-   background-color: #333;
-}
-
-.panels-sample-flickr-item.onyx-selected {
-   background-color: #c0c0c0;
 }
 
 .panels-sample-flickr-title {
@@ -29,10 +19,7 @@
    white-space: nowrap;
    text-overflow: ellipsis;
 }
-.panels-sample-flickr-thumbnail {
-   width: 75px;
-   height: 75px;
-}
+
 .panels-sample-flickr-more-button {
    color: white; margin: 10px;
 }
@@ -72,6 +59,9 @@
 }
 
 
+.remove-button-css{
+   float: right;
+}
 
 
 
@@ -80,7 +70,16 @@
 
 
 
-.main-css{
+
+
+
+
+
+
+
+
+
+.main{
    color: white;
    background-image: url('MainBackground1.png');
    background-size: contain;
@@ -88,61 +87,44 @@
    width: 1920px;
    height: 1040px;
 }
-.play
-{
-   background-image: url('play.png');
-   background-repeat: no-repeat;
-     width: 580px;
-     zoom: 110%;
-   height: 150px;
-}
-.RoadPan1-css{
-   background-size: contain;
-   width: 0px;
-   height: 400px;/*650 400*/
-   margin-top : 0px; /*50 10 0*/
-   margin-right : 0px;
-   margin-left : 0px;
-   
-}
-.RoadPan-css{
+.RoadPan{
    background-size: contain;
    width: 650px;
    height: 400px;
-   margin-top : 70px; 
-   margin-right : 10px;
-   margin-left : 300px;
-   
+   margin: 20px;
+   background-color: #FFE400;
 }
-.ListPan-css{
+.ExpPan{
    background-size: contain;
-   width: 500px;
-   height: 600px;
-   margin-top : 100px; /**/
-   margin-right : 100px;
-   padding-top : 50px;
-   /*margin-right: 10px;*/
-  
+   width: 650px;
+   height: 300px;
+   margin: 20px;
+   background-color: #FFE400;
 }
-.remove-button-css{
-   float: right;
+.listPan{
+   background-size: contain;
+   width: 350px;
+   height: 740px;
+   margin: 20px;
+   background-color: #FFE400;
 }
-.chocheon-bar-css{
-   width: 700px;
-   height: 50px;
-   margin: 0px 0px 0px 0px;
+.panels-sample-flickr-thumbnail {
+   width: 75px;
+   height: 75px;
 }
-.chocheon-css{
-   width: 700px;
-   height: 100px;
-   margin: 0px 500px 200px 200px;
-}
-.highlight-css{
-   width: 50px;
-   height: 50px;
+.panels-sample-flickr-item {
+   position: relative;
+   border-bottom: 1px solid #0E0E0E;
+   padding: 12px 16px;
+   background-color: #333333;
 }
 
-
+.panels-sample-flickr-item.onyx-selected {
+   background-color: MidnightBlue;
+}
+.toolbar{
+   background-color: #FFE400;
+}
 .home
 {
    background-image: url('homebutton.jpg');
@@ -150,4 +132,9 @@
    background-repeat: no-repeat;
    height: 40px;
    width: 180px;
+}
+.ExpItem{
+   width: 300px;
+   height: 70px;
+   margin: 10px;
 }

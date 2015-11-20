@@ -116,11 +116,23 @@ enyo.kind({
 		
 		
 		previous: function(inSender, inEvent) {
+			var index = this.$.carousel.getIndex();
 			this.$.carousel.previous();
+			if (index == 0)
+			{
+				this.$.carousel.setIndex(4);
+			}
 			this.changedHeadLineText();
+
+			
 		},
 		next: function(inSender, inEvent) {
+			var index = this.$.carousel.getIndex();
 			this.$.carousel.next();
+			if (index == 4)
+			{
+				this.$.carousel.setIndex(0);
+			}
 			this.changedHeadLineText();
 		},
 		fetch: function() {
