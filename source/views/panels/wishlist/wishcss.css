@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
 .panels-sample-flickr-panels {
    color: white;
    background: #555;
@@ -9,24 +11,10 @@
    -webkit-box-shadow: -4px 0px 4px rgba(0,0,0,0.3);
 }
 
-.panels-sample-flickr-title {
-   position: absolute;
-   top: 40px;
-   right: 0;
-   left: 100px;
-
-   overflow: hidden;
-   white-space: nowrap;
-   text-overflow: ellipsis;
-}
-
 .panels-sample-flickr-more-button {
    color: white; margin: 10px;
 }
-.panels-sample-flickr-more-spinner {
-   vertical-align: middle;
-   margin: -4px 0 0 4px;
-}
+
 .panels-sample-flickr-center {
    margin: auto;
 }
@@ -59,20 +47,6 @@
 }
 
 
-.remove-button-css{
-   float: right;
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -81,42 +55,47 @@
 
 .main{
    color: white;
-   background-image: url('MainBackground1.png');
+   background-image: url('MainBackground1.jpg');
    background-size: contain;
    background-repeat: no-repeat;
    width: 1920px;
    height: 1040px;
 }
 .RoadPan{
-   background-size: contain;
+   background-size: cover;
+   background-repeat: no-repeat;
    width: 650px;
-   height: 400px;
+   height: 355px;
    margin: 20px;
-   background-color: #FFE400;
+   margin-left: 240px;
+   margin-top: 115px;
+   font-family: 'Nanum Gothic', sans-serif;
 }
 .ExpPan{
    background-size: contain;
    width: 650px;
-   height: 300px;
+   height: 240px;
    margin: 20px;
-   background-color: #FFE400;
+   margin-left: 240px;
+   margin-top: 130px;
+   font-family: 'Nanum Gothic', sans-serif;
 }
 .listPan{
    background-size: contain;
-   width: 350px;
-   height: 740px;
+   width: 500px;
+   height: 700px;
    margin: 20px;
-   background-color: #FFE400;
+   margin-left: 110px;
+   margin-top: 120px;
+   font-family: 'Nanum Gothic', sans-serif;
 }
 .panels-sample-flickr-thumbnail {
-   width: 75px;
-   height: 75px;
 }
 .panels-sample-flickr-item {
    position: relative;
-   border-bottom: 1px solid #0E0E0E;
-   padding: 12px 16px;
-   background-color: #333333;
+   border-bottom: 5px solid #0E0E0E;
+   background-color: #222222;
+   width: 430px;
 }
 
 .panels-sample-flickr-item.onyx-selected {
@@ -135,6 +114,13 @@
 }
 .ExpItem{
    width: 300px;
-   height: 70px;
-   margin: 10px;
+   height: 40px;
+   margin: 5px;
+}
+.Caro{
+   width: 350px;
+   height: 800px;
+}
+.Caro1{
+   margin-left: 100px;
 }
