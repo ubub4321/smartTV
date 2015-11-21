@@ -84,6 +84,7 @@ enyo.kind({
 				  {name: "star_9", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
 				  {name: "star_10", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
 				  {name: "star_11", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
+				  {kind:"enyo.Audio",src:'buttonclick.mp3'}
 				  ]
 		},
 	],
@@ -101,6 +102,7 @@ enyo.kind({
 	},
 	Play: function(inSender, inEvent)
 	{
+		this.$.audio.play();
 		var i = inEvent.index;
 		if(i == 0)
 			{
@@ -162,6 +164,7 @@ enyo.kind({
 		
 	},
 	goHome : function(inSender, inEvent) {
+		this.$.audio.play();
 		this.bubbleUp("onGoHome", {
 			name : name
 		});
@@ -169,6 +172,7 @@ enyo.kind({
 	},
  	imageClick: function(inSender, inEvent) {
  		//alert(inSender.name); // 
+ 		this.$.audio.play();
  		var name = inSender.name;
  		this.bubbleUp("onShowPanel", {name:name});
  		return true;

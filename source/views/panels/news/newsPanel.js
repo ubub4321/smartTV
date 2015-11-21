@@ -49,6 +49,7 @@ enyo.kind({
 		                
 		                ]},
 		                {kind : "moon.BodyText",name : "info",content:"이미지를 클릭하면 상세정보가 나옵니다.",style:"font-size :15px;color : #b45b4b"},
+		                {kind:"enyo.Audio",src:'buttonclick.mp3'}
 	                ]},
             ],
             },
@@ -57,11 +58,13 @@ enyo.kind({
 	],
 	Stfashion : function()
 	   {
+		this.$.audio.play();
 	      location = "http://www.thesartorialist.com/";
 	      return true;
 	   },
 	fashionnew :  function()
 	   {
+		this.$.audio.play();
 	      location = "http://www.musinsa.com/index.php?m=news&cat=FASHION";
 	      return true;
 	   },
@@ -108,6 +111,7 @@ enyo.kind({
 		
 		
 		previous: function(inSender, inEvent) {
+			this.$.audio.play();
 			var index = this.$.carousel.getIndex();
 			this.$.carousel.previous();
 			if (index == 0)
@@ -119,6 +123,7 @@ enyo.kind({
 			
 		},
 		next: function(inSender, inEvent) {
+			this.$.audio.play();
 			var index = this.$.carousel.getIndex();
 			this.$.carousel.next();
 			if (index == 4)
@@ -189,11 +194,13 @@ enyo.kind({
 			   },
 			   
 			gohome: function(inSender, inEvent){
+				this.$.audio.play();
 					this.bubbleUp("onGoHome");
 					return true;
 				},
 			gonews : function(inSender, inEvent)
 				{
+				this.$.audio.play();
 					index = this.$.carousel.getIndex();
 					var name = inSender.name;
 					this.bubbleUp("onShowPanel", {name:name});

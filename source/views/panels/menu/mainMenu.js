@@ -69,24 +69,29 @@ enyo.kind({
 														kind: "FittableRows",
 														components:[{
 																	name: "news",kind:"moon.Image",classes :"newsb", onclick: "imageClick"
-																	}]
+																	},
+																	{kind:"enyo.Audio",src:'buttonclick.mp3'}
+														]
 													}]
 									},
 									]
 				 }],
 	         	imageClick: function(inSender, inEvent) {
 	         		//alert(inSender.name); // 
+	         		this.$.audio.play();
 	         		var name = inSender.name;
 	         		this.bubbleUp("onShowPanel", {name:name});
 	         		return true;
 	         	},
 	         	goface : function()
 	         	{
+	         		this.$.audio.play();
 	         	      location = "https://www.facebook.com/hashtag/%ED%8C%A8%EC%85%98?fref=ts";
 	         	      return true;
 	         	},
 	        	gotwit : function()
 	         	{
+	        		this.$.audio.play();
 	         	      location = "https://twitter.com/search?q=fashion&src=tyah";
 	         	      return true;
 	         	}
