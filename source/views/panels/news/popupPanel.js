@@ -24,7 +24,8 @@ enyo.kind({
 	        ]},
 		   {kind: "moon.Scroller", classes: "news_scroller", components:[
 		        {name:"spinner", kind:"moon.Spinner", center:true},      
-	            {name:"detail"}
+	            {name:"detail"},
+	            {kind:"enyo.Audio",src:'buttonclick.mp3'}
 	        ]}
         ]}
     ],
@@ -61,10 +62,12 @@ enyo.kind({
     	return true;
 	},
 	goHome: function(inSender, inEvent){
+		this.$.audio.play();
 		this.bubbleUp("onGoHome");
 		return true;
 	},
 	goBack: function(inSender, inEvent) {
+		this.$.audio.play();
 		this.bubbleUp("onShowPanel", {name:"news"});
 		return true;
 	},

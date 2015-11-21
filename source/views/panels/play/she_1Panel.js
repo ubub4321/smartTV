@@ -1,8 +1,7 @@
 /**
  * 
  *///프로듀사 영상의 옷이 저장된 DB //num, program, program_start_time, program_end_time, imgSrc, address, price
-var clothesArray
-var wishList;
+var sheArray = 0;
 var tableCount;
 
 enyo.kind({
@@ -15,6 +14,7 @@ enyo.kind({
 		src : "she_1.mp4", 
 		preload : "auto",
 		autoplay : true,
+		showControls : true,
 	}, 
 	{
 
@@ -99,7 +99,7 @@ enyo.kind({
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/close.png",
+			            	            				                	            		 src: "assets/close.jpg",
 			            	            				                	            		 ontap:"closeDrawer1"
 			            	            				                	            	 }]
 			            	            				                	             }
@@ -161,7 +161,7 @@ enyo.kind({
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/close.png",
+			            	            				                	            		 src: "assets/close.jpg",
 			            	            				                	            		 ontap:"closeDrawer2"
 			            	            				                	            	 }]
 			            	            				                	             }
@@ -223,7 +223,7 @@ enyo.kind({
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/close.png",
+			            	            				                	            		 src: "assets/close.jpg",
 			            	            				                	            		 ontap:"closeDrawer3"
 			            	            				                	            	 }]
 			            	            				                	             }
@@ -285,10 +285,11 @@ enyo.kind({
 			            	            				                	            	 {
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/close.png",
+			            	            				                	            		 src: "assets/close.jpg",
 			            	            				                	            		 ontap:"closeDrawer4"
 			            	            				                	            	 },
-			            	            				                	            	 {name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearchForShe7", onResults: "searchResults"}
+			            	            				                	            	 {name: "flickrSearchShe7", kind: "enyo.sample.PanelsFlickrSearchForShe7", onResults: "searchResults"},
+			            	            				                	            	 {kind:"enyo.Audio",src:'buttonclick.mp3'}
 			            	            				                	            	 ]
 			            	            				                	             }
 			            	            				                	             ]
@@ -321,7 +322,7 @@ enyo.kind({
 		      this.page = 0;
 		      this.results = [];
 		      //this.$.searchSpinner.show();
-		      this.$.flickrSearch.search(this.searchText);
+		      this.$.flickrSearchShe7.search(this.searchText);
 		      
 		   },
 		   searchResults: function(inSender, inResults) {
@@ -331,38 +332,41 @@ enyo.kind({
 			      this.show();
 			   },
 	show: function(){
-		this.$.reresult1_1.setContent(clothesArray[0][1]); 
-		this.$.reresult2_1.setContent(clothesArray[1][1]);
-		this.$.reresult3_1.setContent(clothesArray[2][1]);
-		this.$.reresult4_1.setContent(clothesArray[3][1]);
+		this.$.reresult1_1.setContent(sheArray[0][1]); 
+		this.$.reresult2_1.setContent(sheArray[1][1]);
+		this.$.reresult3_1.setContent(sheArray[2][1]);
+		this.$.reresult4_1.setContent(sheArray[3][1]);
 		
-		this.$.reresult1_2.setContent("￦ "+clothesArray[0][8]); 
-		this.$.reresult2_2.setContent("￦ "+clothesArray[1][8]);
-		this.$.reresult3_2.setContent("￦ "+clothesArray[2][8]);
-		this.$.reresult4_2.setContent("￦ "+clothesArray[3][8]);
+		this.$.reresult1_2.setContent("￦ "+sheArray[0][8]); 
+		this.$.reresult2_2.setContent("￦ "+sheArray[1][8]);
+		this.$.reresult3_2.setContent("￦ "+sheArray[2][8]);
+		this.$.reresult4_2.setContent("￦ "+sheArray[3][8]);
 		
-		
-		this.$.detail_1.setSrc(clothesArray[0][6]);
-		this.$.detail_2.setSrc(clothesArray[1][6]);
-		this.$.detail_3.setSrc(clothesArray[2][6]);
-		this.$.detail_4.setSrc(clothesArray[3][6]);
+		this.$.detail_1.setSrc(sheArray[0][6]);
+		this.$.detail_2.setSrc(sheArray[1][6]);
+		this.$.detail_3.setSrc(sheArray[2][6]);
+		this.$.detail_4.setSrc(sheArray[3][6]);
 		//----------------------------------------------------------------------------------------------------------	
-	},buttonTapped1: function(inSender, inEvent) {            
+	},buttonTapped1: function(inSender, inEvent) {     
+		this.$.audio.play();
 		this.ajaxFunction(0);
 	},buttonTapped2: function(inSender, inEvent) { 
+		this.$.audio.play();
 		this.ajaxFunction(1);
 	},buttonTapped3: function(inSender, inEvent) {   
+		this.$.audio.play();
 		this.ajaxFunction(2);
 	},buttonTapped4: function(inSender, inEvent) { 
+		this.$.audio.play();
 		this.ajaxFunction(3);
 	},ajaxFunction : function(num){
 		var str=""; //= "\'qqqqqqq\'";  //0번째 array를 가져온다
 		for(j=0; j<9; j++)
 		{
 			if(j==8)
-				str = str+ "\'"+clothesArray[num][j]+"\'";
+				str = str+ "\'"+sheArray[num][j]+"\'";
 			else
-				str = str+ "\'"+clothesArray[num][j]+"\',";
+				str = str+ "\'"+sheArray[num][j]+"\',";
 			while(true)
 			{
 				if(str.indexOf("&")==-1)
@@ -371,7 +375,7 @@ enyo.kind({
 			}
 		}
 		//this.$.text1.setContent(str);
-		this.showUser(str+"\'");
+		this.showUser(str);
 	}, showUser : function(str) {
 		if (str == "") {
 			document.getElementById("txtHint").innerHTML = "";
@@ -390,12 +394,13 @@ enyo.kind({
 				}
 			}
 			//%26
-			xmlhttp.open("GET","http://meeneeon.ddns.net/insert_sora.php?q="+str+"\'",true);
+			xmlhttp.open("GET","http://meeneeon.ddns.net/insert_sora.php?q="+str,true);
 
 			xmlhttp.send();
 		}
 	},
 	goHome : function(inSender, inEvent) {
+		this.$.audio.play();
 		this.$.player.unload();
 		this.bubbleUp("onGoHome", {
 			name : name
@@ -403,64 +408,77 @@ enyo.kind({
 		return true;
 	},
 	goBack: function(inSender, inEvent) {
+		this.$.audio.play();
 		this.$.player.unload();
 		this.bubbleUp("onShowPanel", {name:"select"});
 		
 		return true;
 	},
 	backtoImage1 : function(inSender, inEvent){
-		var time = clothesArray[0][5];
+		this.$.audio.play();
+		var time = sheArray[0][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	backtoImage2 : function(inSender, inEvent){
-		var time = clothesArray[1][5];
+		this.$.audio.play();
+		var time = sheArray[1][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	backtoImage3 : function(inSender, inEvent){
-		var time = clothesArray[2][5];
+		this.$.audio.play();
+		var time = sheArray[2][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	backtoImage4 : function(inSender, inEvent){
-		var time = clothesArray[3][5];
+		this.$.audio.play();
+		var time = sheArray[3][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	realDrawer1 : function(inSender, inEvent) {
+		this.$.audio.play();
 		this.$.drawer1.setOpen(true);
 		playerinput = inSender.getContent();
 		var data_player_url1 = player.indexOf(playerinput);
 	},
 	realDrawer2 : function(inSender, inEvent) {
+		this.$.audio.play();
 		this.$.drawer2.setOpen(true);
 		playerinput = inSender.getContent();
 		var data_player_url1 = player.indexOf(playerinput);
 	},
 	realDrawer3 : function(inSender, inEvent) {
+		this.$.audio.play();
 		this.$.drawer3.setOpen(true);
 		playerinput = inSender.getContent();
 		var data_player_url1 = player.indexOf(playerinput);
 	},
 	realDrawer4 : function(inSender, inEvent) {
+		this.$.audio.play();
 		this.$.drawer4.setOpen(true);
 		playerinput = inSender.getContent();
 		var data_player_url1 = player.indexOf(playerinput);
 	},
 	closeDrawer1 : function(inSender, inEvent) {
+		this.$.audio.play();
 		this.$.drawer1.setOpen(false);
 		return true;
 	},
 	closeDrawer2 : function(inSender, inEvent) {
+		this.$.audio.play();
 		this.$.drawer2.setOpen(false);
 		return true;
 	},
 	closeDrawer3 : function(inSender, inEvent) {
+		this.$.audio.play();
 		this.$.drawer3.setOpen(false);
 		return true;
 	},
 	closeDrawer4 : function(inSender, inEvent) {
+		this.$.audio.play();
 		this.$.drawer4.setOpen(false);
 		return true;
 	},
@@ -496,7 +514,6 @@ enyo.kind({
 	   },
 	   parserOrderPitcher: function(){
 	      var data2 = data;
-	      
 	      var tableCount=0;
 	      while(1)
 	         {
@@ -510,10 +527,10 @@ enyo.kind({
 	               data2 = data2.substring(data2.indexOf("["));
 	            }
 	         }
-	      clothesArray = new Array(tableCount);
+	      sheArray = new Array(tableCount);
 	      for(i=0; i<tableCount; i++)
-	         clothesArray[i] = new Array(9);
-	      //'produsa'프로그램을 뽑아서 clothesArray를 할당한다.
+	         sheArray[i] = new Array(9);
+	      //'produsa'프로그램을 뽑아서 sheArray를 할당한다.
 	      
 	      data2 = data;
 	      for(i=0; i<tableCount; i++)
@@ -524,15 +541,15 @@ enyo.kind({
 	         {
 	            if(j == 8)
 	            {
-	               clothesArray[i][j] = data2.substring(data2.indexOf("\"")+1, data2.indexOf("]")-18);
+	               sheArray[i][j] = data2.substring(data2.indexOf("\"")+1, data2.indexOf("]")-18);
 	               break;
 	            }   
-	            clothesArray[i][j] = data2.substring(data2.indexOf("\"")+1, data2.indexOf("\","));
-	            data2 = data2.substring(data2.indexOf(clothesArray[i][j])+clothesArray[i][j].length+2);
+	            sheArray[i][j] = data2.substring(data2.indexOf("\"")+1, data2.indexOf("\","));
+	            data2 = data2.substring(data2.indexOf(sheArray[i][j])+sheArray[i][j].length+2);
 	         }
-	      } //웹에 출력된 DB를 파싱하여 clothesArray에 저장한다.
-	      this.doResults(clothesArray);
-	      return clothesArray;
+	      } //웹에 출력된 DB를 파싱하여 sheArray에 저장한다.
+	      this.doResults(sheArray);
+	      return sheArray;
 	   }      
 	   
 	});
