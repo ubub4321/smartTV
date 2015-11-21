@@ -26,7 +26,7 @@ enyo.kind({
 
         	                {kind : "moon.Image",name : "img6",classes:"bottomPhoto",ontap : "Stfashion"},
          	                {kind : "moon.Image",name : "img7",style:"padding-top : 1300px;zoom : 37%;",ontap : "Stfashion"},
-	            {kind: "FittableRows",style:"margin-left:200px;width : 620px; height :480px;",
+	            {kind: "FittableRows",style:"margin-left:300px;width : 620px; height :480px;",
 	            	components: [
 	                {name : "popup",style:"width : 620px; height :300px;",  //style:"background-color: black;",
 	                	components: [
@@ -176,7 +176,7 @@ enyo.kind({
 			      
 
 			      this.$.img1.setSrc("assets/1.jpg");
-			      this.$.img2.setSrc("assets/2.jpg");// this.$.img2.setSrc("assets/3.jpg");
+			      this.$.img2.setSrc("assets/2.jpg");
 			      this.$.img3.setSrc("assets/3.jpg");
 			      this.$.img5.setSrc("assets/4.jpg");
 			      this.$.img6.setSrc("assets/5.jpg");
