@@ -37,17 +37,9 @@
 {
    zoom:37%;
 }
-.bottomPhoto1
+.bottomPhoto
 {
-   margin-left : -1500px;
-   padding-top : 1200px;
    zoom:40%;
-}
-.bottomPhoto2
-{
-   padding-top : 1200px;
-   zoom : 40%;
-   padding-left : 50px;
 }
 .news-font
 {
@@ -58,7 +50,7 @@
 
 .home
 {
-   background-image: url('home_150x100.png');
+   background-image: url('home.png');
    background-size: 150px;
    background-repeat: no-repeat;
    height: 100px;
