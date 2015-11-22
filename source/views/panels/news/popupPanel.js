@@ -1,36 +1,34 @@
 
 enyo.kind({
 	name:"popupPanel",
-	kind : "moon.Panel",
+	kind : "moon.Panels",
 	style: "background-color:white;",
+	classes : "popup_background",
 	spotlight: true,
 	components:[
-	    {kind:"FittableColumns",style : "height : 100px;",
-	    	components:[
-	        {name:"title",classes:"news_title",fit :true},
-	        {name:"backButton", kind:"moon.Image", classes : "buttonback", ontap: "goBack"},
-	        {name:"homeButton", kind:"moon.Image", classes : "buttonhome", ontap: "goHome"}
-	        ]
-	    },
-        
-	    {kind:"FittableColumns", style : "margin-top :80px;",
-	    	components:[
-	    	            {kind : "FittableRows",
-	    	            	components:[
-	    	            	            {style:"text-align:center;",
-	    	            	            	components:[
-	    	            	            	            {name:"image", kind:"Image", style:"zoom:80%;",}
-	    	            	            	            ]}
-	    	            	            ]
-	    	            },
-	    	            {kind : "FittableRows",
-	    	            	components:[
-	    	            	            {name:"article",classes: "article"},
-	    	            	            {kind:"enyo.Audio",src:'buttonclick.mp3'}
-	    	            	            ]
-	    	            },
-	    	            ]
-	    }
+	             {kind : "FittableRows",
+	            	 components : [
+	            	               {name:"backButton", kind:"moon.Image", classes : "buttonback", ontap: "goBack"},
+	            	               {name:"homeButton", kind:"moon.Image", classes : "buttonhome", ontap: "goHome"},
+	            	               {kind:"FittableColumns",style : "height : 100px;margin : 110px 0px 0px 70px;",
+	            	            	   components:[
+	            	            	               {name:"title",classes:"news_title",fit : true},
+	            	            	               ]
+	            	               },
+	            	               {kind : "FittableColumns",style :"margin-top : 15px;margin-left : 45px;",
+	            	            	   components:[
+	            	            	               {name:"image", kind:"Image", style:"width : 890px;height : 517px;"}, //zoom: 50%;
+	            	            	               {name:"article",classes: "article"},
+	            	            	               {kind:"enyo.Audio",src:'buttonclick.mp3'}
+	            	            	               ]
+	            	               }
+	            	               ]
+	             }
+	    
+	    
+	    
+	    
+	    
 	    ],
 	create: function(inSender, inEvent){
 		this.inherited(arguments);
