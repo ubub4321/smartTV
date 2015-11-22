@@ -40,7 +40,7 @@ enyo.kind({
                                                     {name:"remove",kind:"Image",style:"background-image: url('assets/delete.png');width:60px;height:60px;margin-left:30px;",ontap:"removeTap"}]}]},
                                   ]}]},
                 {kind:"moon.Image",classes:"home",ontap:"gohome"},
-                {kind:"enyo.Audio",src:'assets/buttonclick.mp3'},
+                {kind:"enyo.Audio",src:"buttonclick.mp3"},
                {name: "flickrSearch_wish", kind: "enyo.sample.PanelsFlickrSearch22", onResults: "searchResults"}],
    rendered: enyo.inherit(function(sup) {
       return function() {
