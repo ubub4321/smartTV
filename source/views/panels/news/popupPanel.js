@@ -5,30 +5,33 @@ enyo.kind({
 	style: "background-color:white;",
 	spotlight: true,
 	components:[
-	    {kind:"FittableColumns",classes:"news_title",  
-	    	components:[ //height:150px; style:"padding-top:20px;"
-	        {name:"title", fit:true, },
-	        {kind: "moon.Item", style:"width:120px; margin-right:15px;",  ontap: "goBack", components: [
-	            {name:"backButton", kind:"moon.Image", classes: "buttonback"}
-	        ]},
-	        {kind: "moon.Item", style:"width:120px; margin-right:35px",  ontap: "goHome", components: [
-	            {name:"homeButton", kind:"moon.Image", classes : "buttonhome"}
-	        ]}
-	    ]},
-	    {kind:"FittableRows",
+	    {kind:"FittableColumns",style : "height : 100px;",
 	    	components:[
-	        {style:"text-align:center; margin-top:10px;", 
-	        	components:[
-	            {name:"image", kind:"Image", style:"zoom:50%;",},
-	            
-	        ]},
-		   {kind: "moon.Scroller", classes: "news_scroller", components:[
-		        {name:"spinner", kind:"moon.Spinner", center:true},      
-	            {name:"detail"},
-	            {kind:"enyo.Audio",src:'buttonclick.mp3'}
-	        ]}
-        ]}
-    ],
+	        {name:"title",classes:"news_title",fit :true},
+	        {name:"backButton", kind:"moon.Image", classes : "buttonback", ontap: "goBack"},
+	        {name:"homeButton", kind:"moon.Image", classes : "buttonhome", ontap: "goHome"}
+	        ]
+	    },
+        
+	    {kind:"FittableColumns", style : "margin-top :80px;",
+	    	components:[
+	    	            {kind : "FittableRows",
+	    	            	components:[
+	    	            	            {style:"text-align:center;",
+	    	            	            	components:[
+	    	            	            	            {name:"image", kind:"Image", style:"zoom:80%;",}
+	    	            	            	            ]}
+	    	            	            ]
+	    	            },
+	    	            {kind : "FittableRows",
+	    	            	components:[
+	    	            	            {name:"article",classes: "article"},
+	    	            	            {kind:"enyo.Audio",src:'buttonclick.mp3'}
+	    	            	            ]
+	    	            },
+	    	            ]
+	    }
+	    ],
 	create: function(inSender, inEvent){
 		this.inherited(arguments);
 		this.fetch();
@@ -46,7 +49,6 @@ enyo.kind({
 	},	
 	processResponse: function(inSender, inResponse) {
 		dataNews = JSON.stringify(inResponse, null, 2);
-		this.$.spinner.hide();
 		this.parserNewsPage();
 		return true;
 	},
@@ -58,7 +60,7 @@ enyo.kind({
 	    this.$.title.setContent(head);
 		this.$.image.setSrc(url[index]);
 		//같은 폴더 내에 이미 한번 실행된 js파일에서 gonews의 index변수로 해당 js파일에서 변수가 없어도 사용 가능하다.
-		this.$.detail.setContent(content);
+		this.$.article.setContent(content);
     	return true;
 	},
 	goHome: function(inSender, inEvent){
