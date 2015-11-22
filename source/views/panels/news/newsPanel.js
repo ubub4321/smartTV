@@ -53,7 +53,6 @@ enyo.kind({
                       
                       ]},
                       {kind : "moon.BodyText",name : "info",content:"이미지를 클릭하면 상세정보가 나옵니다.",style:"font-size :15px;color : #b45b4b"},
-                      {kind:"enyo.Audio",src:'buttonclick.mp3'}
                    ]},
             ],
             },
@@ -62,13 +61,11 @@ enyo.kind({
    ],
    Stfashion : function()
       {
-      this.$.audio.play();
          location = "http://www.thesartorialist.com/";
          return true;
       },
    fashionnew :  function()
       {
-      this.$.audio.play();
          location = "http://www.musinsa.com/index.php?m=news&cat=FASHION";
          return true;
       },
@@ -170,7 +167,6 @@ enyo.kind({
       
       
       previous: function(inSender, inEvent) {
-         this.$.audio.play();
          var index = this.$.carousel.getIndex();
          this.$.carousel.previous();
          if (index == 0)
@@ -182,7 +178,6 @@ enyo.kind({
          
       },
       next: function(inSender, inEvent) {
-         this.$.audio.play();
          var index = this.$.carousel.getIndex();
          this.$.carousel.next();
          if (index == 4)
@@ -237,9 +232,7 @@ enyo.kind({
                fsimg = condata.substring(condata.indexOf("패션뉴스사진")+10,condata.indexOf("jpg")+3);
                fshead = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
                //article = condata.substring(condata.indexOf("기사")+6,condata.indexOf("...")+3);
-               
 
-<<<<<<< HEAD
                this.$.img1.setSrc("assets/1.jpg");
                this.$.img2.setSrc("assets/2.jpg");
                this.$.img3.setSrc("assets/3.jpg");
@@ -254,50 +247,17 @@ enyo.kind({
             },
             
          gohome: function(inSender, inEvent){
-            this.$.audio.play();
                this.bubbleUp("onGoHome");
                return true;
             },
          gonews : function(inSender, inEvent)
             {
-            this.$.audio.play();
                index = this.$.carousel.getIndex();
                var name = inSender.name;
                this.bubbleUp("onShowPanel", {name:name});
                return true;
-            },
-            
-            
-=======
-			      this.$.img1.setSrc("assets/1.jpg");
-			      this.$.img2.setSrc("assets/2.jpg");
-			      this.$.img3.setSrc("assets/3.jpg");
-			      this.$.img4.setSrc("assets/4.jpg");
-			      this.$.img5.setSrc("assets/5.jpg");
-			      this.$.img6.setSrc("assets/7.jpg");
-			      this.$.img8.setSrc("assets/6.jpg");
-			      //this.$.img4.setSrc(fsimg);
-			      //this.$.text1.setContent(fshead);
-			      this.$.head.setContent(head0);
-			      return true;
-			   },
-			   
-			gohome: function(inSender, inEvent){
-				this.$.audio.play();
-					this.bubbleUp("onGoHome");
-					return true;
-				},
-			gonews : function(inSender, inEvent)
-				{
-				this.$.audio.play();
-					index = this.$.carousel.getIndex();
-					var name = inSender.name;
-					this.bubbleUp("onShowPanel", {name:name});
-					return true;
-				},
-				
-			   
->>>>>>> 8d39317bc51c9477df49d682930e65c27fd68861
+            }
+
 });
   
 

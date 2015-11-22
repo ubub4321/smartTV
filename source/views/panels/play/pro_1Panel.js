@@ -535,8 +535,8 @@ enyo.kind({
 			            	            				                	            		 src: "assets/close.jpg",
 			            	            				                	            		 ontap:"closeDrawer8"
 			            	            				                	            	 },
-			            	            				                	            	  {name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearchForClothes", onResults: "searchResults"},
-			            	            				                	            	  {kind:"enyo.Audio",src:'buttonclick.mp3'}
+			            	            				                	            	  {name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearchForClothes", onResults: "searchResults"}
+			            	            				                	            	  
 			            	            				                	            	 ]
 			            	            				                	             }
 			            	            				                	             ]
@@ -610,29 +610,21 @@ enyo.kind({
 		this.$.detail_7.setSrc(clothesArray[6][6]);
 		this.$.detail_8.setSrc(clothesArray[7][6]);
 		//----------------------------------------------------------------------------------------------------------	
-	},buttonTapped1: function(inSender, inEvent) {    
-		this.$.audio.play();
+	},buttonTapped1: function(inSender, inEvent) {  
 		this.ajaxFunction(0);
 	},buttonTapped2: function(inSender, inEvent) { 
-		this.$.audio.play();
 		this.ajaxFunction(1);
-	},buttonTapped3: function(inSender, inEvent) {   
-		this.$.audio.play();
+	},buttonTapped3: function(inSender, inEvent) {  
 		this.ajaxFunction(2);
 	},buttonTapped4: function(inSender, inEvent) { 
-		this.$.audio.play();
 		this.ajaxFunction(3);
-	},buttonTapped5: function(inSender, inEvent) {   
-		this.$.audio.play();
+	},buttonTapped5: function(inSender, inEvent) {  
 		this.ajaxFunction(4);
-	},buttonTapped6: function(inSender, inEvent) {   
-		this.$.audio.play();
+	},buttonTapped6: function(inSender, inEvent) {  
 		this.ajaxFunction(5);
-	},buttonTapped7: function(inSender, inEvent) {   
-		this.$.audio.play();
+	},buttonTapped7: function(inSender, inEvent) {  
 		this.ajaxFunction(6);
-	},buttonTapped8: function(inSender, inEvent) {   
-		this.$.audio.play();
+	},buttonTapped8: function(inSender, inEvent) {  
 		this.ajaxFunction(7);
 	},ajaxFunction : function(num){
 		var str=""; //= "\'qqqqqqq\'";  //0번째 array를 가져온다
@@ -675,7 +667,6 @@ enyo.kind({
 		}
 	},
 	goHome : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.player.unload();
 		this.bubbleUp("onGoHome", {
 			name : name
@@ -683,145 +674,120 @@ enyo.kind({
 		return true;
 	},
 	goBack: function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.player.unload();
 		this.bubbleUp("onShowPanel", {name:"select"});
 		
 		return true;
 	},
 	backtoImage1 : function(inSender, inEvent){
-		this.$.audio.play();
 		var time = clothesArray[0][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	backtoImage2 : function(inSender, inEvent){
-		this.$.audio.play();
 		var time = clothesArray[1][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	backtoImage3 : function(inSender, inEvent){
-		this.$.audio.play();
 		var time = clothesArray[2][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	backtoImage4 : function(inSender, inEvent){
-		this.$.audio.play();
 		var time = clothesArray[3][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	backtoImage5 : function(inSender, inEvent){
-		this.$.audio.play();
 		var time = clothesArray[4][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	backtoImage6 : function(inSender, inEvent){
-		this.$.audio.play();
 		var time = clothesArray[5][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	backtoImage7 : function(inSender, inEvent){
-		this.$.audio.play();
 		var time = clothesArray[6][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	backtoImage8 : function(inSender, inEvent){
-		this.$.audio.play();
 		var time = clothesArray[7][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	realDrawer1 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer1.setOpen(true);
 		playerinput = inSender.getContent();
 		var data_player_url1 = player.indexOf(playerinput);
 	},
 	realDrawer2 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer2.setOpen(true);
 		playerinput = inSender.getContent();
 		var data_player_url1 = player.indexOf(playerinput);
 	},
 	realDrawer3 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer3.setOpen(true);
 		playerinput = inSender.getContent();
 		var data_player_url1 = player.indexOf(playerinput);
 	},
 	realDrawer4 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer4.setOpen(true);
 		playerinput = inSender.getContent();
 		var data_player_url1 = player.indexOf(playerinput);
 	},
 	realDrawer5 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer5.setOpen(true);
 		playerinput = inSender.getContent();
 		var data_player_url1 = player.indexOf(playerinput);
 	},
 	realDrawer6 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer6.setOpen(true);
 		playerinput = inSender.getContent();
 		var data_player_url1 = player.indexOf(playerinput);
 	},
 	realDrawer7 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer7.setOpen(true);
 		playerinput = inSender.getContent();
 		var data_player_url1 = player.indexOf(playerinput);
 	},
 	realDrawer8 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer8.setOpen(true);
 		playerinput = inSender.getContent();
 		var data_player_url1 = player.indexOf(playerinput);
 	},
 	closeDrawer1 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer1.setOpen(false);
 		return true;
 	},
 	closeDrawer2 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer2.setOpen(false);
 		return true;
 	},
 	closeDrawer3 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer3.setOpen(false);
 		return true;
 	},
 	closeDrawer4 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer4.setOpen(false);
 		return true;
 	},
 	closeDrawer5 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer5.setOpen(false);
 		return true;
 	},
 	closeDrawer6 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer6.setOpen(false);
 		return true;
 	},
 	closeDrawer7 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer7.setOpen(false);
 		return true;
 	},
 	closeDrawer8 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer8.setOpen(false);
 		return true;
 	},

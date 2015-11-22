@@ -21,7 +21,7 @@ enyo.kind({
                                         {layoutKind:"FittableRowsLayout", components:[{name:"clothes_name",classes:"ExpItem"},{name:"clothes_brand",classes:"ExpItem"},{name:"clothes_price",classes:"ExpItem"},{name:"program_name",classes:"ExpItem"}]}
                                         //{layoutKind:"FittableColumnsLayout", components:[{name:"clothes_price",classes:"ExpItem"},{name:"program_name",classes:"ExpItem"}]},
                                         ]},
-                            {name:"BuyClothes",kind:"moon.Image",style:"margin-left:570px;width:100px;height:100px;",ontap:"purchaseTap",src:"assets/buybutton.jpg"}
+                            {name:"BuyClothes",kind:"moon.Image",style:"margin-left:570px;width:100px;height:100px;",ontap:"purchaseTap",src:"assets/buybutton.jpg", onmouseout:"Selectout1",onmouseover:"Selecton1"}
                             ]},
                 {layoutKind:"FittableRowsLayout",components:[
                             /*{kind:"onyx.Toolbar",components:[
@@ -39,8 +39,8 @@ enyo.kind({
                                                     /*{name:"purchase",kind:"moon.IconButton",src:"assets/addtowhishlist.png",classes:"remove-button-css",ontap:"purchaseTap"},*/
                                                     {name:"remove",kind:"moon.Image",style:"background-image: url('assets/delete.png');width:60px;height:60px;margin-left:30px;",ontap:"removeTap"}]}]}
                                   ]},
-                             {kind:"moon.Image",ontap:"gohome",style:"margin-left:200px;",src:"assets/HomeButton.png"}]},
-                {kind:"enyo.Audio",src:'buttonclick.mp3'},
+                             {name : "home", kind:"moon.Image",ontap:"gohome",style:"margin-left:200px;",src:"assets/HomeButton_wish.png", onmouseout:"Selectout2",onmouseover:"Selecton2"}]},
+           
                {name: "flickrSearch_wish", kind: "enyo.sample.PanelsFlickrSearch22", onResults: "searchResults"}],
    rendered: enyo.inherit(function(sup) {
       return function() {
@@ -90,7 +90,6 @@ enyo.kind({
       if (enyo.Panels.isScreenNarrow()) {
          this.setIndex(1);
       }
-      this.$.audio.play();
       var i = inEvent.index;   
       //this.$.imageSpinner.show();         clothes_name   clothes_brand   clothes_price   program_name
       var item = wishListArray[i][9];
@@ -214,9 +213,24 @@ enyo.kind({
    },
    gohome: function(inSender,inEvent)
    {
-      this.$.audio.play();
       this.bubbleUp("onGoHome");
       return true;
+   },
+   Selecton1: function(inSender, inEvent)
+   {
+         this.$.BuyClothes.setSrc("assets/buybutton_modify.jpg");   
+   },
+   Selectout1: function(inSender, inEvent)
+   {
+         this.$.BuyClothes.setSrc("assets/buybutton.jpg");      
+   },
+   Selecton2: function(inSender, inEvent)
+   {
+         this.$.home.setSrc("assets/HomeButton_wish_modify.png");   
+   },
+   Selectout2: function(inSender, inEvent)
+   {
+         this.$.home.setSrc("assets/HomeButton_wish.png");      
    },
    previous: function(inSender, inEvent) {
       this.$.Caro.previous();

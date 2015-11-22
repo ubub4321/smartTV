@@ -162,8 +162,7 @@ enyo.kind({
 			            	            				                	            		 src: "assets/close.jpg",
 			            	            				                	            		 ontap:"closeDrawer2"
 			            	            				                	            	 },
-			            	            				                	            	 {name: "flickrSearchForProdusa", kind: "enyo.sample.PanelsFlickrSearchForProdusa4", onResults: "searchResults"},
-			            	            				                	            	 {kind:"enyo.Audio",src:'buttonclick.mp3'}
+			            	            				                	            	 {name: "flickrSearchForProdusa", kind: "enyo.sample.PanelsFlickrSearchForProdusa4", onResults: "searchResults"}
 			            	            				                	            	 ]
 			            	            				                	             }
 			            	            				                	             ]
@@ -217,10 +216,8 @@ enyo.kind({
 		this.$.detail_2.setSrc(clothesArray[1][6]);
 		//----------------------------------------------------------------------------------------------------------	
 	},buttonTapped1: function(inSender, inEvent) {   
-		this.$.audio.play();
 		this.ajaxFunction(0);
 	},buttonTapped2: function(inSender, inEvent) { 
-		this.$.audio.play();
 		this.ajaxFunction(1);
 	},ajaxFunction : function(num){
 		var str=""; //= "\'qqqqqqq\'";  //0번째 array를 가져온다
@@ -269,36 +266,30 @@ enyo.kind({
 		return true;
 	},
 	backtoImage1 : function(inSender, inEvent){
-		this.$.audio.play();
 		var time = clothesArray[0][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	backtoImage2 : function(inSender, inEvent){
-		this.$.audio.play();
 		var time = clothesArray[1][5];
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
 	realDrawer1 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer1.setOpen(true);
 		playerinput = inSender.getContent();
 		var data_player_url1 = player.indexOf(playerinput);
 	},
 	realDrawer2 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer2.setOpen(true);
 		playerinput = inSender.getContent();
 		var data_player_url1 = player.indexOf(playerinput);
 	},
-	closeDrawer1 : function(inSender, inEvent) {
-		this.$.audio.play();
+	closeDrawer1 : function(inSender, inEvent) 
 		this.$.drawer1.setOpen(false);
 		return true;
 	},
 	closeDrawer2 : function(inSender, inEvent) {
-		this.$.audio.play();
 		this.$.drawer2.setOpen(false);
 		return true;
 	},
