@@ -17,6 +17,7 @@ enyo.kind({
                                       
                        
             {kind: "FittableColumns", style: "padding-left : 105px;",// 왼쪽 띄워진 부분부터 column으로 묶어줌
+
                components: [
                             
                             {kind : "moon.Image",name : "img1", classes:"Photos",ontap : "Stfashion", onmouseout:"Selectout1",onmouseover:"Selecton1"}, //사진 1
@@ -44,6 +45,7 @@ enyo.kind({
                                        // 화살표
                                      ]
                       },
+
 
                       {style:"margin-top:10px;",//style:"background-color: black;",
                          components :[
@@ -237,6 +239,7 @@ enyo.kind({
                //article = condata.substring(condata.indexOf("기사")+6,condata.indexOf("...")+3);
                
 
+<<<<<<< HEAD
                this.$.img1.setSrc("assets/1.jpg");
                this.$.img2.setSrc("assets/2.jpg");
                this.$.img3.setSrc("assets/3.jpg");
@@ -265,6 +268,36 @@ enyo.kind({
             },
             
             
+=======
+			      this.$.img1.setSrc("assets/1.jpg");
+			      this.$.img2.setSrc("assets/2.jpg");
+			      this.$.img3.setSrc("assets/3.jpg");
+			      this.$.img4.setSrc("assets/4.jpg");
+			      this.$.img5.setSrc("assets/5.jpg");
+			      this.$.img6.setSrc("assets/7.jpg");
+			      this.$.img8.setSrc("assets/6.jpg");
+			      //this.$.img4.setSrc(fsimg);
+			      //this.$.text1.setContent(fshead);
+			      this.$.head.setContent(head0);
+			      return true;
+			   },
+			   
+			gohome: function(inSender, inEvent){
+				this.$.audio.play();
+					this.bubbleUp("onGoHome");
+					return true;
+				},
+			gonews : function(inSender, inEvent)
+				{
+				this.$.audio.play();
+					index = this.$.carousel.getIndex();
+					var name = inSender.name;
+					this.bubbleUp("onShowPanel", {name:name});
+					return true;
+				},
+				
+			   
+>>>>>>> 8d39317bc51c9477df49d682930e65c27fd68861
 });
   
 

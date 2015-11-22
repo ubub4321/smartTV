@@ -16,6 +16,14 @@
    height: 1080px;
    width: 1920px;
 }
+.popup_background
+{
+	background-image : url('popupback.png');
+	background-size : contain;
+	background-repeat : no-repeat;
+	height: 1080px;
+	width: 1920px;
+}
 .article
 {
    width : 900px;
@@ -23,6 +31,7 @@
    margin-left : 40px;
    font-family: 'Jeju Hallasan', sans-serif;
    word-spacing : 8px;
+
 }
 .Photos
 {
