@@ -1,5 +1,4 @@
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-
+@import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
 .panels-sample-flickr-panels {
    color: white;
    background: #555;
@@ -67,27 +66,27 @@
    width: 650px;
    height: 355px;
    margin: 20px;
-   margin-left: 240px;
+   margin-left: 80px;
    margin-top: 115px;
-   font-family: 'Nanum Gothic', sans-serif;
+   margin-bottom:130px;
+   font-family: 'Jeju Hallasan', cursive;
 }
 .ExpPan{
    background-size: contain;
    width: 650px;
-   height: 240px;
+   height: 150px;
    margin: 20px;
-   margin-left: 240px;
-   margin-top: 130px;
-   font-family: 'Nanum Gothic', sans-serif;
+   margin-left: 110px;
+   font-family: 'Jeju Hallasan', cursive;
 }
 .listPan{
    background-size: contain;
    width: 500px;
-   height: 700px;
+   height: 610px;
    margin: 20px;
-   margin-left: 110px;
-   margin-top: 120px;
-   font-family: 'Nanum Gothic', sans-serif;
+   margin-left: 80px;
+   margin-top: 160px;
+   font-family: 'Jeju Hallasan', cursive;
 }
 .panels-sample-flickr-thumbnail {
 }
@@ -104,23 +103,18 @@
 .toolbar{
    background-color: #FFE400;
 }
-.home
-{
-   background-image: url('homebutton.jpg');
-   background-size: 200px;
-   background-repeat: no-repeat;
-   height: 40px;
-   width: 180px;
-}
 .ExpItem{
    width: 300px;
    height: 40px;
    margin: 5px;
 }
-.Caro{
-   width: 350px;
-   height: 800px;
+.Carousel{
+   width: 440px;
+   height: 1000px;
+   margin-left: 70px;
+   margin-top: 100px;
 }
 .Caro1{
-   margin-left: 100px;
+   margin-left: 140px;
+   margin-bottom: 110px;
 }

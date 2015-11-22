@@ -9,20 +9,20 @@ enyo.kind({
    spotlight: true,
    components: [
                 {name: "backToolbar", kind: "onyx.Toolbar", fit: false, showing: false},   
-                {classes:"Caro",components:[
-                             {name:"carousel", kind:'ImageCarousel', fit:true, onTransitionFinish: 'transitionFinish'},
+                {classes:"Carousel",components:[
+                             {name:"Caro", kind:'enyo.ImageCarousel',style:"width:440px; height:600px;",defaultScale:"auto"},
                              {classes:"Caro1",layoutKind:"FittableColumnsLayout", fit:true,components:[
                                         {kind: 'moon.Icon', icon: "arrowsmallleft", allowHtml: true, ontap:'previous'},
-                                        //{kind: 'onyx.InputDecorator', classes: 'imagecarousel-sample-input', components: [{name: 'carouselIndexInput', kind: 'onyx.Input', value: '0', onchange: 'updateIndex'}]},
                                         {kind: 'moon.Icon', icon: "arrowsmallright", allowHtml: true, ontap:'next'}]}]},
                 {layoutKind:"FittableRowsLayout", components:[
                             {name:"flickrImage",kind:"Image",classes:"RoadPan"},
                             {layoutKind:"FittableColumnsLayout",classes:"ExpPan",components:[
                                         {layoutKind:"FittableRowsLayout", components:[{content:"이름",classes:"ExpItem"},{content:"브랜드",classes:"ExpItem"},{content:"가격",classes:"ExpItem"},{content:"프로그램이름",classes:"ExpItem"}]},
-                                        {layoutKind:"FittableRowsLayout", components:[{name:"clothes_name",classes:"ExpItem"},{name:"clothes_brand",classes:"ExpItem"},{name:"clothes_price",classes:"ExpItem"},{name:"program_name",classes:"ExpItem"}]},
+                                        {layoutKind:"FittableRowsLayout", components:[{name:"clothes_name",classes:"ExpItem"},{name:"clothes_brand",classes:"ExpItem"},{name:"clothes_price",classes:"ExpItem"},{name:"program_name",classes:"ExpItem"}]}
                                         //{layoutKind:"FittableColumnsLayout", components:[{name:"clothes_price",classes:"ExpItem"},{name:"program_name",classes:"ExpItem"}]},
                                         ]},
-                            {name:"BuyClothes",kind:"onyx.Button",classes:"remove-button-css",content:"사러가기",ontap:"purchaseTap"/*,components:[{kind:"onyx.Icon",src:""}]*/}]},
+                            {name:"BuyClothes",kind:"moon.Image",style:"margin-left:570px;width:100px;height:100px;",ontap:"purchaseTap",src:"assets/buybutton.jpg"}
+                            ]},
                 {layoutKind:"FittableRowsLayout",components:[
                             /*{kind:"onyx.Toolbar",components:[
                                   {name:"searchSpinner",kind:"Image",src:"assets/spinner.gif",showing:false}]},*/
@@ -37,17 +37,16 @@ enyo.kind({
                                                     {name:"thumbnail",kind:"Image",style:"width:75px;height:75px;",classes:"panels-sample-flickr-thumbnail"},
                                                     {name:"title",style:"width:200px;height:75px;margin-left:40px;margin-top:20px;font-size:24px;"},
                                                     /*{name:"purchase",kind:"moon.IconButton",src:"assets/addtowhishlist.png",classes:"remove-button-css",ontap:"purchaseTap"},*/
-                                                    {name:"remove",kind:"Image",style:"background-image: url('assets/delete.png');width:60px;height:60px;margin-left:30px;",ontap:"removeTap"}]}]},
-                                  ]}]},
-                {kind:"moon.Image",classes:"home",ontap:"gohome"},
-                {kind:"enyo.Audio",src:"buttonclick.mp3"},
+                                                    {name:"remove",kind:"moon.Image",style:"background-image: url('assets/delete.png');width:60px;height:60px;margin-left:30px;",ontap:"removeTap"}]}]}
+                                  ]},
+                             {kind:"moon.Image",ontap:"gohome",style:"margin-left:200px;",src:"assets/HomeButton.png"}]},
+                {kind:"enyo.Audio",src:'buttonclick.mp3'},
                {name: "flickrSearch_wish", kind: "enyo.sample.PanelsFlickrSearch22", onResults: "searchResults"}],
    rendered: enyo.inherit(function(sup) {
       return function() {
          this.search();
          sup.apply(this, arguments);
          this.urls=['assets/street1.jpg','assets/street2.jpg','assets/street3.jpg','assets/street4.jpg','assets/street5.jpg','assets/street6.jpg','assets/street7.jpg','assets/street8.jpg','assets/street9.jpg','assets/street10.jpg'];
-         this.$.carousel.setImages(this.urls);
       };
    }),
    reflow: enyo.inherit(function(sup) {
@@ -87,6 +86,7 @@ enyo.kind({
       return true;
    },
    itemTap: function(inSender, inEvent) {
+     var cnt = 0;
       if (enyo.Panels.isScreenNarrow()) {
          this.setIndex(1);
       }
@@ -98,12 +98,61 @@ enyo.kind({
       var Cbrand = wishListArray[i][2];
       var Cprice = wishListArray[i][8];
       var Cprogramname = wishListArray[i][4];
+      var Cpeoplename = wishListArray[i][3];
       this.$.flickrImage.setSrc(item);
       this.$.clothes_name.setContent(wishListArray[i][1]);
       this.$.clothes_brand.setContent(wishListArray[i][2]);
       this.$.clothes_price.setContent(wishListArray[i][8]);
       this.$.program_name.setContent(wishListArray[i][4]);
       buyitem = wishListArray[i][7];
+      urls=[];
+      this.$.Caro.setImages(urls);
+      
+      if(Cpeoplename=="김수현")
+      {
+         urls = ['assets/starImg/ksh1.jpg','assets/starImg/ksh2.jpg','assets/starImg/ksh3.jpg','assets/starImg/ksh4.jpg'];
+         this.$.Caro.setImages(urls);
+      }
+      else if(Cpeoplename=="아이유")
+      {
+         urls = ['assets/starImg/iii1.jpg','assets/starImg/iii2.jpg','assets/starImg/iii3.jpg','assets/starImg/iii4.jpg'];
+         this.$.Caro.setImages(urls);
+      }
+      else if(Cpeoplename=="박서준")
+      {
+         urls = ['assets/starImg/psj1.jpg','assets/starImg/psj2.jpg','assets/starImg/psj3.jpg','assets/starImg/psj4.jpg'];
+         this.$.Caro.setImages(urls);
+      }
+      else if(Cpeoplename=="고준희")
+      {
+         urls = ['assets/starImg/kjh1.jpg','assets/starImg/kjh2.jpg','assets/starImg/kjh3.jpg','assets/starImg/kjh4.jpg']
+         this.$.Caro.setImages(urls);
+      }
+      else if(Cpeoplename=="공효진")
+      {
+         urls = ['assets/starImg/ghj1.jpg','assets/starImg/ghj2.jpg','assets/starImg/ghj3.jpg','assets/starImg/ghj4.jpg'];
+         this.$.Caro.setImages(urls);
+      }
+      else if(Cpeoplename=="전지현")
+      {
+         urls = ['assets/starImg/jjh1.jpg','assets/starImg/jjh2.jpg','assets/starImg/jjh3.jpg','assets/starImg/jjh4.jpg'];
+         this.$.Caro.setImages(urls);
+      }
+      else if(Cpeoplename=="유인나")
+      {
+         urls = ['assets/starImg/uin1.jpg','assets/starImg/uin2.jpg','assets/starImg/uin3.jpg','assets/starImg/uin4.jpg'];
+         this.$.Caro.setImages(urls);
+      }
+      else if(Cpeoplename=="최시원")
+      {
+         urls = ['assets/starImg/csw1.jpg','assets/starImg/csw2.jpg','assets/starImg/csw3.jpg','assets/starImg/csw4.jpg'];
+         this.$.Caro.setImages(urls);
+      }
+      else if(Cpeoplename=="차태현")
+      {
+         urls = ['assets/starImg/ctw1.jpg','assets/starImg/ctw2.jpg','assets/starImg/ctw3.jpg','assets/starImg/ctw4.jpg'];
+         this.$.Caro.setImages(urls);
+      }
    },
    imageLoaded: function() {
       var img = this.$.flickrImage;
@@ -169,39 +218,11 @@ enyo.kind({
       this.bubbleUp("onGoHome");
       return true;
    },
-   updateIndex: function(inSender, inEvent) {
-      var index = this.trimWhitespace(this.$.carouselIndexInput.getValue());
-      if (index === '' || isNaN(index)) {
-         //enyo.log('Numbers only please.')
-         return;
-      }
-      this.$.carousel.setIndex(parseInt(index, 9));
-   },
-   trimWhitespace: function(inString) {
-      return inString.replace(/^\s+|\s+$/g,'');
-   },
    previous: function(inSender, inEvent) {
-       var index = this.$.carousel.getIndex();
-       this.$.carousel.previous();
-       if (index == 0)
-       {
-          this.$.carousel.setIndex(9);
-       }
-       this.changedHeadLineText();   
-    },
-    next: function(inSender, inEvent) {
-       var index = this.$.carousel.getIndex();
-       this.$.carousel.next();
-       if (index == 9)
-       {
-          this.$.carousel.setIndex(0);
-       }
-       this.changedHeadLineText();
-    },
-   transitionFinish: function(inSender, inEvent) {
-      if (this.$.carouselIndexInput) {
-         this.$.carouselIndexInput.setValue(inEvent.toIndex);
-      }
+      this.$.Caro.previous();
+   },
+   next: function(inSender, inEvent) {
+      this.$.Caro.next();
    }
 });
 
