@@ -22,9 +22,7 @@ enyo.kind({
          	                {kind : "moon.Image",name : "img2",classes:"Photos",ontap : "Stfashion"}, // 사진 2
          	                {kind : "moon.Image",name : "img3",classes:"Photos",ontap : "Stfashion"}, // 사진 3
          	                {kind : "moon.Image",name : "img4",classes:"Photos",ontap : "Stfashion"}, // 사진 3
-
-
-        	                {kind : "moon.Image",name : "img5",classes:"bottomPhoto1",ontap : "Stfashion"},
+         	                {kind : "moon.Image",name : "img5",classes:"bottomPhoto1",ontap : "Stfashion"},
          	                {kind : "moon.Image",name : "img6",classes:"bottomPhoto2",ontap : "Stfashion"},
          	                
 	            {kind: "FittableRows",style:"margin-left:250px;width : 680px; height :480px;",
