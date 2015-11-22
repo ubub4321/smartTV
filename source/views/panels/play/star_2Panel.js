@@ -16,7 +16,6 @@ enyo.kind({
 		showControls : true,
 	}, 
 	{
-
 		name : "panels",
 		kind : "moon.Panels",
 		animate : false,
@@ -84,29 +83,41 @@ enyo.kind({
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
+			            	            				                	            		 name: "back1",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
 			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage1"
+			            	            				                	            		 ontap:"backtoImage1",
+			            	            				                	            		 onmouseout:"Selectout1_1",
+			            	            				                	            		 onmouseover:"Selecton1_1"
 			            	            				                	            	 },
 			            	            				                	            	 {
+			            	            				                	            		 name: "addtowishlist1",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped1"
+			            	            				                	            		 src: "assets/addtowishlist.png",
+			            	            				                	            		 ontap:"buttonTapped1",
+				            	            				                	                 onmouseout:"Selectout1_2",
+				            	            				                	            	 onmouseover:"Selecton1_2"
 			            	            				                	            	 },
 			            	            				                	            	 {
+			            	            				                	            		 name: "close1",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/close.jpg",
-			            	            				                	            		 ontap:"closeDrawer1"
+			            	            				                	            		 ontap:"closeDrawer1",
+			            	            				                	            		 onmouseout:"Selectout1_3",
+			            	            				                	            		 onmouseover:"Selecton1_3"
 			            	            				                	            	 },
-				            	            				                	             {name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearchForstar2", onResults: "searchResults"}]
+			            	            				                	            	 {name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearchForstar2", onResults: "searchResults"}
+
+			            	            				                	            	 ]
 			            	            				                	             }
 			            	            				                	             ]
 			            	            				                }]
 			            	            			  } ]
 			            	            		  },
+			            	            		  
 			            	            		  ],
 
 
@@ -120,6 +131,7 @@ enyo.kind({
 	},
 
 	],
+	 
 	rendered: enyo.inherit(function(sup) {
 	      return function() {
 	         sup.apply(this, arguments);
@@ -143,13 +155,8 @@ enyo.kind({
 			   },
 	show: function(){
 		this.$.reresult1_1.setContent(clothesArray[0][1]); 
-
 		this.$.reresult1_2.setContent("￦ "+clothesArray[0][8]); 
-
-		
 		this.$.detail_1.setSrc(clothesArray[0][6]);
-
-		//----------------------------------------------------------------------------------------------------------	
 	},buttonTapped1: function(inSender, inEvent) {    
 		this.ajaxFunction(0);
 	},ajaxFunction : function(num){
@@ -220,7 +227,30 @@ enyo.kind({
 		this.$.drawer1.setOpen(false);
 		return true;
 	},
-	
+	Selecton1_1: function(inSender, inEvent)
+    {
+          this.$.back1.setSrc("assets/back_modify.png");   
+    },
+    Selectout1_1: function(inSender, inEvent)
+    {
+          this.$.back1.setSrc("assets/back.png");      
+    },
+    Selecton1_2: function(inSender, inEvent)
+    {
+          this.$.addtowishlist1.setSrc("assets/addtowishlist_modify.png");   
+    },
+    Selectout1_2: function(inSender, inEvent)
+    {
+          this.$.addtowishlist1.setSrc("assets/addtowishlist.png");      
+    },
+    Selecton1_3: function(inSender, inEvent)
+    {
+          this.$.close1.setSrc("assets/close_modify.png");   
+    },
+    Selectout1_3: function(inSender, inEvent)
+    {
+          this.$.close1.setSrc("assets/close.jpg");      
+    }
 });
 enyo.kind({
 	   name: "enyo.sample.PanelsFlickrSearchForstar2",

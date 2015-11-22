@@ -21,9 +21,9 @@
 	Text-align:center;
 }
 .resize_back{
-	 background-image: url('back.png');
+/*	 background-image: url('back.png');
    background-size: contain;
-   background-repeat: no-repeat;
+   background-repeat: no-repeat;*/
    margin-top:50px : 40px;
    margin-left:700px;
    width: 90px;

@@ -85,22 +85,31 @@ enyo.kind({
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
+			            	            				                	            		 name: "back1",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
 			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage1"
+			            	            				                	            		 ontap:"backtoImage1",
+			            	            				                	            		 onmouseout:"Selectout1_1",
+			            	            				                	            		 onmouseover:"Selecton1_1"
 			            	            				                	            	 },
 			            	            				                	            	 {
+			            	            				                	            		 name: "addtowishlist1",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped1"
+			            	            				                	            		 src: "assets/addtowishlist.png",
+			            	            				                	            		 ontap:"buttonTapped1",
+				            	            				                	                 onmouseout:"Selectout1_2",
+				            	            				                	            	 onmouseover:"Selecton1_2"
 			            	            				                	            	 },
 			            	            				                	            	 {
+			            	            				                	            		 name: "close1",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/close.jpg",
-			            	            				                	            		 ontap:"closeDrawer1"
+			            	            				                	            		 ontap:"closeDrawer1",
+			            	            				                	            		 onmouseout:"Selectout1_3",
+			            	            				                	            		 onmouseover:"Selecton1_3"
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -147,22 +156,31 @@ enyo.kind({
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
+			            	            				                	            		 name: "back2",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
 			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage2"
+			            	            				                	            		 ontap:"backtoImage2",
+			            	            				                	            		 onmouseout:"Selectout2_1",
+			            	            				                	            		 onmouseover:"Selecton2_1"
 			            	            				                	            	 },
 			            	            				                	            	 {
+			            	            				                	            		 name: "addtowishlist2",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped2"
+			            	            				                	            		 src: "assets/addtowishlist.png",
+			            	            				                	            		 ontap:"buttonTapped2",
+			            	            				                	            		 onmouseout:"Selectout2_2",
+			            	            				                	            		 onmouseover:"Selecton2_2"
 			            	            				                	            	 },
 			            	            				                	            	 {
+			            	            				                	            		 name: "close2",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/close.jpg",
-			            	            				                	            		 ontap:"closeDrawer2"
+			            	            				                	            		 ontap:"closeDrawer2",
+			            	            				                	            		 onmouseout:"Selectout2_3",
+			            	            				                	            		 onmouseover:"Selecton2_3"
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -209,22 +227,31 @@ enyo.kind({
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
+			            	            				                	            		 name: "back3",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
 			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage3"
+			            	            				                	            		 ontap:"backtoImage3",
+			            	            				                	            		 onmouseout:"Selectout3_1",
+			            	            				                	            		 onmouseover:"Selecton3_1"
 			            	            				                	            	 },
 			            	            				                	            	 {
+			            	            				                	            		 name: "addtowishlist3",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped3"
+			            	            				                	            		 src: "assets/addtowishlist.png",
+			            	            				                	            		 ontap:"buttonTapped3",
+			            	            				                	            		 onmouseout:"Selectout3_2",
+			            	            				                	            		 onmouseover:"Selecton3_2"
 			            	            				                	            	 },
 			            	            				                	            	 {
+			            	            				                	            		 name: "close3",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/close.jpg",
-			            	            				                	            		 ontap:"closeDrawer3"
+			            	            				                	            		 ontap:"closeDrawer3",
+			            	            				                	            		 onmouseout:"Selectout3_3",
+			            	            				                	            		 onmouseover:"Selecton3_3"
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -271,24 +298,34 @@ enyo.kind({
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
+			            	            				                	            		 name: "back4",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
 			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage4"
+			            	            				                	            		 ontap:"backtoImage4",
+			            	            				                	            		 onmouseout:"Selectout4_1",
+			            	            				                	            		 onmouseover:"Selecton4_1"
 			            	            				                	            	 },
 			            	            				                	            	 {
+			            	            				                	            		 name: "addtowishlist4", 
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped4"
+			            	            				                	            		 src: "assets/addtowishlist.png",
+			            	            				                	            		 ontap:"buttonTapped4",
+			            	            				                	            		 onmouseout:"Selectout4_2",
+			            	            				                	            		 onmouseover:"Selecton4_2"
 			            	            				                	            	 },
 			            	            				                	            	 {
+			            	            				                	            		 name: "close4",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/close.jpg",
-			            	            				                	            		 ontap:"closeDrawer4"
+			            	            				                	            		 ontap:"closeDrawer4",
+			            	            				                	            		 onmouseout:"Selectout4_3",
+			            	            				                	            		 onmouseover:"Selecton4_3"
 			            	            				                	            	 },
-			            	            				                	            	 {name: "flickrSearchShe7", kind: "enyo.sample.PanelsFlickrSearchForShe7", onResults: "searchResults"}]
+			            	            				                	            	 {name: "flickrSearchShe7", kind: "enyo.sample.PanelsFlickrSearchForShe7", onResults: "searchResults"}
+			            	            				                	            	 ]
 			            	            				                	             }
 			            	            				                	             ]
 			            	            				                }]
@@ -462,6 +499,102 @@ enyo.kind({
 		this.$.drawer4.setOpen(false);
 		return true;
 	},
+	Selecton1_1: function(inSender, inEvent)
+    {
+          this.$.back1.setSrc("assets/back_modify.png");   
+    },
+    Selectout1_1: function(inSender, inEvent)
+    {
+          this.$.back1.setSrc("assets/back.png");      
+    },
+    Selecton1_2: function(inSender, inEvent)
+    {
+          this.$.addtowishlist1.setSrc("assets/addtowishlist_modify.png");   
+    },
+    Selectout1_2: function(inSender, inEvent)
+    {
+          this.$.addtowishlist1.setSrc("assets/addtowishlist.png");      
+    },
+    Selecton1_3: function(inSender, inEvent)
+    {
+          this.$.close1.setSrc("assets/close_modify.png");   
+    },
+    Selectout1_3: function(inSender, inEvent)
+    {
+          this.$.close1.setSrc("assets/close.jpg");      
+    },
+    Selecton2_1: function(inSender, inEvent)
+    {
+          this.$.back2.setSrc("assets/back_modify.png");   
+    },
+    Selectout2_1: function(inSender, inEvent)
+    {
+          this.$.back2.setSrc("assets/back.png");      
+    },
+    Selecton2_2: function(inSender, inEvent)
+    {
+          this.$.addtowishlist2.setSrc("assets/addtowishlist_modify.png");   
+    },
+    Selectout2_2: function(inSender, inEvent)
+    {
+          this.$.addtowishlist2.setSrc("assets/addtowishlist.png");      
+    },
+    Selecton2_3: function(inSender, inEvent)
+    {
+          this.$.close2.setSrc("assets/close_modify.png");   
+    },
+    Selectout2_3: function(inSender, inEvent)
+    {
+          this.$.close2.setSrc("assets/close.jpg");      
+    },
+    Selecton3_1: function(inSender, inEvent)
+    {
+          this.$.back3.setSrc("assets/back_modify.png");   
+    },
+    Selectout3_1: function(inSender, inEvent)
+    {
+          this.$.back3.setSrc("assets/back.png");      
+    },
+    Selecton3_2: function(inSender, inEvent)
+    {
+          this.$.addtowishlist3.setSrc("assets/addtowishlist_modify.png");   
+    },
+    Selectout3_2: function(inSender, inEvent)
+    {
+          this.$.addtowishlist3.setSrc("assets/addtowishlist.png");      
+    },
+    Selecton3_3: function(inSender, inEvent)
+    {
+          this.$.close3.setSrc("assets/close_modify.png");   
+    },
+    Selectout3_3: function(inSender, inEvent)
+    {
+          this.$.close3.setSrc("assets/close.jpg");      
+    },
+    Selecton4_1: function(inSender, inEvent)
+    {
+          this.$.back4.setSrc("assets/back_modify.png");   
+    },
+    Selectout4_1: function(inSender, inEvent)
+    {
+          this.$.back4.setSrc("assets/back.png");      
+    },
+    Selecton4_2: function(inSender, inEvent)
+    {
+          this.$.addtowishlist4.setSrc("assets/addtowishlist_modify.png");   
+    },
+    Selectout4_2: function(inSender, inEvent)
+    {
+          this.$.addtowishlist4.setSrc("assets/addtowishlist.png");      
+    },
+    Selecton4_3: function(inSender, inEvent)
+    {
+          this.$.close4.setSrc("assets/close_modify.png");   
+    },
+    Selectout4_3: function(inSender, inEvent)
+    {
+          this.$.close4.setSrc("assets/close.jpg");      
+    },
 });
 enyo.kind({
 	   name: "enyo.sample.PanelsFlickrSearchForShe7",
