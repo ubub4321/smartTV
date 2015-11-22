@@ -33,7 +33,7 @@ enyo.kind({
 			            	            		  components : [{							
 			            	            			  components :[
 
-			            	            			                {
+			            	            			               {
 			            	            			            	   name : "homeButton",
 			            	            			            	   classes:"resize_back",
 			            	            			            	   ontap : "goBack"
@@ -83,22 +83,31 @@ enyo.kind({
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
+			            	            				                	            		 name: "back1",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
 			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage1"
+			            	            				                	            		 ontap:"backtoImage1",
+			            	            				                	            		 onmouseout:"Selectout1_1",
+			            	            				                	            		 onmouseover:"Selecton1_1"
 			            	            				                	            	 },
 			            	            				                	            	 {
+			            	            				                	            		 name: "addtowishlist1",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped1"
+			            	            				                	            		 src: "assets/addtowishlist.png",
+			            	            				                	            		 ontap:"buttonTapped1",
+			            	            				                	            		 onmouseout:"Selectout1_2",
+			            	            				                	            		 onmouseover:"Selecton1_2"
 			            	            				                	            	 },
 			            	            				                	            	 {
+			            	            				                	            		 name: "close1",
 			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
+			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/close.jpg",
-			            	            				                	            		 ontap:"closeDrawer1"
+			            	            				                	            		 ontap:"closeDrawer1",
+			            	            				                	            		 onmouseout:"Selectout1_3",
+			            	            				                	            		 onmouseover:"Selecton1_3"
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -145,22 +154,31 @@ enyo.kind({
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
+			            	            				                	            		 name: "back2",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
 			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage2"
+			            	            				                	            		 ontap:"backtoImage2",
+			            	            				                	            		 onmouseout:"Selectout2_1",
+			            	            				                	            		 onmouseover:"Selecton2_1"
 			            	            				                	            	 },
 			            	            				                	            	 {
+			            	            				                	            		 name: "addtowishlist2",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped2"
+			            	            				                	            		 src: "assets/addtowishlist.png",
+			            	            				                	            		 ontap:"buttonTapped2",
+			            	            				                	            		 onmouseout:"Selectout2_2",
+			            	            				                	            		 onmouseover:"Selecton2_2"
 			            	            				                	            	 },
 			            	            				                	            	 {
+			            	            				                	            		 name: "close2",
 			            	            				                	            		 kind: "moon.Image",
 			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/close.jpg",
-			            	            				                	            		 ontap:"closeDrawer2"
+			            	            				                	            		 ontap:"closeDrawer2",
+			            	            				                	            		 onmouseout:"Selectout2_3",
+			            	            				                	            		 onmouseover:"Selecton2_3"
 			            	            				                	            	 },
 			            	            				                	            	 {name: "flickrSearchForProdusa", kind: "enyo.sample.PanelsFlickrSearchForProdusa4", onResults: "searchResults"}
 			            	            				                	            	 ]
@@ -169,14 +187,14 @@ enyo.kind({
 			            	            				                }]
 			            	            			  } ]
 			            	            		  },
-			            	            		  
+
 			            	            		  ],
 
 
 			            	            	  }
 			            	            	  ]
 			            	              }
-			            	              	              ]}
+			            	              ]}
 			             ],
 		},
 		]
@@ -184,34 +202,34 @@ enyo.kind({
 
 	],
 	rendered: enyo.inherit(function(sup) {
-	      return function() {
-	         sup.apply(this, arguments);
-	         this.search();
-	         
-	      };
-	   }),
-	   search: function() {
-		      //this.searchText = this.$.searchInput.getValue();
-		      this.page = 0;
-		      this.results = [];
-		      //this.$.searchSpinner.show();
-		      this.$.flickrSearchForProdusa.search(this.searchText);
-		      
-		   },
-		   searchResults: function(inSender, inResults) {
-			      //this.$.searchSpinner.hide();
-			      //this.$.moreSpinner.hide();
-			      this.results = this.results.concat(inResults);
-			      this.show();
-			   },
+		return function() {
+			sup.apply(this, arguments);
+			this.search();
+
+		};
+	}),
+	search: function() {
+		//this.searchText = this.$.searchInput.getValue();
+		this.page = 0;
+		this.results = [];
+		//this.$.searchSpinner.show();
+		this.$.flickrSearchForProdusa.search(this.searchText);
+
+	},
+	searchResults: function(inSender, inResults) {
+		//this.$.searchSpinner.hide();
+		//this.$.moreSpinner.hide();
+		this.results = this.results.concat(inResults);
+		this.show();
+	},
 	show: function(){
 		this.$.reresult1_1.setContent(clothesArray[0][1]); 
 		this.$.reresult2_1.setContent(clothesArray[1][1]);
-		
+
 		this.$.reresult1_2.setContent("￦ "+clothesArray[0][8]); 
 		this.$.reresult2_2.setContent("￦ "+clothesArray[1][8]);
-		
-		
+
+
 		this.$.detail_1.setSrc(clothesArray[0][6]);
 		this.$.detail_2.setSrc(clothesArray[1][6]);
 		//----------------------------------------------------------------------------------------------------------	
@@ -262,7 +280,7 @@ enyo.kind({
 	goBack: function(inSender, inEvent) {
 		this.$.player.unload();
 		this.bubbleUp("onShowPanel", {name:"select"});
-		
+
 		return true;
 	},
 	backtoImage1 : function(inSender, inEvent){
@@ -293,75 +311,131 @@ enyo.kind({
 		this.$.drawer2.setOpen(false);
 		return true;
 	},
+	Selecton: function(inSender, inEvent)
+	{
+		this.$.back1.setSrc("assets/back2_modify.png");   
+	},
+	Selectout: function(inSender, inEvent)
+	{
+		this.$.back1.setSrc("assets/back2.jpg");      
+	},
+	Selecton1_1: function(inSender, inEvent)
+	{
+		this.$.back1.setSrc("assets/back_modify.png");   
+	},
+	Selectout1_1: function(inSender, inEvent)
+	{
+		this.$.back1.setSrc("assets/back.png");      
+	},
+	Selecton1_2: function(inSender, inEvent)
+	{
+		this.$.addtowishlist1.setSrc("assets/addtowishlist_modify.png");   
+	},
+	Selectout1_2: function(inSender, inEvent)
+	{
+		this.$.addtowishlist1.setSrc("assets/addtowishlist.png");      
+	},
+	Selecton1_3: function(inSender, inEvent)
+	{
+		this.$.close1.setSrc("assets/close_modify.png");   
+	},
+	Selectout1_3: function(inSender, inEvent)
+	{
+		this.$.close1.setSrc("assets/close.jpg");      
+	},
+	Selecton2_1: function(inSender, inEvent)
+	{
+		this.$.back2.setSrc("assets/back_modify.png");   
+	},
+	Selectout2_1: function(inSender, inEvent)
+	{
+		this.$.back2.setSrc("assets/back.png");      
+	},
+	Selecton2_2: function(inSender, inEvent)
+	{
+		this.$.addtowishlist2.setSrc("assets/addtowishlist_modify.png");   
+	},
+	Selectout2_2: function(inSender, inEvent)
+	{
+		this.$.addtowishlist2.setSrc("assets/addtowishlist.png");      
+	},
+	Selecton2_3: function(inSender, inEvent)
+	{
+		this.$.close2.setSrc("assets/close_modify.png");   
+	},
+	Selectout2_3: function(inSender, inEvent)
+	{
+		this.$.close2.setSrc("assets/close.jpg");      
+	},
 });
 enyo.kind({
-	   name: "enyo.sample.PanelsFlickrSearchForProdusa4",
-	   kind: "Component",
-	   published: {
-	      searchText: ""
-	   },
-	   events: {
-	      onResults: ""
-	   },
-	   url: "http://query.yahooapis.com/v1/public/yql?format=json",
-	   search: function(inSearchText, inPage) {
-	    // username:  decodeURIComponent($('#username').val());
-	      
-	      var params = {                        //http://meeneeon.ddns.net:8080/wishList.php
-	         q: 'select * from html where url = "http://meeneeon.ddns.net/produsa4.php"'
-	      };
-	      var req;
-	      req = new enyo.JsonpRequest({url: this.url, callbackName: "callback"})
-	       //  .response.setCharacterEncoding("UTF-8")
-	          .response(this, "processResponse")
-	         .go(params);
-	      
-	      return req;
-	   },
-	   processResponse: function(inSender, inResponse) {
-	      data = JSON.stringify(inResponse, null, 2);
-	      this.parserOrderPitcher();
-	      return true;
-	   },
-	   parserOrderPitcher: function(){
-	      var data2 = data;
-	      
-	      var tableCount=0;
-	      while(1)
-	         {
-	            temp=data2.indexOf("td");
-	            if(temp == -1)
-	               break;
-	            else
-	            {
-	               tableCount++;
-	               data2 = data2.substring(temp);
-	               data2 = data2.substring(data2.indexOf("["));
-	            }
-	         }
-	      clothesArray = new Array(tableCount);
-	      for(i=0; i<tableCount; i++)
-	         clothesArray[i] = new Array(10);
-	      //'produsa'프로그램을 뽑아서 clothesArray를 할당한다.
-	      
-	      data2 = data;
-	      for(i=0; i<tableCount; i++)
-	      {
-	         data2 = data2.substring(data2.indexOf("td"));
-	         data2 = data2.substring(data2.indexOf("["));
-	         for(j=0; j<10; j++)
-	         {
-	            if(j == 9)
-	            {
-	               clothesArray[i][j] = data2.substring(data2.indexOf("\"")+1, data2.indexOf("]")-18);
-	               break;
-	            }   
-	            clothesArray[i][j] = data2.substring(data2.indexOf("\"")+1, data2.indexOf("\","));
-	            data2 = data2.substring(data2.indexOf(clothesArray[i][j])+clothesArray[i][j].length+2);
-	         }
-	      } //웹에 출력된 DB를 파싱하여 clothesArray에 저장한다.
-	      this.doResults(clothesArray);
-	      return clothesArray;
-	   }      
-	   
-	});
+	name: "enyo.sample.PanelsFlickrSearchForProdusa4",
+	kind: "Component",
+	published: {
+		searchText: ""
+	},
+	events: {
+		onResults: ""
+	},
+	url: "http://query.yahooapis.com/v1/public/yql?format=json",
+	search: function(inSearchText, inPage) {
+		// username:  decodeURIComponent($('#username').val());
+
+		var params = {                        //http://meeneeon.ddns.net:8080/wishList.php
+				q: 'select * from html where url = "http://meeneeon.ddns.net/produsa4.php"'
+		};
+		var req;
+		req = new enyo.JsonpRequest({url: this.url, callbackName: "callback"})
+		//  .response.setCharacterEncoding("UTF-8")
+		.response(this, "processResponse")
+		.go(params);
+
+		return req;
+	},
+	processResponse: function(inSender, inResponse) {
+		data = JSON.stringify(inResponse, null, 2);
+		this.parserOrderPitcher();
+		return true;
+	},
+	parserOrderPitcher: function(){
+		var data2 = data;
+
+		var tableCount=0;
+		while(1)
+		{
+			temp=data2.indexOf("td");
+			if(temp == -1)
+				break;
+			else
+			{
+				tableCount++;
+				data2 = data2.substring(temp);
+				data2 = data2.substring(data2.indexOf("["));
+			}
+		}
+		clothesArray = new Array(tableCount);
+		for(i=0; i<tableCount; i++)
+			clothesArray[i] = new Array(10);
+		//'produsa'프로그램을 뽑아서 clothesArray를 할당한다.
+
+		data2 = data;
+		for(i=0; i<tableCount; i++)
+		{
+			data2 = data2.substring(data2.indexOf("td"));
+			data2 = data2.substring(data2.indexOf("["));
+			for(j=0; j<10; j++)
+			{
+				if(j == 9)
+				{
+					clothesArray[i][j] = data2.substring(data2.indexOf("\"")+1, data2.indexOf("]")-18);
+					break;
+				}   
+				clothesArray[i][j] = data2.substring(data2.indexOf("\"")+1, data2.indexOf("\","));
+				data2 = data2.substring(data2.indexOf(clothesArray[i][j])+clothesArray[i][j].length+2);
+			}
+		} //웹에 출력된 DB를 파싱하여 clothesArray에 저장한다.
+		this.doResults(clothesArray);
+		return clothesArray;
+	}      
+
+});
