@@ -161,68 +161,6 @@ enyo.kind({
 			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/close.jpg",
 			            	            				                	            		 ontap:"closeDrawer2"
-			            	            				                	            	 }]
-			            	            				                	             }
-			            	            				                	             ]
-			            	            				                }]
-			            	            			  } ]
-			            	            		  },
-			            	            		  {
-			            	            			  kind: "moon.Divider", spotlight: true,
-			            	            		  },
-			            	            		  {
-			            	            			  kind : "moon.TooltipDecorator",
-			            	            			  style : "display:inline-block",
-			            	            			  components :[
-			            	            			               {
-			            	            			            	   name: "detail_3",
-			            	            			            	   kind: "moon.Image",
-			            	            			            	   classes : "imagepanel",
-			            	            			            	   style : "margin-left:210px;",
-			            	            			            	   ontap:"realDrawer3"
-			            	            			               }]
-			            	            		  },
-			            	            		  {
-			            	            			  name : "drawer3",
-			            	            			  kind : "enyo.Drawer",
-			            	            			  open : false,
-			            	            			  components : [ {
-			            	            				  classes : "moon-hspacing fittable-sample-box fittable-sample-mtb",
-			            	            				  style : "height : 500px; color: white;",
-			            	            				  components : [
-			            	            				                {
-			            	            				                	kind: 'FittableRows',
-			            	            				                	classes: 'enyo-fit',
-			            	            				                	components: [
-			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
-			            	            				                	            	 components: [{
-			            	            				                	            		 name : "reresult3_1",
-			            	            				                	            		 classes : "table",
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult3_2",
-			            	            				                	            		 classes : "table",
-			            	            				                	            		 content : "가격"
-			            	            				                	            	 }]
-			            	            				                	             },
-			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
-			            	            				                	            	 components: [{
-			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
-			            	            				                	            		 src: "assets/back.png",
-			            	            				                	            		 ontap:"backtoImage3"
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/addtowhishlist.png",
-			            	            				                	            		 ontap:"buttonTapped3"
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 kind: "moon.Image",
-			            	            				                	            		 style : "width: 135px;height: 135px;margin-left:40px;margin-top:40px",
-			            	            				                	            		 src: "assets/close.jpg",
-			            	            				                	            		 ontap:"closeDrawer3"
 			            	            				                	            	 },
 			            	            				                	            	 {name: "flickrSearchForProdusa", kind: "enyo.sample.PanelsFlickrSearchForProdusa4", onResults: "searchResults"},
 			            	            				                	            	 {kind:"enyo.Audio",src:'buttonclick.mp3'}
@@ -232,10 +170,7 @@ enyo.kind({
 			            	            				                }]
 			            	            			  } ]
 			            	            		  },
-			            	            		  {
-			            	            			  kind: "moon.Divider", spotlight: true,
-			            	            		  },
-
+			            	            		  
 			            	            		  ],
 
 
@@ -273,16 +208,13 @@ enyo.kind({
 	show: function(){
 		this.$.reresult1_1.setContent(clothesArray[0][1]); 
 		this.$.reresult2_1.setContent(clothesArray[1][1]);
-		this.$.reresult3_1.setContent(clothesArray[2][1]);
 		
 		this.$.reresult1_2.setContent("￦ "+clothesArray[0][8]); 
 		this.$.reresult2_2.setContent("￦ "+clothesArray[1][8]);
-		this.$.reresult3_2.setContent("￦ "+clothesArray[2][8]);
 		
 		
 		this.$.detail_1.setSrc(clothesArray[0][6]);
 		this.$.detail_2.setSrc(clothesArray[1][6]);
-		this.$.detail_3.setSrc(clothesArray[2][6]);
 		//----------------------------------------------------------------------------------------------------------	
 	},buttonTapped1: function(inSender, inEvent) {   
 		this.$.audio.play();
@@ -290,14 +222,11 @@ enyo.kind({
 	},buttonTapped2: function(inSender, inEvent) { 
 		this.$.audio.play();
 		this.ajaxFunction(1);
-	},buttonTapped3: function(inSender, inEvent) {   
-		this.$.audio.play();
-		this.ajaxFunction(2);
 	},ajaxFunction : function(num){
 		var str=""; //= "\'qqqqqqq\'";  //0번째 array를 가져온다
-		for(j=0; j<9; j++)
+		for(j=0; j<10; j++)
 		{
-			if(j==8)
+			if(j==9)
 				str = str+ "\'"+clothesArray[num][j]+"\'";
 			else
 				str = str+ "\'"+clothesArray[num][j]+"\',";
@@ -351,12 +280,6 @@ enyo.kind({
 		time = parseInt(time); 
 		this.$.player.setCurrentTime(time)
 	},
-	backtoImage3 : function(inSender, inEvent){
-		this.$.audio.play();
-		var time = clothesArray[2][5];
-		time = parseInt(time); 
-		this.$.player.setCurrentTime(time)
-	},
 	realDrawer1 : function(inSender, inEvent) {
 		this.$.audio.play();
 		this.$.drawer1.setOpen(true);
@@ -369,12 +292,6 @@ enyo.kind({
 		playerinput = inSender.getContent();
 		var data_player_url1 = player.indexOf(playerinput);
 	},
-	realDrawer3 : function(inSender, inEvent) {
-		this.$.audio.play();
-		this.$.drawer3.setOpen(true);
-		playerinput = inSender.getContent();
-		var data_player_url1 = player.indexOf(playerinput);
-	},
 	closeDrawer1 : function(inSender, inEvent) {
 		this.$.audio.play();
 		this.$.drawer1.setOpen(false);
@@ -383,11 +300,6 @@ enyo.kind({
 	closeDrawer2 : function(inSender, inEvent) {
 		this.$.audio.play();
 		this.$.drawer2.setOpen(false);
-		return true;
-	},
-	closeDrawer3 : function(inSender, inEvent) {
-		this.$.audio.play();
-		this.$.drawer3.setOpen(false);
 		return true;
 	},
 });
@@ -438,7 +350,7 @@ enyo.kind({
 	         }
 	      clothesArray = new Array(tableCount);
 	      for(i=0; i<tableCount; i++)
-	         clothesArray[i] = new Array(9);
+	         clothesArray[i] = new Array(10);
 	      //'produsa'프로그램을 뽑아서 clothesArray를 할당한다.
 	      
 	      data2 = data;
@@ -446,9 +358,9 @@ enyo.kind({
 	      {
 	         data2 = data2.substring(data2.indexOf("td"));
 	         data2 = data2.substring(data2.indexOf("["));
-	         for(j=0; j<9; j++)
+	         for(j=0; j<10; j++)
 	         {
-	            if(j == 8)
+	            if(j == 9)
 	            {
 	               clothesArray[i][j] = data2.substring(data2.indexOf("\"")+1, data2.indexOf("]")-18);
 	               break;

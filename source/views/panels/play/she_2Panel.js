@@ -364,9 +364,9 @@ enyo.kind({
 		this.ajaxFunction(3);
 	},ajaxFunction : function(num){
 		var str=""; //= "\'qqqqqqq\'";  //0번째 array를 가져온다
-		for(j=0; j<9; j++)
+		for(j=0; j<10; j++)
 		{
-			if(j==8)
+			if(j==9)
 				str = str+ "\'"+clothesArray[num][j]+"\'";
 			else
 				str = str+ "\'"+clothesArray[num][j]+"\',";
@@ -378,7 +378,7 @@ enyo.kind({
 			}
 		}
 		//this.$.text1.setContent(str);
-		this.showUser(str+"\'");
+		this.showUser(str);
 	}, showUser : function(str) {
 		if (str == "") {
 			document.getElementById("txtHint").innerHTML = "";
@@ -397,7 +397,7 @@ enyo.kind({
 				}
 			}
 			//%26
-			xmlhttp.open("GET","http://meeneeon.ddns.net/insert_sora.php?q="+str+"\'",true);
+			xmlhttp.open("GET","http://meeneeon.ddns.net/insert_sora.php?q="+str,true);
 
 			xmlhttp.send();
 		}
@@ -532,7 +532,7 @@ enyo.kind({
 	         }
 	      clothesArray = new Array(tableCount);
 	      for(i=0; i<tableCount; i++)
-	         clothesArray[i] = new Array(9);
+	         clothesArray[i] = new Array(10);
 	      //'produsa'프로그램을 뽑아서 clothesArray를 할당한다.
 	      
 	      data2 = data;
@@ -540,9 +540,9 @@ enyo.kind({
 	      {
 	         data2 = data2.substring(data2.indexOf("td"));
 	         data2 = data2.substring(data2.indexOf("["));
-	         for(j=0; j<9; j++)
+	         for(j=0; j<10; j++)
 	         {
-	            if(j == 8)
+	            if(j == 9)
 	            {
 	               clothesArray[i][j] = data2.substring(data2.indexOf("\"")+1, data2.indexOf("]")-18);
 	               break;

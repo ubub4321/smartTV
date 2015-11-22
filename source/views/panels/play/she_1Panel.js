@@ -361,9 +361,9 @@ enyo.kind({
 		this.ajaxFunction(3);
 	},ajaxFunction : function(num){
 		var str=""; //= "\'qqqqqqq\'";  //0번째 array를 가져온다
-		for(j=0; j<9; j++)
+		for(j=0; j<10; j++)
 		{
-			if(j==8)
+			if(j==9)
 				str = str+ "\'"+sheArray[num][j]+"\'";
 			else
 				str = str+ "\'"+sheArray[num][j]+"\',";
@@ -529,7 +529,7 @@ enyo.kind({
 	         }
 	      sheArray = new Array(tableCount);
 	      for(i=0; i<tableCount; i++)
-	         sheArray[i] = new Array(9);
+	         sheArray[i] = new Array(10);
 	      //'produsa'프로그램을 뽑아서 sheArray를 할당한다.
 	      
 	      data2 = data;
@@ -537,9 +537,9 @@ enyo.kind({
 	      {
 	         data2 = data2.substring(data2.indexOf("td"));
 	         data2 = data2.substring(data2.indexOf("["));
-	         for(j=0; j<9; j++)
+	         for(j=0; j<10; j++)
 	         {
-	            if(j == 8)
+	            if(j == 9)
 	            {
 	               sheArray[i][j] = data2.substring(data2.indexOf("\"")+1, data2.indexOf("]")-18);
 	               break;

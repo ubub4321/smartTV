@@ -1,12 +1,20 @@
 @import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 .News_background{
-	background-image: url('background2.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-	height: 1080px;
-	width: 1920px;
-	text-align:center;
+   background-image: url('background2.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   height: 1080px;
+   width: 1920px;
+   text-align:center;
+}
+.popup_background
+{
+   background-image : url('popupback.png');
+   background-size : contain;
+   background-repeat : no-repeat;
+   height: 1080px;
+   width: 1920px;
 }
 .popup_background
 {
@@ -18,87 +26,88 @@
 }
 .article
 {
-	width : 900px;
-	font-size : 32px;
-	margin-left : 40px;
-	font-family: 'Jeju Hallasan', sans-serif;
-	word-spacing : 8px;
+   width : 900px;
+   font-size : 32px;
+   margin-left : 40px;
+   font-family: 'Jeju Hallasan', sans-serif;
+   word-spacing : 8px;
+
 }
 .Photos
 {
-	zoom:37%;
+   zoom:37%;
 }
 .bottomPhoto1
 {
-	margin-left : -1500px;
-	padding-top : 1200px;
-	zoom:40%;
+   margin-left : -1500px;
+   padding-top : 1200px;
+   zoom:40%;
 }
 .bottomPhoto2
 {
-	padding-top : 1200px;
-	zoom : 40%;
-	padding-left : 50px;
+   padding-top : 1200px;
+   zoom : 40%;
+   padding-left : 50px;
 }
 .news-font
 {
-	font-style: normal;
-	font-size: 16px;
-	width: 370px;
+   font-style: normal;
+   font-size: 16px;
+   width: 370px;
 }
 
 .home
 {
-	background-image: url('home_150x100.png');
-	background-size: 150px;
-	background-repeat: no-repeat;
-	height: 100px;
-	width: 150px;
+   background-image: url('home_150x100.png');
+   background-size: 150px;
+   background-repeat: no-repeat;
+   height: 100px;
+   width: 150px;
 }
 .buttonhome
 {
-	background-image: url('homebutton.jpg');
-	background-size: 100px;
-	background-repeat: no-repeat;
-	height: 100px;
-	width: 100px;
-	margin-top : 200px;
+   background-image: url('homebutton.jpg');
+   background-size: 100px;
+   background-repeat: no-repeat;
+   height: 100px;
+   width: 100px;
+   margin-top : 200px;
 }
 .buttonback
 {
-	background-image: url('back.jpg');
-	background-size: 100px;
-	background-repeat: no-repeat;
-	height: 100px;
-	width: 100px;
-	margin-left : 1650px;
-	margin-top : 200px;
+   background-image: url('back.jpg');
+   background-size: 100px;
+   background-repeat: no-repeat;
+   height: 100px;
+   width: 100px;
+   margin-left : 1650px;
+   margin-top : 200px;
 }
 .news_title
 {
-	font-size : 72px;
-	color : #000000;
-	font-family: 'Jeju Hallasan', sans-serif;
+   font-size : 72px;
+   color : #000000;
+   font-family: 'Jeju Hallasan', sans-serif;
 }
 .popup
 {
-	height: 400px;
-	width: 600px;
+   height: 400px;
+   width: 600px;
 }
 .fsnew
 {
-	margin-left:-2000px;
-	padding-top : 1700px;
-	zoom:30%;
-	height: 100px;
-	width: 100px;
-	
+   margin-left:-2000px;
+   padding-top : 1700px;
+   zoom:30%;
+   height: 100px;
+   width: 100px;
+   
 }
 .fstext
 {
-	margin-left : -40px;
-	padding-top : 750px;
-	font-size: 18px;
-	width: 280px;
-	color : #898176;
+   margin-left : -40px;
+   padding-top : 750px;
+   font-size: 18px;
+   width: 280px;
+   color : #898176;
 }
