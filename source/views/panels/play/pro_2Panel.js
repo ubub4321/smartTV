@@ -285,7 +285,7 @@ enyo.kind({
 		playerinput = inSender.getContent();
 		var data_player_url1 = player.indexOf(playerinput);
 	},
-	closeDrawer1 : function(inSender, inEvent) 
+	closeDrawer1 : function(inSender, inEvent) {
 		this.$.drawer1.setOpen(false);
 		return true;
 	},

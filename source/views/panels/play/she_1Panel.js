@@ -288,7 +288,7 @@ enyo.kind({
 			            	            				                	            		 src: "assets/close.jpg",
 			            	            				                	            		 ontap:"closeDrawer4"
 			            	            				                	            	 },
-			            	            				                	            	 {name: "flickrSearchShe7", kind: "enyo.sample.PanelsFlickrSearchForShe7", onResults: "searchResults"}
+			            	            				                	            	 {name: "flickrSearchShe7", kind: "enyo.sample.PanelsFlickrSearchForShe7", onResults: "searchResults"}]
 			            	            				                	             }
 			            	            				                	             ]
 			            	            				                }]
