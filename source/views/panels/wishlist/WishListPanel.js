@@ -93,7 +93,7 @@ enyo.kind({
       this.$.audio.play();
       var i = inEvent.index;   
       //this.$.imageSpinner.show();         clothes_name   clothes_brand   clothes_price   program_name
-      var item = wishListArray[i][6];
+      var item = wishListArray[i][9];
       var Cname = wishListArray[i][1];
       var Cbrand = wishListArray[i][2];
       var Cprice = wishListArray[i][8];
@@ -253,7 +253,7 @@ enyo.kind({
             }
          wishListArray = new Array(tableCount);
          for(i=0; i<tableCount; i++)
-            wishListArray[i] = new Array(9);
+            wishListArray[i] = new Array(10);
          //'produsa'프로그램을 뽑아서 wishListArray를 할당한다.
          
          data2 = data;
@@ -261,9 +261,9 @@ enyo.kind({
          {
             data2 = data2.substring(data2.indexOf("td"));
             data2 = data2.substring(data2.indexOf("["));
-            for(j=0; j<9; j++)
+            for(j=0; j<10; j++)
             {
-               if(j == 8)
+               if(j == 9)
                {
                   wishListArray[i][j] = data2.substring(data2.indexOf("\"")+1, data2.indexOf("]")-18);
                   break;
