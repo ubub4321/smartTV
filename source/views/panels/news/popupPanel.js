@@ -8,8 +8,8 @@ enyo.kind({
 	components:[
 	             {kind : "FittableRows",
 	            	 components : [
-	            	               {name:"backButton", kind:"moon.Image", classes : "buttonback", ontap: "goBack"},
-	            	               {name:"homeButton", kind:"moon.Image", classes : "buttonhome", ontap: "goHome"},
+	            	               {name:"backButton", kind:"moon.Image", classes : "buttonback", ontap: "goBack",onmouseout:"Selectout_back",onmouseover:"Selecton_back"},
+	            	               {name:"homeButton", kind:"moon.Image", classes : "buttonhome", ontap: "goHome",onmouseout:"Selectout_home",onmouseover:"Selecton_home"},
 	            	               {kind:"FittableColumns",style : "height : 100px;margin : 110px 0px 0px 70px;",
 	            	            	   components:[
 	            	            	               {name:"title",classes:"news_title",fit : true},
@@ -30,6 +30,22 @@ enyo.kind({
 	    
 	    
 	    ],
+	    Selectout_back: function(inSender, inEvent)
+		   {
+		      this.$.backButton.setSrc("assets/news/popback_off.jpg");   
+		   },
+		Selecton_back: function(inSender, inEvent)
+		   {   
+		      this.$.backButton.setSrc("assets/news/popback_on.jpg");   
+		   },
+		Selectout_home: function(inSender, inEvent)
+		   {
+			  this.$.homeButton.setSrc("assets/news/pophome_off.jpg");   
+		   },
+		Selecton_home: function(inSender, inEvent)
+		   {
+			  this.$.homeButton.setSrc("assets/news/pophome_on.jpg");  
+		   },
 	create: function(inSender, inEvent){
 		this.inherited(arguments);
 		this.fetch();

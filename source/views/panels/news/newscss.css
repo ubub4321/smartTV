@@ -58,22 +58,22 @@
 }
 .buttonhome
 {
-   background-image: url('homebutton.jpg');
-   background-size: 100px;
+   background-image: url('pophome_off.jpg');
    background-repeat: no-repeat;
-   height: 100px;
-   width: 100px;
-   margin-top : 200px;
+	background-size : contain;
+   height: 90px;
+   width: 90px;
+   margin-top : 210px;
 }
 .buttonback
 {
-   background-image: url('back.jpg');
-   background-size: 100px;
+   background-image: url('popback_off.jpg');
    background-repeat: no-repeat;
-   height: 100px;
-   width: 100px;
-   margin-left : 1650px;
-   margin-top : 200px;
+	background-size : contain;
+   height: 90px;
+   width: 90px;
+   margin-left : 1675px;
+   margin-top : 210px;
 }
 .news_title
 {
