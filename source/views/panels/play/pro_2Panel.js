@@ -29,7 +29,7 @@ enyo.kind({
 			components: [
 			             {
 			            	 components: [
-			            	              {kind: 'enyo.Scroller', /*classes : "enyo-fit",*/
+			            	              {kind: 'enyo.Scroller', classes : "enyo-fit",
 			            	            	  components: [{		
 			            	            		  components : [{							
 			            	            			  components :[
