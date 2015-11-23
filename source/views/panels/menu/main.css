@@ -7,47 +7,47 @@
    height: 1080px;
 }
 .newsb{
-	background-image: url('news.png');
-	   background-size: contain;
-	background-repeat: no-repeat;
-	margin-top:110px;
-	margin-left:600px;
-	width: 350px;
+   /*background-image: url('news.png');
+      background-size: contain;
+   background-repeat: no-repeat;*/
+   margin-top:110px;
+   margin-left:600px;
+   width: 350px;
    height: 200px;
 }
 .playb{
-	background-image: url('play.png');
-	background-repeat: no-repeat;
+   /*background-image: url('play.png');
+   background-repeat: no-repeat;*/
 margin-left:463px;
-	margin-top:155px;
+   margin-top:155px;
      width: 580px;
      zoom: 110%;
    height: 150px;
 }
 .faceb{
-	background-image: url('face.jpg');
-	background-repeat: no-repeat;
-	margin-top:70px;
-	margin-left:720px;
+   /*background-image: url('face.jpg');
+   background-repeat: no-repeat;*/
+   margin-top:70px;
+   margin-left:720px;
      width: 440px;
    height: 165px;
 }
 
 
 .twitb{
-	background-image: url('twit.png');
-	background-repeat: no-repeat;
-	margin-top:270px;
-	margin-left:260px;
+   /*background-image: url('twit.png');
+   background-repeat: no-repeat;*/
+   margin-top:270px;
+   margin-left:260px;
      width: 360px;
    height: 165px;
 }
 .wishb{
-	background-image: url('wish.png');
-	background-repeat: no-repeat;
-	margin-top:120px;
-		margin-left:300px;
-	width: 320px;
+   /*background-image: url('wish.png');
+   background-repeat: no-repeat;*/
+   margin-top:120px;
+      margin-left:300px;
+   width: 320px;
    height: 380px;
 }
 .ani {

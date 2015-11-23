@@ -1,4 +1,10 @@
 var indexArray;
+var index;
+var index2;
+var index3;
+var tog1;
+var tog2;
+var tog3;
 
 enyo.kind({
    name: "selectPanel",
@@ -9,185 +15,254 @@ enyo.kind({
    },
    components: [
    {
-      name : "homeButton",
+      name:"Home",
       kind: "moon.Image",
       classes: "S_Home",
-      ontap : "goHome"
+      src:"assets/play/homeB.jpg",
+      onclick : "goHome",
+      onmouseout:"Homeout",
+      onmouseover:"Homeon"
    },
       {kind: "moon.Scroller", fit:true, components: [
-         {kind: "Repeater", count:3, classes:"moon-hspacing", onSetupItem:"setupItem", components: [
             {
 
                orientation: "vertical",
                components: [
-                  {kind: "moon.Item", components: [
-                     {name: 'image', kind: 'enyo.Image',}
-                  ]},
-                  {
-                     kind: "moon.Button",visible: false ,classes:"imsi", style:"margin-left:160px;width:240px",name: "Play", small: true, content: "PLAY",ontap:"Play"
-                  }
+                  { components: [
+                     {name: 'image', src:"assets/play/poster.png",style:"margin-left:80px;margin-right:80px;margin-top:40px;",kind: 'enyo.Image',ontap:"Play1",onmouseover:"Playon1",onmouseout:"Playout1"},
+                     {name: 'image2',src:"assets/play/14210_15836_3930.jpg", style:"margin-left:80px;margin-right:80px;margin-top:40px;",kind: 'enyo.Image',ontap:"Play2",onmouseover:"Playon2",onmouseout:"Playout2"},
+                     {name: 'image3',src:"assets/play/1442019900-68-org.jpg", style:"margin-left:80px;margin-right:80px;margin-top:40px;",kind: 'enyo.Image',ontap:"Play3",onmouseover:"Playon3",onmouseout:"Playout3"}
+                  ]}
                ],//actionComponents
             }
-         ]}
+         
       ]},
-      
-      {name: 'Story',style:"padding-top:100px;height:100px;", kind: 'moon.BodyText'},
-      {name: 'Story2',style:"", kind: 'moon.BodyText'},
-   /*   { 
-           name : "drawer0",
-           kind : "enyo.Drawer",
-           open : true,
-           fit : true,
-           components : [
-                {name: "adv_1", kind: "enyo.Image",style:"width: 400px;height: 135px;margin-right:40px;",src:"assets/ese.jpg"},
-               {name: "adv_2", kind: "enyo.Image",style:"width: 400px;height: 135px;margin-right:40px;",src:"assets/smart.png"},
-               {name: "adv_3", kind: "enyo.Image",style:"width: 400px;height: 135px;margin-right:40px;",src:"assets/inu.jpg"},
-           ]
-      },*/
-      {kind: "moon.Divider"},
 
       { 
-        name : "drawer1",
-        kind : "enyo.Drawer",
-      //  classes: "drawer_background",
-        open : false,
-        components : [
-             {name: "pro_1", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;",ontap:"imageClick"},
-            {name: "pro_2", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;",ontap:"imageClick"},
-            {name: "pro_3", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;",ontap:"imageClick"},
-             {name: "pro_4", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-            {name: "pro_5", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-            {name: "pro_6", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-             {name: "pro_7", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-            {name: "pro_8", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-            {name: "pro_9", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-             {name: "pro_10", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-            {name: "pro_11", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-        ]
-      },
-      { 
-           name : "drawer2",
+           name : "drawer1",
            kind : "enyo.Drawer",
-         //  classes: "drawer_background",
+      //   style: "margin-bottom : 150px;",
            open : false,
            components : [
-              {name: "she_1", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;",ontap:"imageClick"},
-              {name: "she_2", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;",ontap:"imageClick"},
-              {name: "she_3", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;",ontap:"imageClick"},
-              {name: "she_4", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-              {name: "she_5", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-              {name: "she_6", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-              {name: "she_7", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-              {name: "she_8", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-              {name: "she_9", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-              {name: "she_10", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-              {name: "she_11", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
+                 {name: 'Story',classes:"font",style:"width:1600px;margin-left:150px;", kind: 'moon.BodyText'},
+                 {kind: "moon.Divider"},
+                {name: "pro_1", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;",onmouseout:"outNumpro1",onmouseover:"onNumpro1",ontap:"imageClick"},
+               {name: "pro_2", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;",onmouseout:"outNumpro2",onmouseover:"onNumpro2",ontap:"imageClick"},
+               {name: "pro_3", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;",onmouseout:"outNumpro3",onmouseover:"onNumpro3",ontap:"imageClick"},
+                {name: "pro_4", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+               {name: "pro_5", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+               {name: "pro_6", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+                {name: "pro_7", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+               {name: "pro_8", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+               {name: "pro_9", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+                {name: "pro_10", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+               {name: "pro_11", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
            ]
-      },
-      { 
-              name : "drawer3",
+         },
+         { 
+              name : "drawer2",
               kind : "enyo.Drawer",
-            //  classes: "drawer_background",
+             // style: "margin-bottom : 350px;",
               open : false,
               components : [
-              {name: "star_1", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;",ontap:"imageClick"},
-              {name: "star_2", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;",ontap:"imageClick"},
-              {name: "star_3", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;",ontap:"imageClick"},
-              {name: "star_4", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-              {name: "star_5", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-              {name: "star_6", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-              {name: "star_7", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-              {name: "star_8", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-              {name: "star_9", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-              {name: "star_10", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
-              {name: "star_11", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;"},
+                          {name: 'Story2',classes:"font",style:"width:1600px;margin-left:150px;", kind: 'moon.BodyText'},
+                          {kind: "moon.Divider"},
+                 {name: "she_1", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;",onmouseout:"outNumshe1",onmouseover:"onNumshe1",ontap:"imageClick"},
+                 {name: "she_2", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;",onmouseout:"outNumshe2",onmouseover:"onNumshe2",ontap:"imageClick"},
+                 {name: "she_3", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;",onmouseout:"outNumshe3",onmouseover:"onNumshe3",ontap:"imageClick"},
+                 {name: "she_4", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+                 {name: "she_5", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+                 {name: "she_6", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+                 {name: "she_7", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+                 {name: "she_8", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+                 {name: "she_9", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+                 {name: "she_10", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+                 {name: "she_11", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
               ]
-      },
+         },
+         { 
+                 name : "drawer3",
+                 kind : "enyo.Drawer",
+                // style: "margin-bottom : 350px;",
+                 open : false,
+                 components : [
+                             {name: 'Story3',classes:"font",style:"width:1600px;margin-left:150px;", kind: 'moon.BodyText'},
+                             {kind: "moon.Divider"},
+                 {name: "star_1", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;",onmouseout:"outNumstar1",onmouseover:"onNumstar1",ontap:"imageClick"},
+                 {name: "star_2", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;",onmouseout:"outNumstar2",onmouseover:"onNumstar2",ontap:"imageClick"},
+                 {name: "star_3", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;",onmouseout:"outNumstar3",onmouseover:"onNumstar3",ontap:"imageClick"},
+                 {name: "star_4", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+                 {name: "star_5", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+                 {name: "star_6", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+                 {name: "star_7", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+                 {name: "star_8", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+                 {name: "star_9", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+                 {name: "star_10", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+                 {name: "star_11", kind: "enyo.Image",style:"width: 100px;height: 100px;margin-right:40px;margin-bottom : 5px;"},
+                 ]
+         },
+
+      
    ],
-   setupItem: function(inSender, inEvent) {
-      var i = inEvent.index;
-      if(i == 0){
-      inEvent.item.$.image.setSrc("assets/poster.png");
-      }
-      if(i == 1){
-         inEvent.item.$.image.setSrc("assets/poster1.png");
-         }
-      if(i == 2){
-         inEvent.item.$.image.setSrc("assets/poster2.png");
-         }
-   },
-   Play: function(inSender, inEvent)
+   Playon1: function(inSender, inEvent)
    {
-      var i = inEvent.index;
-      if(i == 0)
-         {
-         this.$.Story.setContent(" 본의 아니게 예능국 OJT 좋아하는 대학 동아리 누나 때문에 KBS 예능국에 들어온 백승찬(김수현), ");
-         this.$.Story2.setContent(" 예능국 여왕벌 탁예진(공효진)와 1박 2일 PD준모(차태현),인기 가수 신디(아이유)가 펼치는 예능국 안에서의 이야기!");
-                  
-      //   this.$.Story.setContent(" 인기 가수 신디(아이유)가 펼치는 예능국 안에서의 이야기!");   
-
-         this.$.drawer1.setOpen(true);
-         this.$.drawer2.setOpen(false);
-         this.$.drawer3.setOpen(false);
-         //this.$.drawer0.setOpen(false);
-         
-         this.$.pro_1.setSrc("assets/1_.png");
-         this.$.pro_2.setSrc("assets/2_.png");
-         this.$.pro_3.setSrc("assets/3_.png");
-         this.$.pro_4.setSrc("assets/4.png");
-         this.$.pro_5.setSrc("assets/5.png");
-         this.$.pro_6.setSrc("assets/6_.png");
-         this.$.pro_7.setSrc("assets/7.png");
-         this.$.pro_8.setSrc("assets/8.png");
-         this.$.pro_9.setSrc("assets/9.png");
-         this.$.pro_10.setSrc("assets/10.png");
-         this.$.pro_11.setSrc("assets/11.png");
-         }
-      if(i == 1)
-      {
-
-         this.$.Story.setContent(" 주근깨 뽀글머리 '역대급 폭탄녀'로 역변한 혜진과 '초정절 복권남'으로 정변한 성준 완벽한듯 하지만 '빈틈 많은 섹시녀'하리,");
-         this.$.Story2.setContent(" 베일에 가려진 '똘끼충만 반전남'신혁, 네 남녀의 재기발랄 로멘틱 코미디!");
-         this.$.drawer2.setOpen(true);
-         this.$.drawer1.setOpen(false);
-         this.$.drawer3.setOpen(false);
-         //this.$.drawer0.setOpen(false);
-         
-         this.$.she_1.setSrc("assets/1_.png");
-         this.$.she_2.setSrc("assets/2_.png");
-         this.$.she_3.setSrc("assets/3_.png");
-         this.$.she_4.setSrc("assets/4.png");
-         this.$.she_5.setSrc("assets/5.png");
-         this.$.she_6.setSrc("assets/6_.png");
-         this.$.she_7.setSrc("assets/7.png");
-         this.$.she_8.setSrc("assets/8.png");
-         this.$.she_9.setSrc("assets/9.png");
-         this.$.she_10.setSrc("assets/10.png");
-         this.$.she_11.setSrc("assets/11.png");
-      }
-      if(i == 2)
-      {
-         this.$.Story.setContent(" 실제 1609년 조선왕조실록에 기록된 비행물체 출현을 근거로, 외계남 도민준과 왕싸가지 한류여신 톱스타");
-         this.$.Story2.setContent(" 천송이의 기적과도 같은 달콤 발랄 로멘스!");
-         this.$.drawer3.setOpen(true);
-         this.$.drawer1.setOpen(false);
-         this.$.drawer2.setOpen(false);
-         //this.$.drawer0.setOpen(false);
-         
-         this.$.star_1.setSrc("assets/1_.png");
-         this.$.star_2.setSrc("assets/2_.png");
-         this.$.star_3.setSrc("assets/3_.png");
-         this.$.star_4.setSrc("assets/4.png");
-         this.$.star_5.setSrc("assets/5.png");
-         this.$.star_6.setSrc("assets/6_.png");
-         this.$.star_7.setSrc("assets/7.png");
-         this.$.star_8.setSrc("assets/8.png");
-         this.$.star_9.setSrc("assets/9.png");
-         this.$.star_10.setSrc("assets/10.png");
-         this.$.star_11.setSrc("assets/11.png");
-      }
+   
+         this.$.image.setSrc("assets/play/postert.png");
       
    },
+   Playout1: function(inSender, inEvent)
+   {
+      if(tog1 != 1)
+      {
+         this.$.image.setSrc("assets/play/poster.png");
+      }
+   },
+   Playon2: function(inSender, inEvent)
+   {
+         this.$.image2.setSrc("assets/play/14210_15836_3930t.jpg");
+   },
+   Playout2: function(inSender, inEvent)
+   {
+      if(tog2 != 1)
+      {
+         this.$.image2.setSrc("assets/play/14210_15836_3930.jpg");
+      }
+   },
+   Playon3: function(inSender, inEvent)
+   {
+         this.$.image3.setSrc("assets/play/1442019900-68-orgt.jpg");
+   },
+   Playout3: function(inSender, inEvent)
+   {
+      if(tog3 != 1)
+      {
+         this.$.image3.setSrc("assets/play/1442019900-68-org.jpg");
+      }
+   },
+   Homeon: function(inSender, inEvent)
+   {
+         this.$.Home.setSrc("assets/play/homeBt.jpg");   
+   },
+   Homeout: function(inSender, inEvent)
+   {
+         this.$.Home.setSrc("assets/play/homeB.jpg");      
+   },
+   Play1: function(inSender, inEvent)
+   {
+      tog1 = 1;
+      this.$.image.setSrc("assets/play/postert.png");
+            if(index == 0)
+               {
+                  this.$.drawer1.setOpen(false);
+                  this.$.image.setSrc("assets/play/poster.png");
+
+                  index =1;
+               }
+            else{
+                  this.$.Story.setContent(" 본의 아니게 예능국 OJT 좋아하는 대학 동아리 누나 때문에 KBS 예능국에 들어온 백승찬(김수현),예능국 여왕벌 탁예진(공효진)와 1박 2일 PD준모(차태현),인기 가수 신디(아이유)가 펼치는 예능국 안에서의 이야기!,밤샘회의에 촬영에 편집에 마라톤을 뛰고도 시청률 떨어지면 밥버러지 취급을 받으니 ... 출입증을 목에 걸고 오늘도 여의도 18번지 6층으로 출근하는 피디 아닌 직장인들의 사무실 이야기.");   
+                  
+                  this.$.drawer1.setOpen(true);
+                  this.$.drawer2.setOpen(false);
+                  this.$.drawer3.setOpen(false);
+                  //this.$.drawer0.setOpen(false);
+                  
+                  this.$.pro_1.setSrc("assets/play/1.png");
+                  this.$.pro_2.setSrc("assets/play/2.png");
+                  this.$.pro_3.setSrc("assets/play/3.png");
+                  this.$.pro_4.setSrc("assets/play/4.png");
+                  this.$.pro_5.setSrc("assets/play/5.png");
+                  this.$.pro_6.setSrc("assets/play/6.png");
+                  this.$.pro_7.setSrc("assets/play/7.png");
+                  this.$.pro_8.setSrc("assets/play/8.png");
+                  this.$.pro_9.setSrc("assets/play/9.png");
+                  this.$.pro_10.setSrc("assets/play/10.png");
+                  this.$.pro_11.setSrc("assets/play/11.png");
+                  index = 0;
+            }
+            index2 = 1;
+            index3 = 1;
+            tog2 = 0;
+            tog3 = 0;
+            this.$.image2.setSrc("assets/play/14210_15836_3930.jpg");
+            this.$.image3.setSrc("assets/play/1442019900-68-org.jpg");
+   },
+   Play2: function(inSender, inEvent)
+   {
+      tog2 = 1;
+      this.$.image2.setSrc("assets/play/14210_15836_3930t.jpg");   
+      if(index3 == 0)
+      {
+         this.$.drawer3.setOpen(false);
+         this.$.image2.setSrc("assets/play/14210_15836_3930.jpg");   
+
+         index3 = 1;
+      }
+      else
+      {
+            this.$.Story3.setContent("조선왕조실록 광해 20권에는 기이한 기록이 남아 있다 1609년 가을. 강원도 간성, 원주, 춘천, 양양, 강릉 등지에서 거의 비슷한 시간에 알 수없는 비행 물체들이 출몰했는ㄴ것. 만약, 그것이 '조선으로 날아온 UFO'였고 그 때 이 땅에 정착한 외계인이 있다면? 바로 옆집에 누가 살고 있는지 모르고 나의 옆집에서 어느 사랑스러운 외계인이 살고 잇을지 그와 기적과도 같은 달콤한 로맨스를 만들어 갈 수 있을지 알이다.");
+            this.$.drawer3.setOpen(true);
+            this.$.drawer1.setOpen(false);
+            this.$.drawer2.setOpen(false);
+            //this.$.drawer0.setOpen(false);
+            index3 = 0;
+            this.$.star_1.setSrc("assets/play/1.png");
+            this.$.star_2.setSrc("assets/play/2.png");
+            this.$.star_3.setSrc("assets/play/3.png");
+            this.$.star_4.setSrc("assets/play/4.png");
+            this.$.star_5.setSrc("assets/play/5.png");
+            this.$.star_6.setSrc("assets/play/6.png");
+            this.$.star_7.setSrc("assets/play/7.png");
+            this.$.star_8.setSrc("assets/play/8.png");
+            this.$.star_9.setSrc("assets/play/9.png");
+            this.$.star_10.setSrc("assets/play/10.png");
+            this.$.star_11.setSrc("assets/play/11.png");
+      }
+      index = 1;
+      index2 =1;
+      tog1 = 0;
+      tog3 = 0;
+      this.$.image.setSrc("assets/play/poster.png");
+      this.$.image3.setSrc("assets/play/1442019900-68-org.jpg");
+   },
+   Play3: function(inSender, inEvent)
+   {
+      tog3 = 1;
+      this.$.image3.setSrc("assets/play/1442019900-68-orgt.jpg");
+      if(index2 == 0)
+      {
+         this.$.drawer2.setOpen(false);
+         index2 = 1;
+         this.$.image3.setSrc("assets/play/1442019900-68-org.jpg");
+
+      }
+      else
+      {
+            this.$.Story2.setContent(" 주근깨 뽀글머리 '역대급 폭탄녀'로 역변한 혜진과 '초정절 복권남'으로 정변한 성준 완벽한듯 하지만 '빈틈 많은 섹시녀'하리, 베일에 가려진 '똘끼충만 반전남'신혁, 네 남녀의 재기발랄 로멘틱 코미디! 스스로를 '주연'아닌 '조연'으로 여겼건, 그래서 첫사랑 앞에 당당히 나서시도 못했던 그녀가.. 이젠 스스로를 알리고 싶은 첫사랑 '그'를 만나 인생의 당당한 '주연'으로 성장해 나가는 상큼발랄 로맨스!");
+            this.$.drawer2.setOpen(true);
+            this.$.drawer1.setOpen(false);
+            this.$.drawer3.setOpen(false);
+            //this.$.drawer0.setOpen(false);
+            index2 = 0;
+            this.$.she_1.setSrc("assets/play/1.png");
+            this.$.she_2.setSrc("assets/play/2.png");
+            this.$.she_3.setSrc("assets/play/3.png");
+            this.$.she_4.setSrc("assets/play/4.png");
+            this.$.she_5.setSrc("assets/play/5.png");
+            this.$.she_6.setSrc("assets/play/6.png");
+            this.$.she_7.setSrc("assets/play/7.png");
+            this.$.she_8.setSrc("assets/play/8.png");
+            this.$.she_9.setSrc("assets/play/9.png");
+            this.$.she_10.setSrc("assets/play/10.png");
+            this.$.she_11.setSrc("assets/play/11.png");
+      }
+      index = 1;
+      index3 = 1;
+      tog1 = 0;
+      tog2 = 0;
+      this.$.image.setSrc("assets/play/poster.png");
+      this.$.image2.setSrc("assets/play/14210_15836_3930.jpg");
+   },
+   
    goHome : function(inSender, inEvent) {
       this.bubbleUp("onGoHome", {
          name : name
@@ -200,46 +275,77 @@ enyo.kind({
        this.bubbleUp("onShowPanel", {name:name});
        return true;
     },
-   pro_1: function(inSender, inEvent)
+    outNumpro1: function(inSender, inEvent)
    {
-         this.$.Story.setContent("dsadsadsadsadsadsadsadadsadsad");      
+         this.$.pro_1.setSrc("assets/play/1.png");   
    },
-   pro_2: function(inSender, inEvent)
+   onNumpro1: function(inSender, inEvent)
    {
-      this.$.Story.setSrc("assets/sheStory_1.png");      
-      
+         this.$.pro_1.setSrc("assets/play/1_.png");      
    },
-   pro_3: function(inSender, inEvent)
+    outNumpro2: function(inSender, inEvent)
    {
-      this.$.Story.setSrc("assets/starStory_1.png");      
-      
+         this.$.pro_2.setSrc("assets/play/2.png");   
    },
-   star_1: function(inSender, inEvent)
+   onNumpro2: function(inSender, inEvent)
    {
-         this.$.Story.setSrc("assets/proStory_1.png");      
+         this.$.pro_2.setSrc("assets/play/2_.png");      
    },
-   star_2: function(inSender, inEvent)
+    outNumpro3: function(inSender, inEvent)
    {
-      this.$.Story.setSrc("assets/sheStory_1.png");      
-      
+         this.$.pro_3.setSrc("assets/play/3.png");   
    },
-   star_3: function(inSender, inEvent)
+   onNumpro3: function(inSender, inEvent)
    {
-      this.$.Story.setSrc("assets/starStory_1.png");      
-      
+         this.$.pro_3.setSrc("assets/play/3_.png");      
    },
-   she_1: function(inSender, inEvent)
+   outNumshe1: function(inSender, inEvent)
    {
-         this.$.Story.setSrc("assets/proStory_1.png");      
+         this.$.she_1.setSrc("assets/play/1.png");   
    },
-   she_2: function(inSender, inEvent)
+   onNumshe1: function(inSender, inEvent)
    {
-      this.$.Story.setSrc("assets/sheStory_1.png");      
-      
+         this.$.she_1.setSrc("assets/play/1_.png");      
    },
-   she_3: function(inSender, inEvent)
+    outNumshe2: function(inSender, inEvent)
    {
-      this.$.Story.setSrc("assets/starStory_1.png");      
-      
+         this.$.she_2.setSrc("assets/play/2.png");   
    },
+   onNumshe2: function(inSender, inEvent)
+   {
+         this.$.she_2.setSrc("assets/play/2_.png");      
+   },
+    outNumshe3: function(inSender, inEvent)
+   {
+         this.$.she_3.setSrc("assets/play/3.png");   
+   },
+   onNumshe3: function(inSender, inEvent)
+   {
+         this.$.she_3.setSrc("assets/play/3_.png");      
+   },
+   outNumstar1: function(inSender, inEvent)
+   {
+         this.$.star_1.setSrc("assets/play/1.png");   
+   },
+   onNumstar1: function(inSender, inEvent)
+   {
+         this.$.star_1.setSrc("assets/play/1_.png");      
+   },
+    outNumstar2: function(inSender, inEvent)
+   {
+         this.$.star_2.setSrc("assets/play/2.png");   
+   },
+   onNumstar2: function(inSender, inEvent)
+   {
+         this.$.star_2.setSrc("assets/play/2_.png");      
+   },
+    outNumstar3: function(inSender, inEvent)
+   {
+         this.$.star_3.setSrc("assets/play/3.png");   
+   },
+   onNumstar3: function(inSender, inEvent)
+   {
+         this.$.star_3.setSrc("assets/play/3_.png");      
+   },
+
 });

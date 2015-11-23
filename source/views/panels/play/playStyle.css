@@ -1,10 +1,22 @@
 @CHARSET "EUC-KR";
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web:700,700italic,900&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
 .moon-panels.always-viewing .moon-panels-panel-scrim {
 	background-color: rgba(0, 0, 0, 0.3);
 	color: white;
 	
 	opacity:0;
+}
+.Select_background{
+   background-image: url('back2.jpg');
+   background-size: contain;
+   background-repeat: no-repeat;
+   height: 1080px;
+   width: 1920px;
+   text-align:center;
+}
+.font{
+font-family: 'Jeju Hallasan', cursive;
 }
 .table{
 	text-transform: uppercase;
@@ -31,9 +43,9 @@
 	
 }
 .S_Home{
-   background-image: url('HomeButton.png');
+ /*	  background-image: url('HomeButton.png');
    background-size: contain;
-   background-repeat: no-repeat;
+   background-repeat: no-repeat;*/
    margin-left : 1840px;
    width: 40px;
    height: 40px;
