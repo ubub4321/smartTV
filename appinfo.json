@@ -1,10 +1,10 @@
 {
-    "id": "20151123.app",
-    "version": "1.0.5",
+    "id": "20151123c.app",
+    "version": "1.1.0",
     "vendor": "wannabe",
     "type": "web",
     "main": "index.html",
-    "title": "wannabe",
+    "title": "Wannabe",
     "icon": "icon.png",
     "largeIcon": "largeIcon.png",
     "uiRevision": 2,

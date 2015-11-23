@@ -124,12 +124,12 @@ enyo.kind({
               },
                goface : function()
                {
-                     location = "https://www.facebook.com/hashtag/%ED%8C%A8%EC%85%98?fref=ts";
+            	   window.open('https://www.facebook.com/hashtag/%ED%8C%A8%EC%85%98?fref=ts',"facebook",'scrollbars=yes,menubar=no');
                      return true;
                },
               gotwit : function()
                {
-                     location = "https://twitter.com/search?q=fashion&src=tyah";
+            	  window.open('https://twitter.com/search?q=fashion&src=tyah',"twit",'scrollbars=yes,menubar=no');
                      return true;
                }
 });

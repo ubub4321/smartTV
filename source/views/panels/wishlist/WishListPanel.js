@@ -35,9 +35,9 @@ enyo.kind({
                                               {name:"item",layoutKind:"FittableColumnsLayout",fit:true,classes:"panels-sample-flickr-item",ontap:"itemTap",components:[
                                                     {name:"thumbnail",kind:"Image",style:"width:75px;height:75px;",classes:"panels-sample-flickr-thumbnail"},
                                                     {name:"title",style:"width:200px;height:75px;margin-left:40px;margin-top:20px;font-size:24px;"},
-                                                    {name:"remove",kind:"moon.Image",style:"background-image: url('assets/delete.png');width:60px;height:60px;margin-left:30px;",ontap:"removeTap"}]}]}]},
-                             {name : "home",kind:"moon.Image",style:"margin-left:250px;",ontap:"gohome",src:"assets/HomeButton_wish.png", onmouseout:"Selectout2",onmouseover:"Selecton2"}]},
-                {kind:"enyo.Audio",src:'buttonclick.mp3'},
+                                                    {name:"remove",kind:"moon.Image",style:"background-image: url('assets/delete.png');width:60px;height:60px;margin-left:30px;",ontap:"removeTap"}]}]}
+                                  ]},
+                             {name : "home",kind:"moon.Image",ontap:"gohome",style:"margin-left:250px;",src:"assets/HomeButton_wish.png", onmouseout:"Selectout2",onmouseover:"Selecton2"}]},
                {name: "flickrSearch_wish", kind: "enyo.sample.PanelsFlickrSearch22", onResults: "searchResults"}],
    rendered: enyo.inherit(function(sup) {
       return function() {
@@ -87,7 +87,6 @@ enyo.kind({
       if (enyo.Panels.isScreenNarrow()) {
          this.setIndex(1);
       }
-      this.$.audio.play();
       var i = inEvent.index;   
       //this.$.imageSpinner.show();         clothes_name   clothes_brand   clothes_price   program_name
       var item = wishListArray[i][9];
@@ -214,11 +213,10 @@ enyo.kind({
          this.setIndex(1);
       }
       var getitem = buyitem;
-      location = getitem;
+      window.open(getitem,"item",'scrollbars=yes,menubar=no');
    },
    gohome: function(inSender,inEvent)
    {
-      this.$.audio.play();
       this.bubbleUp("onGoHome");
       return true;
    },

@@ -18,7 +18,7 @@ enyo.kind({
 	            	               {kind : "FittableColumns",style :"margin-top : 15px;margin-left : 45px;",
 	            	            	   components:[
 	            	            	               {name:"image", kind:"Image", style:"width : 890px;height : 517px;"}, //zoom: 50%;
-	            	            	               {name:"article",classes: "article"}
+	            	            	               {name:"article",classes: "article"},
 	            	            	               ]
 	            	               }
 	            	               ]
