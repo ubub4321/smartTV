@@ -41,22 +41,27 @@ enyo.kind({
                                     	            	                	             {name : "popup",style:"width : 680px; height :380px;margin-top : -50px;",  //style:"background-color: black;",
                                     	            	                	            	 components: [
                                     	            	                	            	              {name:"carousel", kind:"ImageCarousel", style:"width : 680px;height:450px;"}, // 이미지 넘기는 화면
-                                    	            	                	            	              {name : "head",onload : "changedHeadLineText",style : "text-align:center;"}, // 기사 헤드라인
+                                    	            	                	            	              {name : "head",onload : "changedHeadLineText",classes : "headline"}, // 기사 헤드라인
                                     	            	                	            	              ],
                                     	            	                	            	              ondown: "gonews"},
                                     	            	                	            	              {style:"margin-top:100px;",
                                     	            	                	            	            	  components :[
-                                    	            	                	            	            	               {kind: "moon.Icon", icon: "arrowsmallleft", style:"margin-top : 10px;margin-left : 250px; color : black;",small: false, ontap: "previous"},
+                                    	            	                	            	            	               {kind: "moon.Icon", icon: "arrowsmallleft", style:"margin-top : 10px;margin-left : 280px; color : black;",small: false, ontap: "previous"},
                                     	            	                	            	            	               {kind: "moon.Icon", icon: "arrowsmallright", style:"margin-top : 10px; color : black;",small: false, ontap: "next"},
                                     	            	                	            	            	               // 화살표
                                     	            	                	            	            	               ]
                                     	            	                	            	              },
-                                    	            	                	            	              {style:"margin-top:10px;",//style:"background-color: black;",
+                                    	            	                	            	              {kind: "FittableColumns",style:"margin-top:10px;margin-left : -80px;",//style:"background-color: black;",
                                     	            	                	            	            	  components :[
-                                    	            	                	            	            	               {kind : "moon.Image",name : "img8", classes:"Photos",ontap : "Stfashion", onmouseout:"Selectout8",onmouseover:"Selecton8"},
+                                    	            	                	            	            	               {kind : "moon.Image",classes:"fsimage",name : "fsimage",ontap : "fashionnew",onmouseout:"Selectoff_fsimg",onmouseover:"Selecton_fsimg"},
+                                    	            	                	            	            	               {kind: "FittableRows",
+                                    	            	                	            	            	            	   components :[
+                                    	            	                	            	            	            	                {name : "fshead",classes:"fstext"},
+                                    	            	                	            	            	            	                {name : "article",classes:"fsarticle"}
+                                    	            	                	            	            	            	                ]
+                                    	            	                	            	            	               }
                                     	            	                	            	            	               ]
                                     	            	                	            	              },
-                                    	            	                	            	              {kind : "moon.BodyText",name : "info",content:"이미지를 클릭하면 상세정보가 나옵니다.",style:"font-size :15px;color : #b45b4b"},
                                     	            	                	            	              ]
                                     	            	                },
                                     	            	                ]
@@ -130,13 +135,13 @@ enyo.kind({
 	   {
 	      this.$.img7.setSrc("assets/news/7.jpg");      
 	   },
-	 Selecton8: function(inSender, inEvent)
+	 Selecton_fsimg: function(inSender, inEvent)
 	   {
-	      this.$.img8.setSrc("assets/news/8_modify.jpg");   
+	      this.$.fsimage.setSrc("assets/news/fsimgon.jpg");   
 	   },
-	 Selectout8: function(inSender, inEvent)
+	 Selectoff_fsimg: function(inSender, inEvent)
 	   {
-	      this.$.img8.setSrc("assets/news/8.jpg");      
+	      this.$.fsimage.setSrc("assets/news/fsimgoff.jpg");      
 	   },
 	 Selecton_home: function(inSender, inEvent)
 	   {
@@ -180,7 +185,6 @@ enyo.kind({
       this.$.img5.setSrc("assets/news/5.jpg");
       this.$.img6.setSrc("assets/news/6.jpg");
       this.$.img7.setSrc("assets/news/7.jpg");
-      this.$.img8.setSrc("assets/news/8.jpg");
       this.fetch();
       url = [
              "http://pic.styleindex.co.kr/syof/editor/201511/8881fa1e8f90227426c25f935f77b1d2.jpg",
@@ -247,24 +251,16 @@ enyo.kind({
                
                condata = data.substring(data.indexOf("헤드5"));   //substring(3) -> 0~3번째 문자열을 뺀 나머지를 출력
                head4 = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
-               /*
-               condata = data.substring(data.indexOf("스트릿1"));
-               img1 = condata.substring(condata.indexOf("스트릿사진")+9,condata.indexOf("jpg")+3);
-               
-               condata = data.substring(data.indexOf("스트릿2"));
-               img2 = condata.substring(condata.indexOf("스트릿사진")+9,condata.indexOf("jpg")+3);
-               
-               condata = data.substring(data.indexOf("스트릿3"));
-               img3 = condata.substring(condata.indexOf("스트릿사진")+9,condata.indexOf("jpg")+3);
-               
+
                condata = data.substring(data.indexOf("패션뉴스"));
                fsimg = condata.substring(condata.indexOf("패션뉴스사진")+10,condata.indexOf("jpg")+3);
                fshead = condata.substring(condata.indexOf("h4")+6,condata.indexOf("끝"));
+               article = condata.substring(condata.indexOf("기사")+6,condata.indexOf("...")+3);
 
-               */
-               //this.$.img4.setSrc(fsimg);
-               //this.$.text1.setContent(fshead);
+               this.$.fsimage.setSrc(fsimg);
+               this.$.fshead.setContent(fshead);
                this.$.head.setContent(head0);
+               this.$.article.setContent(article);
                return true;
             },
             
