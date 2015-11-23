@@ -16,12 +16,13 @@ enyo.kind({
    spotlight: true,
    components: [{   
                kind: "FittableRows",
-               components:[{
+               components:[{name:"android", kind:"moon.Image",classes:"androidb", style:"margin-left:-250px;margin-top:50px;",src:"assets/main/android1.jpg",onmouseover:"Androidon",onmouseout:"Androidout"},{
                   kind:"FittableColumns",
-                  components:[{
+                  components:[
+                              {
                               kind: "FittableRows",
                               components:[{
-                                 name: "twit",kind:"moon.Image",src:"assets/main/twit.png",classes :"twitb",onmouseout:"Twitout",onmouseover:"Twiton", onclick: "gotwit"
+                                 name: "twit",kind:"moon.Image",src:"assets/main/twit.png",style:"margin-left:250px;margin-top:30px;",classes :"twitb",onmouseout:"Twitout",onmouseover:"Twiton", onclick: "gotwit"
                                        }]
                            }]
                },
@@ -30,7 +31,7 @@ enyo.kind({
                   components:[{
                               kind: "FittableRows",
                               components:[{
-                                       name: "wish",kind:"moon.Image",src:"assets/main/wish.png",classes :"wishb", onmouseout:"Wishout",onmouseover:"Wishon",onclick: "imageClick"
+                                       name: "wish",kind:"moon.Image",src:"assets/main/wish.png",style:"margin-left:300px;margin-top:140px;",classes :"wishb", onmouseout:"Wishout",onmouseover:"Wishon",onclick: "imageClick"
                                        }]
                            }]
                }
@@ -73,6 +74,14 @@ enyo.kind({
                   this.bubbleUp("onShowPanel", {name:name});
                   return true;
                },
+              Androidon: function(inSender, inEvent)
+              {
+                    this.$.android.setSrc("assets/main/android2.jpg");   
+              },
+              Androidout: function(inSender, inEvent)
+              {
+                    this.$.android.setSrc("assets/main/android1.jpg");     
+              },
               Faceon: function(inSender, inEvent)
               {
                     this.$.face.setSrc("assets/main/facet.png");   
