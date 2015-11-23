@@ -13,6 +13,7 @@ enyo.kind({
 		src : "pro_2.mp4", 
 		preload : "auto",
 		autoplay : true,
+		loop : true,
 		showControls : true,
 	}, 
 	{

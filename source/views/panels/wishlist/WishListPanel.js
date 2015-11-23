@@ -1,5 +1,7 @@
 var wishList;
 var buyitem;
+var cnt = 0;
+var flag = 0;
 
 enyo.kind({
    name: "wishPanel",
@@ -10,7 +12,8 @@ enyo.kind({
    components: [
                 {name: "backToolbar", kind: "onyx.Toolbar", fit: false, showing: false},   
                 {classes:"Carousel",components:[
-                             {name:"Caro", kind:'enyo.ImageCarousel',style:"width:440px; height:600px;",defaultScale:"auto"},
+                             {content:"Fashion",style:"margin-top:103px;margin-bottom:-2px;"},
+                             {name:"Caro", kind:'moon.Image',style:"width:430px; height:625px;margin-top:5px;"},
                              {classes:"Caro1",layoutKind:"FittableColumnsLayout", fit:true,components:[
                                         {kind: 'moon.Icon', icon: "arrowsmallleft", allowHtml: true, ontap:'previous'},
                                         {kind: 'moon.Icon', icon: "arrowsmallright", allowHtml: true, ontap:'next'}]}]},
@@ -31,7 +34,7 @@ enyo.kind({
                                         {kind:"onyx.InputDecorator",layoutKind:"FittableColumnsLayout",components:[
                                               {name:"searchSpinner",kind:"Image",src:"assets/spinner.gif",showing:false},
                                               {comtent:"장바구니",onResults:"search"}]}]},*/
-                                  {content:"장바구니"},
+                                  {content:"장바구니",style:"font-family: 'Noto Sans KR', sans-serif;"},
                                   {kind:"List",touch:true,onSetupItem:"setupItem",components:[
                                               {name:"item",layoutKind:"FittableColumnsLayout",fit:true,classes:"panels-sample-flickr-item",ontap:"itemTap",components:[
                                                     {name:"thumbnail",kind:"Image",style:"width:75px;height:75px;",classes:"panels-sample-flickr-thumbnail"},
@@ -39,8 +42,8 @@ enyo.kind({
                                                     /*{name:"purchase",kind:"moon.IconButton",src:"assets/addtowhishlist.png",classes:"remove-button-css",ontap:"purchaseTap"},*/
                                                     {name:"remove",kind:"moon.Image",style:"background-image: url('assets/delete.png');width:60px;height:60px;margin-left:30px;",ontap:"removeTap"}]}]}
                                   ]},
-                             {name : "home", kind:"moon.Image",ontap:"gohome",style:"margin-left:200px;",src:"assets/HomeButton_wish.png", onmouseout:"Selectout2",onmouseover:"Selecton2"}]},
-           
+                             {name : "home",kind:"moon.Image",ontap:"gohome",style:"margin-left:250px;",src:"assets/HomeButton_wish.png", onmouseout:"Selectout2",onmouseover:"Selecton2"}]},
+                {kind:"enyo.Audio",src:'buttonclick.mp3'},
                {name: "flickrSearch_wish", kind: "enyo.sample.PanelsFlickrSearch22", onResults: "searchResults"}],
    rendered: enyo.inherit(function(sup) {
       return function() {
@@ -60,11 +63,12 @@ enyo.kind({
       };
    }),
    search: function() {
-      //this.searchText = this.$.searchInput.getValue();
       this.page = 0;
       this.results = [];
       //this.$.searchSpinner.show();
       this.$.flickrSearch_wish.search(this.searchText);
+      this.$.Caro.setSrc('assets/starImg/default1.jpg');
+      this.$.flickrImage.setSrc('assets/starImg/default2.jpg')
    },
    searchResults: function(inSender, inResults) {
       //this.$.searchSpinner.hide();
@@ -86,10 +90,10 @@ enyo.kind({
       return true;
    },
    itemTap: function(inSender, inEvent) {
-     var cnt = 0;
       if (enyo.Panels.isScreenNarrow()) {
          this.setIndex(1);
       }
+      this.$.audio.play();
       var i = inEvent.index;   
       //this.$.imageSpinner.show();         clothes_name   clothes_brand   clothes_price   program_name
       var item = wishListArray[i][9];
@@ -104,53 +108,60 @@ enyo.kind({
       this.$.clothes_price.setContent(wishListArray[i][8]);
       this.$.program_name.setContent(wishListArray[i][4]);
       buyitem = wishListArray[i][7];
-      urls=[];
-      this.$.Caro.setImages(urls);
       
       if(Cpeoplename=="김수현")
       {
-         urls = ['assets/starImg/ksh1.jpg','assets/starImg/ksh2.jpg','assets/starImg/ksh3.jpg','assets/starImg/ksh4.jpg'];
-         this.$.Caro.setImages(urls);
+         flag = 1;
+         this.$.Caro.setSrc('assets/starImg/ksh1.jpg');
+         cnt = 1;
       }
       else if(Cpeoplename=="아이유")
       {
-         urls = ['assets/starImg/iii1.jpg','assets/starImg/iii2.jpg','assets/starImg/iii3.jpg','assets/starImg/iii4.jpg'];
-         this.$.Caro.setImages(urls);
+         flag = 2;
+         this.$.Caro.setSrc('assets/starImg/iii1.jpg');
+         cnt = 1;
       }
       else if(Cpeoplename=="박서준")
       {
-         urls = ['assets/starImg/psj1.jpg','assets/starImg/psj2.jpg','assets/starImg/psj3.jpg','assets/starImg/psj4.jpg'];
-         this.$.Caro.setImages(urls);
+         flag = 3;
+         this.$.Caro.setSrc('assets/starImg/psj1.jpg');
+         cnt = 1;
       }
       else if(Cpeoplename=="고준희")
       {
-         urls = ['assets/starImg/kjh1.jpg','assets/starImg/kjh2.jpg','assets/starImg/kjh3.jpg','assets/starImg/kjh4.jpg']
-         this.$.Caro.setImages(urls);
+         flag = 4;
+         this.$.Caro.setSrc('assets/starImg/kjh1.jpg');
+         cnt = 1;
       }
       else if(Cpeoplename=="공효진")
       {
-         urls = ['assets/starImg/ghj1.jpg','assets/starImg/ghj2.jpg','assets/starImg/ghj3.jpg','assets/starImg/ghj4.jpg'];
-         this.$.Caro.setImages(urls);
+         flag = 5;
+         this.$.Caro.setSrc('assets/starImg/ghj1.jpg');
+         cnt = 1;
       }
       else if(Cpeoplename=="전지현")
       {
-         urls = ['assets/starImg/jjh1.jpg','assets/starImg/jjh2.jpg','assets/starImg/jjh3.jpg','assets/starImg/jjh4.jpg'];
-         this.$.Caro.setImages(urls);
+         flag = 6;
+         this.$.Caro.setSrc('assets/starImg/jjh1.jpg');
+         cnt = 1;
       }
       else if(Cpeoplename=="유인나")
       {
-         urls = ['assets/starImg/uin1.jpg','assets/starImg/uin2.jpg','assets/starImg/uin3.jpg','assets/starImg/uin4.jpg'];
-         this.$.Caro.setImages(urls);
+         flag = 7;
+         this.$.Caro.setSrc('assets/starImg/uin1.jpg');
+         cnt = 1;
       }
       else if(Cpeoplename=="최시원")
       {
-         urls = ['assets/starImg/csw1.jpg','assets/starImg/csw2.jpg','assets/starImg/csw3.jpg','assets/starImg/csw4.jpg'];
-         this.$.Caro.setImages(urls);
+         flag = 8;
+         this.$.Caro.setSrc('assets/starImg/csw1.jpg');
+         cnt = 1;
       }
       else if(Cpeoplename=="차태현")
       {
-         urls = ['assets/starImg/ctw1.jpg','assets/starImg/ctw2.jpg','assets/starImg/ctw3.jpg','assets/starImg/ctw4.jpg'];
-         this.$.Caro.setImages(urls);
+         flag = 9;
+         this.$.Caro.setSrc('assets/starImg/ctw1.jpg');
+         cnt = 1;
       }
    },
    imageLoaded: function() {
@@ -213,6 +224,7 @@ enyo.kind({
    },
    gohome: function(inSender,inEvent)
    {
+      this.$.audio.play();
       this.bubbleUp("onGoHome");
       return true;
    },
@@ -233,10 +245,354 @@ enyo.kind({
          this.$.home.setSrc("assets/HomeButton_wish.png");      
    },
    previous: function(inSender, inEvent) {
-      this.$.Caro.previous();
+      if(flag == 1)
+      {
+         if(cnt == 0)
+         {
+            this.$.Caro.setSrc('assets/starImg/ksh1.jpg');
+         }
+         else if(cnt == 1)
+         {
+            this.$.Caro.setSrc('assets/starImg/ksh2.jpg');
+         }
+         else if(cnt == 2)
+         {
+            this.$.Caro.setSrc('assets/starImg/ksh3.jpg');
+         }
+         else if(cnt == 3)
+         {
+            this.$.Caro.setSrc('assets/starImg/ksh4.jpg');
+         }
+      }
+      else if(flag == 2)
+      {
+         if(cnt == 0)
+         {
+            this.$.Caro.setSrc('assets/starImg/iii1.jpg');
+         }
+         else if(cnt == 1)
+         {
+            this.$.Caro.setSrc('assets/starImg/iii2.jpg');
+         }
+         else if(cnt == 2)
+         {
+            this.$.Caro.setSrc('assets/starImg/iii3.jpg');
+         }
+         else if(cnt == 3)
+         {
+            this.$.Caro.setSrc('assets/starImg/iii4.jpg');
+         }
+      }
+      else if(flag == 3)
+      {
+         if(cnt == 0)
+         {
+            this.$.Caro.setSrc('assets/starImg/psj1.jpg');
+         }
+         else if(cnt == 1)
+         {
+            this.$.Caro.setSrc('assets/starImg/psj2.jpg');
+         }
+         else if(cnt == 2)
+         {
+            this.$.Caro.setSrc('assets/starImg/psj3.jpg');
+         }
+         else if(cnt == 3)
+         {
+            this.$.Caro.setSrc('assets/starImg/psj4.jpg');
+         }
+      }
+      else if(flag == 4)
+      {
+         if(cnt == 0)
+         {
+            this.$.Caro.setSrc('assets/starImg/kjh1.jpg');
+         }
+         else if(cnt == 1)
+         {
+            this.$.Caro.setSrc('assets/starImg/kjh2.jpg');
+         }
+         else if(cnt == 2)
+         {
+            this.$.Caro.setSrc('assets/starImg/kjh3.jpg');
+         }
+         else if(cnt == 3)
+         {
+            this.$.Caro.setSrc('assets/starImg/kjh4.jpg');
+         }
+      }
+      else if(flag == 5)
+      {
+         if(cnt == 0)
+         {
+            this.$.Caro.setSrc('assets/starImg/ghj1.jpg');
+         }
+         else if(cnt == 1)
+         {
+            this.$.Caro.setSrc('assets/starImg/ghj2.jpg');
+         }
+         else if(cnt == 2)
+         {
+            this.$.Caro.setSrc('assets/starImg/ghj3.jpg');
+         }
+         else if(cnt == 3)
+         {
+            this.$.Caro.setSrc('assets/starImg/ghj4.jpg');
+         }
+      }
+      else if(flag == 6)
+      {
+         if(cnt == 0)
+         {
+            this.$.Caro.setSrc('assets/starImg/jjh1.jpg');
+         }
+         else if(cnt == 1)
+         {
+            this.$.Caro.setSrc('assets/starImg/jjh2.jpg');
+         }
+         else if(cnt == 2)
+         {
+            this.$.Caro.setSrc('assets/starImg/jjh3.jpg');
+         }
+         else if(cnt == 3)
+         {
+            this.$.Caro.setSrc('assets/starImg/jjh4.jpg');
+         }
+      }
+      else if(flag == 7)
+      {
+         if(cnt == 0)
+         {
+            this.$.Caro.setSrc('assets/starImg/uin1.jpg');
+         }
+         else if(cnt == 1)
+         {
+            this.$.Caro.setSrc('assets/starImg/uin2.jpg');
+         }
+         else if(cnt == 2)
+         {
+            this.$.Caro.setSrc('assets/starImg/uin3.jpg');
+         }
+         else if(cnt == 3)
+         {
+            this.$.Caro.setSrc('assets/starImg/uin4.jpg');
+         }
+      }
+      else if(flag == 8)
+      {
+         if(cnt == 0)
+         {
+            this.$.Caro.setSrc('assets/starImg/csw1.jpg');
+         }
+         else if(cnt == 1)
+         {
+            this.$.Caro.setSrc('assets/starImg/csw2.jpg');
+         }
+         else if(cnt == 2)
+         {
+            this.$.Caro.setSrc('assets/starImg/csw3.jpg');
+         }
+         else if(cnt == 3)
+         {
+            this.$.Caro.setSrc('assets/starImg/csw4.jpg');
+         }
+      }
+      else if(flag == 9)
+      {
+         if(cnt == 0)
+         {
+            this.$.Caro.setSrc('assets/starImg/ctw1.jpg');
+         }
+         else if(cnt == 1)
+         {
+            this.$.Caro.setSrc('assets/starImg/ctw2.jpg');
+         }
+         else if(cnt == 2)
+         {
+            this.$.Caro.setSrc('assets/starImg/ctw3.jpg');
+         }
+         else if(cnt == 3)
+         {
+            this.$.Caro.setSrc('assets/starImg/ctw4.jpg');
+         }
+      }
+      cnt-=1;
+      cnt%=4;
    },
    next: function(inSender, inEvent) {
-      this.$.Caro.next();
+      if(flag == 1)
+      {
+         if(cnt == 0)
+         {
+            this.$.Caro.setSrc('assets/starImg/ksh1.jpg');
+         }
+         else if(cnt == 1)
+         {
+            this.$.Caro.setSrc('assets/starImg/ksh2.jpg');
+         }
+         else if(cnt == 2)
+         {
+            this.$.Caro.setSrc('assets/starImg/ksh3.jpg');
+         }
+         else if(cnt == 3)
+         {
+            this.$.Caro.setSrc('assets/starImg/ksh4.jpg');
+         }
+      }
+      else if(flag == 2)
+      {
+         if(cnt == 0)
+         {
+            this.$.Caro.setSrc('assets/starImg/iii1.jpg');
+         }
+         else if(cnt == 1)
+         {
+            this.$.Caro.setSrc('assets/starImg/iii2.jpg');
+         }
+         else if(cnt == 2)
+         {
+            this.$.Caro.setSrc('assets/starImg/iii3.jpg');
+         }
+         else if(cnt == 3)
+         {
+            this.$.Caro.setSrc('assets/starImg/iii4.jpg');
+         }
+      }
+      else if(flag == 3)
+      {
+         if(cnt == 0)
+         {
+            this.$.Caro.setSrc('assets/starImg/psj1.jpg');
+         }
+         else if(cnt == 1)
+         {
+            this.$.Caro.setSrc('assets/starImg/psj2.jpg');
+         }
+         else if(cnt == 2)
+         {
+            this.$.Caro.setSrc('assets/starImg/psj3.jpg');
+         }
+         else if(cnt == 3)
+         {
+            this.$.Caro.setSrc('assets/starImg/psj4.jpg');
+         }
+      }
+      else if(flag == 4)
+      {
+         if(cnt == 0)
+         {
+            this.$.Caro.setSrc('assets/starImg/kjh1.jpg');
+         }
+         else if(cnt == 1)
+         {
+            this.$.Caro.setSrc('assets/starImg/kjh2.jpg');
+         }
+         else if(cnt == 2)
+         {
+            this.$.Caro.setSrc('assets/starImg/kjh3.jpg');
+         }
+         else if(cnt == 3)
+         {
+            this.$.Caro.setSrc('assets/starImg/kjh4.jpg');
+         }
+      }
+      else if(flag == 5)
+      {
+         if(cnt == 0)
+         {
+            this.$.Caro.setSrc('assets/starImg/ghj1.jpg');
+         }
+         else if(cnt == 1)
+         {
+            this.$.Caro.setSrc('assets/starImg/ghj2.jpg');
+         }
+         else if(cnt == 2)
+         {
+            this.$.Caro.setSrc('assets/starImg/ghj3.jpg');
+         }
+         else if(cnt == 3)
+         {
+            this.$.Caro.setSrc('assets/starImg/ghj4.jpg');
+         }
+      }
+      else if(flag == 6)
+      {
+         if(cnt == 0)
+         {
+            this.$.Caro.setSrc('assets/starImg/jjh1.jpg');
+         }
+         else if(cnt == 1)
+         {
+            this.$.Caro.setSrc('assets/starImg/jjh2.jpg');
+         }
+         else if(cnt == 2)
+         {
+            this.$.Caro.setSrc('assets/starImg/jjh3.jpg');
+         }
+         else if(cnt == 3)
+         {
+            this.$.Caro.setSrc('assets/starImg/jjh4.jpg');
+         }
+      }
+      else if(flag == 7)
+      {
+         if(cnt == 0)
+         {
+            this.$.Caro.setSrc('assets/starImg/uin1.jpg');
+         }
+         else if(cnt == 1)
+         {
+            this.$.Caro.setSrc('assets/starImg/uin2.jpg');
+         }
+         else if(cnt == 2)
+         {
+            this.$.Caro.setSrc('assets/starImg/uin3.jpg');
+         }
+         else if(cnt == 3)
+         {
+            this.$.Caro.setSrc('assets/starImg/uin4.jpg');
+         }
+      }
+      else if(flag == 8)
+      {
+         if(cnt == 0)
+         {
+            this.$.Caro.setSrc('assets/starImg/csw1.jpg');
+         }
+         else if(cnt == 1)
+         {
+            this.$.Caro.setSrc('assets/starImg/csw2.jpg');
+         }
+         else if(cnt == 2)
+         {
+            this.$.Caro.setSrc('assets/starImg/csw3.jpg');
+         }
+         else if(cnt == 3)
+         {
+            this.$.Caro.setSrc('assets/starImg/csw4.jpg');
+         }
+      }
+      else if(flag == 9)
+      {
+         if(cnt == 0)
+         {
+            this.$.Caro.setSrc('assets/starImg/ctw1.jpg');
+         }
+         else if(cnt == 1)
+         {
+            this.$.Caro.setSrc('assets/starImg/ctw2.jpg');
+         }
+         else if(cnt == 2)
+         {
+            this.$.Caro.setSrc('assets/starImg/ctw3.jpg');
+         }
+         else if(cnt == 3)
+         {
+            this.$.Caro.setSrc('assets/starImg/ctw4.jpg');
+         }
+      }
+      cnt+=1;
+      cnt%=4;
    }
 });
 

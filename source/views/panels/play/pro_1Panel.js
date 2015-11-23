@@ -12,6 +12,7 @@ enyo.kind({
 		classes:"container-video",
 		src : "pro_1.mp4", 
 		preload : "auto",
+		loop : true,
 		autoplay : true,
 		showControls : true,
 	}, 
