@@ -119,6 +119,14 @@ enyo.kind({
 			            	            				                	            		 onmouseout:"Selectout1_3",
 			            	            				                	            		 onmouseover:"Selecton1_3"
 			            	            				                	            	 }]
+			            	            				                	             },
+			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
+			            	            				                	            	 components: [{
+			            	            				                	            		 name: "wish_toast",
+			            	            				                	            		 kind: "moon.BodyText",
+			            	            				                	            		 classes : "toast_font",
+			            	            				                	            		 style : "margin-left:270px;",
+			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
 			            	            				                }]
@@ -192,6 +200,14 @@ enyo.kind({
 			            	            				                	            		 ontap:"closeDrawer2",
 			            	            				                	            		 onmouseout:"Selectout2_3",
 			            	            				                	            		 onmouseover:"Selecton2_3"
+			            	            				                	            	 }]
+			            	            				                	             },
+			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
+			            	            				                	            	 components: [{
+			            	            				                	            		 name: "wish_toast2",
+			            	            				                	            		 kind: "moon.BodyText",
+			            	            				                	            		 classes : "toast_font",
+			            	            				                	            		 style : "margin-left:270px;",
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -267,6 +283,14 @@ enyo.kind({
 			            	            				                	            		 onmouseout:"Selectout3_3",
 			            	            				                	            		 onmouseover:"Selecton3_3"
 			            	            				                	            	 }]
+			            	            				                	             },
+			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
+			            	            				                	            	 components: [{
+			            	            				                	            		 name: "wish_toast3",
+			            	            				                	            		 kind: "moon.BodyText",
+			            	            				                	            		 classes : "toast_font",
+			            	            				                	            		 style : "margin-left:270px;",
+			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
 			            	            				                }]
@@ -341,6 +365,14 @@ enyo.kind({
 			            	            				                	            	 },
 			            	            				                	            	 {name: "flickrSearchShe7", kind: "enyo.sample.PanelsFlickrSearchForShe7", onResults: "searchResults"}
 			            	            				                	            	 ]
+			            	            				                	             },
+			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
+			            	            				                	            	 components: [{
+			            	            				                	            		 name: "wish_toast4",
+			            	            				                	            		 kind: "moon.BodyText",
+			            	            				                	            		 classes : "toast_font",
+			            	            				                	            		 style : "margin-left:270px;",
+			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
 			            	            				                }]
@@ -398,12 +430,16 @@ enyo.kind({
 		this.$.detail_4.setSrc(sheArray[3][6]);
 		//----------------------------------------------------------------------------------------------------------	
 	},buttonTapped1: function(inSender, inEvent) {     
+		this.$.wish_toast.setContent("추가 되었습니다");
 		this.ajaxFunction(0);
 	},buttonTapped2: function(inSender, inEvent) { 
+		this.$.wish_toast2.setContent("추가 되었습니다");
 		this.ajaxFunction(1);
 	},buttonTapped3: function(inSender, inEvent) {   
+		this.$.wish_toast3.setContent("추가 되었습니다");
 		this.ajaxFunction(2);
 	},buttonTapped4: function(inSender, inEvent) { 
+		this.$.wish_toast4.setContent("추가 되었습니다");
 		this.ajaxFunction(3);
 	},ajaxFunction : function(num){
 		var str=""; //= "\'qqqqqqq\'";  //0번째 array를 가져온다
@@ -536,6 +572,7 @@ enyo.kind({
     },
     Selectout1_2: function(inSender, inEvent)
     {
+    	this.$.wish_toast.setContent("");
           this.$.addtowishlist1.setSrc("assets/addtowishlist.png");      
     },
     Selecton1_3: function(inSender, inEvent)
@@ -560,6 +597,7 @@ enyo.kind({
     },
     Selectout2_2: function(inSender, inEvent)
     {
+    	this.$.wish_toast2.setContent("");
           this.$.addtowishlist2.setSrc("assets/addtowishlist.png");      
     },
     Selecton2_3: function(inSender, inEvent)
@@ -584,6 +622,7 @@ enyo.kind({
     },
     Selectout3_2: function(inSender, inEvent)
     {
+    	this.$.wish_toast3.setContent("");
           this.$.addtowishlist3.setSrc("assets/addtowishlist.png");      
     },
     Selecton3_3: function(inSender, inEvent)
@@ -608,6 +647,7 @@ enyo.kind({
     },
     Selectout4_2: function(inSender, inEvent)
     {
+    	this.$.wish_toast4.setContent("");
           this.$.addtowishlist4.setSrc("assets/addtowishlist.png");      
     },
     Selecton4_3: function(inSender, inEvent)

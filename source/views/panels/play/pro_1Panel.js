@@ -122,7 +122,7 @@ enyo.kind({
 			            	            				                	            		 name: "wish_toast",
 			            	            				                	            		 kind: "moon.BodyText",
 			            	            				                	            		 classes : "toast_font",
-			            	            				                	            		 style : "margin-left:300px;",
+			            	            				                	            		 style : "margin-left:270px;",
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -203,7 +203,7 @@ enyo.kind({
 			            	            				                	            		 name: "wish_toast2",
 			            	            				                	            		 kind: "moon.BodyText",
 			            	            				                	            		 classes : "toast_font",
-			            	            				                	            		 style : "margin-left:300px;",
+			            	            				                	            		 style : "margin-left:270px;",
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -284,7 +284,7 @@ enyo.kind({
 			            	            				                	            		 name: "wish_toast3",
 			            	            				                	            		 kind: "moon.BodyText",
 			            	            				                	            		 classes : "toast_font",
-			            	            				                	            		 style : "margin-left:300px;",
+			            	            				                	            		 style : "margin-left:270px;",
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -365,7 +365,7 @@ enyo.kind({
 			            	            				                	            		 name: "wish_toast4",
 			            	            				                	            		 kind: "moon.BodyText",
 			            	            				                	            		 classes : "toast_font",
-			            	            				                	            		 style : "margin-left:300px;",
+			            	            				                	            		 style : "margin-left:270px;",
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -447,7 +447,7 @@ enyo.kind({
 			            	            				                	            		 name: "wish_toast5",
 			            	            				                	            		 kind: "moon.BodyText",
 			            	            				                	            		 classes : "toast_font",
-			            	            				                	            		 style : "margin-left:300px;",
+			            	            				                	            		 style : "margin-left:270px;",
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -528,7 +528,7 @@ enyo.kind({
 			            	            				                	            		 name: "wish_toast6",
 			            	            				                	            		 kind: "moon.BodyText",
 			            	            				                	            		 classes : "toast_font",
-			            	            				                	            		 style : "margin-left:300px;",
+			            	            				                	            		 style : "margin-left:270px;",
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -609,7 +609,7 @@ enyo.kind({
 			            	            				                	            		 name: "wish_toast7",
 			            	            				                	            		 kind: "moon.BodyText",
 			            	            				                	            		 classes : "toast_font",
-			            	            				                	            		 style : "margin-left:300px;",
+			            	            				                	            		 style : "margin-left:270px;",
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -693,7 +693,7 @@ enyo.kind({
 			            	            				                	            		 name: "wish_toast8",
 			            	            				                	            		 kind: "moon.BodyText",
 			            	            				                	            		 classes : "toast_font",
-			            	            				                	            		 style : "margin-left:300px;",
+			            	            				                	            		 style : "margin-left:270px;",
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]

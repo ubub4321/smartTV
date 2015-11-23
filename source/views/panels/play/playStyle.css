@@ -1,6 +1,7 @@
 @CHARSET "EUC-KR";
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web:700,700italic,900&subset=latin,latin-ext);
 @import url(http://fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
 .moon-panels.always-viewing .moon-panels-panel-scrim {
 	background-color: rgba(0, 0, 0, 0.3);
 	color: white;
