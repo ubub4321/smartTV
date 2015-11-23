@@ -36,8 +36,12 @@ enyo.kind({
 
 			            	            			               {
 			            	            			            	   name : "homeButton",
+			            	            			            	   kind:"moon.Image",
+			            	            			            	   src:"assets/play/back.png",
 			            	            			            	   classes:"resize_back",
-			            	            			            	   ontap : "goBack"
+			            	            			            	   ontap : "goBack",
+			            	            			            	   onmouseout:"Selectout",
+			            	            			            	   onmouseover:"Selecton"
 			            	            			               }
 			            	            			               ]
 			            	            		  },
@@ -233,6 +237,14 @@ enyo.kind({
 		this.$.drawer1.setOpen(false);
 		return true;
 	},
+	Selecton: function(inSender, inEvent)
+    {
+          this.$.homeButton.setSrc("assets/play/back_modify.png");   
+    },
+    Selectout: function(inSender, inEvent)
+    {
+          this.$.homeButton.setSrc("assets/play/back.png");      
+    },
 	Selecton1_1: function(inSender, inEvent)
     {
           this.$.back1.setSrc("assets/back_modify.png");   

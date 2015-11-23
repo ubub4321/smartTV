@@ -32,13 +32,16 @@ enyo.kind({
 			            	            	  components: [{		
 			            	            		  components : [{							
 			            	            			  components :[
-
-			            	            			               {
-			            	            			            	   name : "homeButton",
-			            	            			            	   classes:"resize_back",
-			            	            			            	   ontap : "goBack"
-			            	            			               }
-			            	            			               ]
+																{
+																	name : "homeButton",
+																	kind:"moon.Image",
+																	src:"assets/play/back.png",
+																	classes:"resize_back",
+																	ontap : "goBack",
+																	onmouseout:"Selectout",
+																	onmouseover:"Selecton"
+																}
+																]
 			            	            		  },
 			            	            		  {	  
 			            	            			  name : "logo",
@@ -313,11 +316,11 @@ enyo.kind({
 	},
 	Selecton: function(inSender, inEvent)
 	{
-		this.$.back1.setSrc("assets/back2_modify.png");   
+		this.$.homeButton.setSrc("assets/play/back_modify.png");   
 	},
 	Selectout: function(inSender, inEvent)
 	{
-		this.$.back1.setSrc("assets/back2.jpg");      
+		this.$.homeButton.setSrc("assets/play/back.png");      
 	},
 	Selecton1_1: function(inSender, inEvent)
 	{

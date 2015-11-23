@@ -36,7 +36,7 @@ enyo.kind({
 			            	            			               {
 			            	            			            	   name : "homeButton",
 			            	            			            	   kind:"moon.Image",
-			            	            			            	   src:"assets/play/homeB.jpg",
+			            	            			            	   src:"assets/play/back.png",
 			            	            			            	   classes:"resize_back",
 			            	            			            	   ontap : "goBack",
 			            	            			            	   onmouseout:"Selectout",
@@ -868,11 +868,11 @@ enyo.kind({
 	},
 	Selecton: function(inSender, inEvent)
     {
-          this.$.homeButton.setSrc("assets/play/homeBt.jpg");   
+          this.$.homeButton.setSrc("assets/play/back_modify.png");   
     },
     Selectout: function(inSender, inEvent)
     {
-          this.$.homeButton.setSrc("assets/play/homeB.jpg");      
+          this.$.homeButton.setSrc("assets/play/back.png");      
     },
 	Selecton1_1: function(inSender, inEvent)
     {
