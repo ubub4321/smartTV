@@ -12,7 +12,6 @@ enyo.kind({
 		classes:"container-video",
 		src : "pro_1.mp4", 
 		preload : "auto",
-		loop : true,
 		autoplay : true,
 		showControls : true,
 	}, 
@@ -78,15 +77,15 @@ enyo.kind({
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult1_1",
-			            	            				                	            	      style : "margin-left:240px",
-			                                                                                      classes : "table",
-			                                                                                      
-			                                                                                   },
-			                                                                                   {
-			                                                                                      name : "reresult1_2",
-			                                                                                      classes : "table",
-			                                                                                      style : "margin-left:280px",
-			            	            				                	            		 content : "가격"
+			            	            				                	            		 kind : 'moon.BodyText',
+			            	            				                	            		 style : "margin-left:240px",
+			            	            				                	            		 classes : "table",
+			            	            				                	            		 
+			            	            				                	            	 },
+			            	            				                	            	 {
+			            	            				                	            		 name : "reresult1_2",
+			            	            				                	            		 style : "margin-left:280px",
+			            	            				                	            		 classes : "table",
 			            	            				                	            	 }]
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
@@ -106,7 +105,7 @@ enyo.kind({
 			            	            				                	            		 src: "assets/addtowishlist.png",
 			            	            				                	            		 ontap:"buttonTapped1",
 				            	            				                	                 onmouseout:"Selectout1_2",
-				            	            				                	            	 onmouseover:"Selecton1_2"
+				            	            				                	            	 onmouseover:"Selecton1_2",
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 name: "close1",
@@ -116,6 +115,14 @@ enyo.kind({
 			            	            				                	            		 ontap:"closeDrawer1",
 			            	            				                	            		 onmouseout:"Selectout1_3",
 			            	            				                	            		 onmouseover:"Selecton1_3"
+			            	            				                	            	 }]
+			            	            				                	             },
+			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
+			            	            				                	            	 components: [{
+			            	            				                	            		 name: "wish_toast",
+			            	            				                	            		 kind: "moon.BodyText",
+			            	            				                	            		 classes : "toast_font",
+			            	            				                	            		 style : "margin-left:300px;",
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -152,13 +159,13 @@ enyo.kind({
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult2_1",
-			                                                                                      classes : "table",
-			                                                                                      style : "margin-left:210px;",
-			                                                                                   },
-			                                                                                   {
-			                                                                                      name : "reresult2_2",
-			                                                                                      classes : "table",
-			                                                                                      style : "margin-left:290px;",
+			            	            				                	            		 classes : "table",
+			            	            				                	            		 style : "margin-left:210px;",
+			            	            				                	            	 },
+			            	            				                	            	 {
+			            	            				                	            		 name : "reresult2_2",
+			            	            				                	            		 classes : "table",
+			            	            				                	            		 style : "margin-left:290px;",
 			            	            				                	            		 content : "가격"
 			            	            				                	            	 }]
 			            	            				                	             },
@@ -189,6 +196,14 @@ enyo.kind({
 			            	            				                	            		 ontap:"closeDrawer2",
 			            	            				                	            		 onmouseout:"Selectout2_3",
 			            	            				                	            		 onmouseover:"Selecton2_3"
+			            	            				                	            	 }]
+			            	            				                	             },
+			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
+			            	            				                	            	 components: [{
+			            	            				                	            		 name: "wish_toast2",
+			            	            				                	            		 kind: "moon.BodyText",
+			            	            				                	            		 classes : "toast_font",
+			            	            				                	            		 style : "margin-left:300px;",
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -225,15 +240,14 @@ enyo.kind({
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult3_1",
-			                                                                                      classes : "table",
-			                                                                                      style : "margin-left:240px;",
+			            	            				                	            		 classes : "table",
+			            	            				                	            		 style : "margin-left:240px;",
 
-			                                                                                   },
-			                                                                                   {
-			                                                                                      name : "reresult3_2",
-			                                                                                      classes : "table",
-			                                                                                      style : "margin-left:290px;",
-			            	            				                	            		 content : "가격"
+			            	            				                	            	 },
+			            	            				                	            	 {
+			            	            				                	            		 name : "reresult3_2",
+			            	            				                	            		 classes : "table",
+			            	            				                	            		 style : "margin-left:300px;",
 			            	            				                	            	 }]
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
@@ -263,6 +277,14 @@ enyo.kind({
 			            	            				                	            		 ontap:"closeDrawer3",
 			            	            				                	            		 onmouseout:"Selectout3_3",
 			            	            				                	            		 onmouseover:"Selecton3_3"
+			            	            				                	            	 }]
+			            	            				                	             },
+			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
+			            	            				                	            	 components: [{
+			            	            				                	            		 name: "wish_toast3",
+			            	            				                	            		 kind: "moon.BodyText",
+			            	            				                	            		 classes : "toast_font",
+			            	            				                	            		 style : "margin-left:300px;",
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -299,13 +321,13 @@ enyo.kind({
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult4_1",
-			                                                                                      style : "margin-left:240px;",
-			                                                                                      classes : "table",
-			                                                                                   },
-			                                                                                   {
-			                                                                                      name : "reresult4_2",
-			                                                                                      classes : "table",
-			                                                                                      style : "margin-left:290px;",
+			            	            				                	            		 style : "margin-left:240px;",
+			            	            				                	            		 classes : "table",
+			            	            				                	            	 },
+			            	            				                	            	 {
+			            	            				                	            		 name : "reresult4_2",
+			            	            				                	            		 classes : "table",
+			            	            				                	            		 style : "margin-left:290px;",
 			            	            				                	            		 content : "가격"
 			            	            				                	            	 }]
 			            	            				                	             },
@@ -336,6 +358,14 @@ enyo.kind({
 			            	            				                	            		 ontap:"closeDrawer4",
 			            	            				                	            		 onmouseout:"Selectout4_3",
 			            	            				                	            		 onmouseover:"Selecton4_3"
+			            	            				                	            	 }]
+			            	            				                	             },
+			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
+			            	            				                	            	 components: [{
+			            	            				                	            		 name: "wish_toast4",
+			            	            				                	            		 kind: "moon.BodyText",
+			            	            				                	            		 classes : "toast_font",
+			            	            				                	            		 style : "margin-left:300px;",
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -372,14 +402,15 @@ enyo.kind({
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult5_1",
-			                                                                                      classes : "table",
-			                                                                                      style : "margin-left:180px;",
+			            	            				                	            		 classes : "table",
+			            	            				                	            		 style : "margin-left:180px;",
 
-			                                                                                   },
-			                                                                                   {
-			                                                                                      name : "reresult5_2",
-			                                                                                      classes : "table",
-			                                                                                      style : "margin-left:290px;",
+			            	            				                	            	 },
+			            	            				                	            	 {
+			            	            				                	            		 name : "reresult5_2",
+			            	            				                	            		 classes : "table",
+			            	            				                	            		 style : "margin-left:290px;",
+
 			            	            				                	            	 }]
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
@@ -409,6 +440,14 @@ enyo.kind({
 			            	            				                	            		 ontap:"closeDrawer5",
 			            	            				                	            		 onmouseout:"Selectout5_3",
 			            	            				                	            		 onmouseover:"Selecton5_3"
+			            	            				                	            	 }]
+			            	            				                	             },
+			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
+			            	            				                	            	 components: [{
+			            	            				                	            		 name: "wish_toast5",
+			            	            				                	            		 kind: "moon.BodyText",
+			            	            				                	            		 classes : "toast_font",
+			            	            				                	            		 style : "margin-left:300px;",
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -445,14 +484,14 @@ enyo.kind({
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult6_1",
-			                                                                                      classes : "table",
-			                                                                                      style : "margin-left:210px;",
+			            	            				                	            		 classes : "table",
+			            	            				                	            		 style : "margin-left:200px;",
 
-			                                                                                   },
-			                                                                                   {
-			                                                                                      name : "reresult6_2",
-			                                                                                      classes : "table",
-			                                                                                      style : "margin-left:280px;",
+			            	            				                	            	 },
+			            	            				                	            	 {
+			            	            				                	            		 name : "reresult6_2",
+			            	            				                	            		 classes : "table",
+			            	            				                	            		 style : "margin-left:280px;",
 			            	            				                	            	 }]
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
@@ -482,6 +521,14 @@ enyo.kind({
 			            	            				                	            		 ontap:"closeDrawer6",
 			            	            				                	            		 onmouseout:"Selectout6_3",
 			            	            				                	            		 onmouseover:"Selecton6_3"
+			            	            				                	            	 }]
+			            	            				                	             },
+			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
+			            	            				                	            	 components: [{
+			            	            				                	            		 name: "wish_toast6",
+			            	            				                	            		 kind: "moon.BodyText",
+			            	            				                	            		 classes : "toast_font",
+			            	            				                	            		 style : "margin-left:300px;",
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -519,14 +566,13 @@ enyo.kind({
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult7_1",
 			            	            				                	            		 classes : "table",
-			            				            	            			            	   style : "margin-left:170px;",
+			            	            				                	            		 style : "margin-left:170px;",
 
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 name : "reresult7_2",
 			            	            				                	            		 classes : "table",
-			            				            	            			            	   style : "margin-left:280px;",
-
+			            	            				                	            		 style : "margin-left:280px;",
 			            	            				                	            	 }]
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
@@ -556,6 +602,14 @@ enyo.kind({
 			            	            				                	            		 ontap:"closeDrawer7",
 			            	            				                	            		 onmouseout:"Selectout7_3",
 			            	            				                	            		 onmouseover:"Selecton7_3"
+			            	            				                	            	 }]
+			            	            				                	             },
+			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
+			            	            				                	            	 components: [{
+			            	            				                	            		 name: "wish_toast7",
+			            	            				                	            		 kind: "moon.BodyText",
+			            	            				                	            		 classes : "toast_font",
+			            	            				                	            		 style : "margin-left:300px;",
 			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
@@ -593,14 +647,13 @@ enyo.kind({
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult8_1",
 			            	            				                	            		 classes : "table",
-			            				            	            			            	   style : "margin-left:210px;",
+			            	            				                	            		 style : "margin-left:210px;",
 
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 name : "reresult8_2",
 			            	            				                	            		 classes : "table",
-			            				            	            			            	   style : "margin-left:290px;",
-
+			            	            				                	            		 style : "margin-left:290px;",
 			            	            				                	            	 }]
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
@@ -634,6 +687,14 @@ enyo.kind({
 			            	            				                	            	  {name: "flickrSearch", kind: "enyo.sample.PanelsFlickrSearchForClothes", onResults: "searchResults"}
 			            	            				                	            	  
 			            	            				                	            	 ]
+			            	            				                	             },
+			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
+			            	            				                	            	 components: [{
+			            	            				                	            		 name: "wish_toast8",
+			            	            				                	            		 kind: "moon.BodyText",
+			            	            				                	            		 classes : "toast_font",
+			            	            				                	            		 style : "margin-left:300px;",
+			            	            				                	            	 }]
 			            	            				                	             }
 			            	            				                	             ]
 			            	            				                }]
@@ -707,20 +768,28 @@ enyo.kind({
 		this.$.detail_8.setSrc(clothesArray[7][6]);
 		//----------------------------------------------------------------------------------------------------------	
 	},buttonTapped1: function(inSender, inEvent) {  
+		 this.$.wish_toast.setContent("추가 되었습니다"); 
 		this.ajaxFunction(0);
 	},buttonTapped2: function(inSender, inEvent) { 
+        this.$.wish_toast2.setContent("추가 되었습니다");   
 		this.ajaxFunction(1);
 	},buttonTapped3: function(inSender, inEvent) {  
+		this.$.wish_toast3.setContent("추가 되었습니다"); 
 		this.ajaxFunction(2);
 	},buttonTapped4: function(inSender, inEvent) { 
+		this.$.wish_toast4.setContent("추가 되었습니다"); 
 		this.ajaxFunction(3);
 	},buttonTapped5: function(inSender, inEvent) {  
+		this.$.wish_toast5.setContent("추가 되었습니다"); 
 		this.ajaxFunction(4);
 	},buttonTapped6: function(inSender, inEvent) {  
+		this.$.wish_toast6.setContent("추가 되었습니다"); 
 		this.ajaxFunction(5);
-	},buttonTapped7: function(inSender, inEvent) {  
+	},buttonTapped7: function(inSender, inEvent) { 
+		this.$.wish_toast7.setContent("추가 되었습니다"); 
 		this.ajaxFunction(6);
 	},buttonTapped8: function(inSender, inEvent) {  
+		this.$.wish_toast8.setContent("추가 되었습니다"); 
 		this.ajaxFunction(7);
 	},ajaxFunction : function(num){
 		var str=""; //= "\'qqqqqqq\'";  //0번째 array를 가져온다
@@ -909,6 +978,7 @@ enyo.kind({
     },
     Selectout1_2: function(inSender, inEvent)
     {
+    	 this.$.wish_toast.setContent("");
           this.$.addtowishlist1.setSrc("assets/addtowishlist.png");      
     },
     Selecton1_3: function(inSender, inEvent)
@@ -933,6 +1003,7 @@ enyo.kind({
     },
     Selectout2_2: function(inSender, inEvent)
     {
+    	 this.$.wish_toast2.setContent("");
           this.$.addtowishlist2.setSrc("assets/addtowishlist.png");      
     },
     Selecton2_3: function(inSender, inEvent)
@@ -957,6 +1028,7 @@ enyo.kind({
     },
     Selectout3_2: function(inSender, inEvent)
     {
+   	      this.$.wish_toast3.setContent("");
           this.$.addtowishlist3.setSrc("assets/addtowishlist.png");      
     },
     Selecton3_3: function(inSender, inEvent)
@@ -981,7 +1053,8 @@ enyo.kind({
     },
     Selectout4_2: function(inSender, inEvent)
     {
-          this.$.addtowishlist4.setSrc("assets/addtowishlist.png");      
+   	 this.$.wish_toast4.setContent("");  
+    	this.$.addtowishlist4.setSrc("assets/addtowishlist.png");      
     },
     Selecton4_3: function(inSender, inEvent)
     {
@@ -997,6 +1070,7 @@ enyo.kind({
     },
     Selectout5_1: function(inSender, inEvent)
     {
+   	 
           this.$.back5.setSrc("assets/back.png");      
     },
     Selecton5_2: function(inSender, inEvent)
@@ -1005,6 +1079,7 @@ enyo.kind({
     },
     Selectout5_2: function(inSender, inEvent)
     {
+    	this.$.wish_toast5.setContent("");
           this.$.addtowishlist5.setSrc("assets/addtowishlist.png");      
     },
     Selecton5_3: function(inSender, inEvent)
@@ -1029,6 +1104,7 @@ enyo.kind({
     },
     Selectout6_2: function(inSender, inEvent)
     {
+    	this.$.wish_toast6.setContent("");
           this.$.addtowishlist6.setSrc("assets/addtowishlist.png");      
     },
     Selecton6_3: function(inSender, inEvent)
@@ -1053,6 +1129,7 @@ enyo.kind({
     },
     Selectout7_2: function(inSender, inEvent)
     {
+    	this.$.wish_toast7.setContent("");
           this.$.addtowishlist7.setSrc("assets/addtowishlist.png");      
     },
     Selecton7_3: function(inSender, inEvent)
@@ -1073,6 +1150,7 @@ enyo.kind({
     },
     Selecton8_2: function(inSender, inEvent)
     {
+    	this.$.wish_toast8.setContent("");
           this.$.addtowishlist8.setSrc("assets/addtowishlist_modify.png");   
     },
     Selectout8_2: function(inSender, inEvent)
