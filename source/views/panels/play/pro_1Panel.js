@@ -12,6 +12,7 @@ enyo.kind({
 		classes:"container-video",
 		src : "pro_1.mp4", 
 		preload : "auto",
+		loop : true,
 		autoplay : true,
 		showControls : true,
 	}, 
@@ -77,11 +78,14 @@ enyo.kind({
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult1_1",
-			            	            				                	            		 classes : "table",
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult1_2",
-			            	            				                	            		 classes : "table",
+			            	            				                	            	      style : "margin-left:240px",
+			                                                                                      classes : "table",
+			                                                                                      
+			                                                                                   },
+			                                                                                   {
+			                                                                                      name : "reresult1_2",
+			                                                                                      classes : "table",
+			                                                                                      style : "margin-left:280px",
 			            	            				                	            		 content : "가격"
 			            	            				                	            	 }]
 			            	            				                	             },
@@ -148,11 +152,13 @@ enyo.kind({
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult2_1",
-			            	            				                	            		 classes : "table",
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult2_2",
-			            	            				                	            		 classes : "table",
+			                                                                                      classes : "table",
+			                                                                                      style : "margin-left:210px;",
+			                                                                                   },
+			                                                                                   {
+			                                                                                      name : "reresult2_2",
+			                                                                                      classes : "table",
+			                                                                                      style : "margin-left:290px;",
 			            	            				                	            		 content : "가격"
 			            	            				                	            	 }]
 			            	            				                	             },
@@ -219,11 +225,14 @@ enyo.kind({
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult3_1",
-			            	            				                	            		 classes : "table",
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult3_2",
-			            	            				                	            		 classes : "table",
+			                                                                                      classes : "table",
+			                                                                                      style : "margin-left:240px;",
+
+			                                                                                   },
+			                                                                                   {
+			                                                                                      name : "reresult3_2",
+			                                                                                      classes : "table",
+			                                                                                      style : "margin-left:290px;",
 			            	            				                	            		 content : "가격"
 			            	            				                	            	 }]
 			            	            				                	             },
@@ -290,11 +299,13 @@ enyo.kind({
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult4_1",
-			            	            				                	            		 classes : "table",
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult4_2",
-			            	            				                	            		 classes : "table",
+			                                                                                      style : "margin-left:240px;",
+			                                                                                      classes : "table",
+			                                                                                   },
+			                                                                                   {
+			                                                                                      name : "reresult4_2",
+			                                                                                      classes : "table",
+			                                                                                      style : "margin-left:290px;",
 			            	            				                	            		 content : "가격"
 			            	            				                	            	 }]
 			            	            				                	             },
@@ -361,12 +372,14 @@ enyo.kind({
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult5_1",
-			            	            				                	            		 classes : "table",
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult5_2",
-			            	            				                	            		 classes : "table",
-			            	            				                	            		 content : "가격"
+			                                                                                      classes : "table",
+			                                                                                      style : "margin-left:180px;",
+
+			                                                                                   },
+			                                                                                   {
+			                                                                                      name : "reresult5_2",
+			                                                                                      classes : "table",
+			                                                                                      style : "margin-left:290px;",
 			            	            				                	            	 }]
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
@@ -432,12 +445,14 @@ enyo.kind({
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult6_1",
-			            	            				                	            		 classes : "table",
-			            	            				                	            	 },
-			            	            				                	            	 {
-			            	            				                	            		 name : "reresult6_2",
-			            	            				                	            		 classes : "table",
-			            	            				                	            		 content : "가격"
+			                                                                                      classes : "table",
+			                                                                                      style : "margin-left:60px;",
+
+			                                                                                   },
+			                                                                                   {
+			                                                                                      name : "reresult6_2",
+			                                                                                      classes : "table",
+			                                                                                      style : "margin-left:280px;",
 			            	            				                	            	 }]
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
@@ -504,11 +519,14 @@ enyo.kind({
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult7_1",
 			            	            				                	            		 classes : "table",
+			            				            	            			            	   style : "margin-left:170px;",
+
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 name : "reresult7_2",
 			            	            				                	            		 classes : "table",
-			            	            				                	            		 content : "가격"
+			            				            	            			            	   style : "margin-left:280px;",
+
 			            	            				                	            	 }]
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
@@ -575,11 +593,14 @@ enyo.kind({
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult8_1",
 			            	            				                	            		 classes : "table",
+			            				            	            			            	   style : "margin-left:210px;",
+
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 name : "reresult8_2",
 			            	            				                	            		 classes : "table",
-			            	            				                	            		 content : "가격"
+			            				            	            			            	   style : "margin-left:290px;",
+
 			            	            				                	            	 }]
 			            	            				                	             },
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
@@ -589,8 +610,8 @@ enyo.kind({
 			            	            				                	            		 style : "margin-left:180px;margin-top:40px",
 			            	            				                	            		 src: "assets/back.png",
 			            	            				                	            		 ontap:"backtoImage8",
-			            	            				                	            		 onmouseout:"Selectout8_3",
-			            	            				                	            		 onmouseover:"Selecton8_3"
+			            	            				                	            		 onmouseout:"Selectout8_1",
+			            	            				                	            		 onmouseover:"Selecton8_1"
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 name: "addtowishlist8", 
@@ -598,8 +619,8 @@ enyo.kind({
 			            	            				                	            		 style : "margin-left:40px;margin-top:40px",
 			            	            				                	            		 src: "assets/addtowishlist.png",
 			            	            				                	            		 ontap:"buttonTapped8",
-			            	            				                	            		 onmouseout:"Selectout8_3",
-			            	            				                	            		 onmouseover:"Selecton8_3"
+			            	            				                	            		 onmouseout:"Selectout8_2",
+			            	            				                	            		 onmouseover:"Selecton8_2"
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 name: "close8",

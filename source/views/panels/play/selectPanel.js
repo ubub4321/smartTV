@@ -30,8 +30,8 @@ enyo.kind({
                components: [
                   { components: [
                      {name: 'image', src:"assets/play/poster.png",style:"margin-left:80px;margin-right:80px;margin-top:40px;",kind: 'enyo.Image',ontap:"Play1",onmouseover:"Playon1",onmouseout:"Playout1"},
-                     {name: 'image2',src:"assets/play/14210_15836_3930.jpg", style:"margin-left:80px;margin-right:80px;margin-top:40px;",kind: 'enyo.Image',ontap:"Play2",onmouseover:"Playon2",onmouseout:"Playout2"},
-                     {name: 'image3',src:"assets/play/1442019900-68-org.jpg", style:"margin-left:80px;margin-right:80px;margin-top:40px;",kind: 'enyo.Image',ontap:"Play3",onmouseover:"Playon3",onmouseout:"Playout3"}
+                     {name: 'image2',src:"assets/play/poster_she.jpg", style:"margin-left:80px;margin-right:80px;margin-top:40px;",kind: 'enyo.Image',ontap:"Play2",onmouseover:"Playon2",onmouseout:"Playout2"},
+                     {name: 'image3',src:"assets/play/poster_star.jpg", style:"margin-left:80px;margin-right:80px;margin-top:40px;",kind: 'enyo.Image',ontap:"Play3",onmouseover:"Playon3",onmouseout:"Playout3"}
                   ]}
                ],//actionComponents
             }
@@ -119,24 +119,24 @@ enyo.kind({
    },
    Playon2: function(inSender, inEvent)
    {
-         this.$.image2.setSrc("assets/play/14210_15836_3930t.jpg");
+         this.$.image2.setSrc("assets/play/poster_she_t.jpg");
    },
    Playout2: function(inSender, inEvent)
    {
       if(tog2 != 1)
       {
-         this.$.image2.setSrc("assets/play/14210_15836_3930.jpg");
+         this.$.image2.setSrc("assets/play/poster_she.jpg");
       }
    },
    Playon3: function(inSender, inEvent)
    {
-         this.$.image3.setSrc("assets/play/1442019900-68-orgt.jpg");
+         this.$.image3.setSrc("assets/play/poster_star_t.jpg");
    },
    Playout3: function(inSender, inEvent)
    {
       if(tog3 != 1)
       {
-         this.$.image3.setSrc("assets/play/1442019900-68-org.jpg");
+         this.$.image3.setSrc("assets/play/poster_star.jpg");
       }
    },
    Homeon: function(inSender, inEvent)
@@ -159,7 +159,7 @@ enyo.kind({
                   index =1;
                }
             else{
-                  this.$.Story.setContent(" 본의 아니게 예능국 OJT 좋아하는 대학 동아리 누나 때문에 KBS 예능국에 들어온 백승찬(김수현),예능국 여왕벌 탁예진(공효진)와 1박 2일 PD준모(차태현),인기 가수 신디(아이유)가 펼치는 예능국 안에서의 이야기!,밤샘회의에 촬영에 편집에 마라톤을 뛰고도 시청률 떨어지면 밥버러지 취급을 받으니 ... 출입증을 목에 걸고 오늘도 여의도 18번지 6층으로 출근하는 피디 아닌 직장인들의 사무실 이야기.");   
+                  this.$.Story.setContent(" 본의 아니게 예능국 OJT 좋아하는 대학 동아리 누나 때문에 KBS 예능국에 들어온 백승찬(김수현),예능국 여왕벌 탁예진(공효진)와 1박 2일 PD준모(차태현),인기 가수 신디(아이유)가 펼치는 예능국 안에서의 이야기! 밤샘회의에 촬영에 편집에 마라톤을 뛰고도 시청률 떨어지면 밥버러지 취급을 받으니 ... 출입증을 목에 걸고 오늘도 여의도 18번지 6층으로 출근하는 피디 아닌 직장인들의 사무실 이야기.");   
                   
                   this.$.drawer1.setOpen(true);
                   this.$.drawer2.setOpen(false);
@@ -183,57 +183,19 @@ enyo.kind({
             index3 = 1;
             tog2 = 0;
             tog3 = 0;
-            this.$.image2.setSrc("assets/play/14210_15836_3930.jpg");
-            this.$.image3.setSrc("assets/play/1442019900-68-org.jpg");
+            this.$.image2.setSrc("assets/play/poster_she.jpg");
+            this.$.image3.setSrc("assets/play/poster_star.jpg");
    },
    Play2: function(inSender, inEvent)
    {
       tog2 = 1;
-      this.$.image2.setSrc("assets/play/14210_15836_3930t.jpg");   
+      this.$.image2.setSrc("assets/play/poster_she_t.jpg");   
       if(index3 == 0)
       {
          this.$.drawer3.setOpen(false);
-         this.$.image2.setSrc("assets/play/14210_15836_3930.jpg");   
+         this.$.image2.setSrc("assets/play/poster_she.jpg");   
 
          index3 = 1;
-      }
-      else
-      {
-            this.$.Story3.setContent("조선왕조실록 광해 20권에는 기이한 기록이 남아 있다 1609년 가을. 강원도 간성, 원주, 춘천, 양양, 강릉 등지에서 거의 비슷한 시간에 알 수없는 비행 물체들이 출몰했는ㄴ것. 만약, 그것이 '조선으로 날아온 UFO'였고 그 때 이 땅에 정착한 외계인이 있다면? 바로 옆집에 누가 살고 있는지 모르고 나의 옆집에서 어느 사랑스러운 외계인이 살고 잇을지 그와 기적과도 같은 달콤한 로맨스를 만들어 갈 수 있을지 알이다.");
-            this.$.drawer3.setOpen(true);
-            this.$.drawer1.setOpen(false);
-            this.$.drawer2.setOpen(false);
-            //this.$.drawer0.setOpen(false);
-            index3 = 0;
-            this.$.star_1.setSrc("assets/play/1.png");
-            this.$.star_2.setSrc("assets/play/2.png");
-            this.$.star_3.setSrc("assets/play/3.png");
-            this.$.star_4.setSrc("assets/play/4.png");
-            this.$.star_5.setSrc("assets/play/5.png");
-            this.$.star_6.setSrc("assets/play/6.png");
-            this.$.star_7.setSrc("assets/play/7.png");
-            this.$.star_8.setSrc("assets/play/8.png");
-            this.$.star_9.setSrc("assets/play/9.png");
-            this.$.star_10.setSrc("assets/play/10.png");
-            this.$.star_11.setSrc("assets/play/11.png");
-      }
-      index = 1;
-      index2 =1;
-      tog1 = 0;
-      tog3 = 0;
-      this.$.image.setSrc("assets/play/poster.png");
-      this.$.image3.setSrc("assets/play/1442019900-68-org.jpg");
-   },
-   Play3: function(inSender, inEvent)
-   {
-      tog3 = 1;
-      this.$.image3.setSrc("assets/play/1442019900-68-orgt.jpg");
-      if(index2 == 0)
-      {
-         this.$.drawer2.setOpen(false);
-         index2 = 1;
-         this.$.image3.setSrc("assets/play/1442019900-68-org.jpg");
-
       }
       else
       {
@@ -242,7 +204,7 @@ enyo.kind({
             this.$.drawer1.setOpen(false);
             this.$.drawer3.setOpen(false);
             //this.$.drawer0.setOpen(false);
-            index2 = 0;
+            index3 = 0;
             this.$.she_1.setSrc("assets/play/1.png");
             this.$.she_2.setSrc("assets/play/2.png");
             this.$.she_3.setSrc("assets/play/3.png");
@@ -256,21 +218,72 @@ enyo.kind({
             this.$.she_11.setSrc("assets/play/11.png");
       }
       index = 1;
+      index2 =1;
+      tog1 = 0;
+      tog3 = 0;
+      this.$.image.setSrc("assets/play/poster.png");
+      this.$.image3.setSrc("assets/play/poster_star.jpg");
+   },
+   Play3: function(inSender, inEvent)
+   {
+      tog3 = 1;
+      this.$.image3.setSrc("assets/play/poster_star_t.jpg");
+      if(index2 == 0)
+      {
+         this.$.drawer2.setOpen(false);
+         index2 = 1;
+         this.$.image3.setSrc("assets/play/poster_star.jpg");
+
+      }
+      else
+      {
+    	    this.$.Story3.setContent("조선왕조실록 광해 20권에는 기이한 기록이 남아 있다 1609년 가을. 강원도 간성, 원주, 춘천, 양양, 강릉 등지에서 거의 비슷한 시간에 알 수없는 비행 물체들이 출몰했다는 것. 만약, 그것이 '조선으로 날아온 UFO'였고 그 때 이 땅에 정착한 외계인이 있다면? 바로 옆집에 누가 살고 있는지 모르고 나의 옆집에서 어느 사랑스러운 외계인이 살고 잇을지 그와 기적과도 같은 달콤한 로맨스를 만들어 갈 수 있을지 알이다.");
+
+            this.$.drawer3.setOpen(true);
+            this.$.drawer1.setOpen(false);
+            this.$.drawer2.setOpen(false);
+            //this.$.drawer0.setOpen(false);
+            index2 = 0;
+            this.$.star_1.setSrc("assets/play/1.png");
+            this.$.star_2.setSrc("assets/play/2.png");
+            this.$.star_3.setSrc("assets/play/3.png");
+            this.$.star_4.setSrc("assets/play/4.png");
+            this.$.star_5.setSrc("assets/play/5.png");
+            this.$.star_6.setSrc("assets/play/6.png");
+            this.$.star_7.setSrc("assets/play/7.png");
+            this.$.star_8.setSrc("assets/play/8.png");
+            this.$.star_9.setSrc("assets/play/9.png");
+            this.$.star_10.setSrc("assets/play/10.png");
+            this.$.star_11.setSrc("assets/play/11.png");
+      }
+      index = 1;
       index3 = 1;
       tog1 = 0;
       tog2 = 0;
       this.$.image.setSrc("assets/play/poster.png");
-      this.$.image2.setSrc("assets/play/14210_15836_3930.jpg");
+      this.$.image2.setSrc("assets/play/poster_she.jpg");
    },
    
    goHome : function(inSender, inEvent) {
-      this.bubbleUp("onGoHome", {
+       index = 1;
+       index2 = 1;
+        index3 = 1;
+        tog1 = 0;
+        tog2 = 0;
+        tog3 = 0;
+	   this.bubbleUp("onGoHome", {
          name : name
       });
       return true;
    },
     imageClick: function(inSender, inEvent) {
        //alert(inSender.name); // 
+        index = 1;
+       index2 = 1;
+        index3 = 1;
+        tog1 = 0;
+        tog2 = 0;
+        tog3 = 0;
        var name = inSender.name;
        this.bubbleUp("onShowPanel", {name:name});
        return true;
