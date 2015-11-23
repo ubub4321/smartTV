@@ -11,7 +11,7 @@ enyo.kind({
                           components:[
                                       {kind: "FittableRows",
                                          components:[
-                                                     {name : "home",kind: "moon.Image",classes:"home",ontap : "gohome",onmouseout:"Selectout_home",onmouseover:"Selecton_home"} //홈 버튼
+                                                     {name : "home",kind: "moon.Image",classes:"home",ondown : "gohome",onmouseout:"Selectout_home",onmouseover:"Selecton_home"} //홈 버튼
                                                     ]
                                       }]},
 
@@ -21,17 +21,17 @@ enyo.kind({
                                     	            	   components: [
                                     	            	                {kind : "FittableColumns",
                                     	            	                	components : [
-                                    	            	                	              {kind : "moon.Image",name : "img1", classes:"Photos",ontap : "Stfashion", onmouseout:"Selectout1",onmouseover:"Selecton1"}, //사진 1
-                                    	            	                	              {kind : "moon.Image",name : "img2",classes:"Photos",ontap : "Stfashion", onmouseout:"Selectout2",onmouseover:"Selecton2"}, // 사진 2
-                                    	            	                	              {kind : "moon.Image",name : "img3",classes:"Photos",ontap : "Stfashion", onmouseout:"Selectout3",onmouseover:"Selecton3"}, // 사진 3
-                                    	            	                	              {kind : "moon.Image",name : "img4",classes:"Photos",ontap : "Stfashion", onmouseout:"Selectout4",onmouseover:"Selecton4"}, // 사진 4
+                                    	            	                	              {kind : "moon.Image",name : "img1", classes:"Photos",ondown : "weeklyfashion", onmouseout:"Selectout1",onmouseover:"Selecton1"}, //사진 1
+                                    	            	                	              {kind : "moon.Image",name : "img2",classes:"Photos",ondown : "weeklyfashion", onmouseout:"Selectout2",onmouseover:"Selecton2"}, // 사진 2
+                                    	            	                	              {kind : "moon.Image",name : "img3",classes:"Photos",ondown : "weeklyfashion", onmouseout:"Selectout3",onmouseover:"Selecton3"}, // 사진 3
+                                    	            	                	              {kind : "moon.Image",name : "img4",classes:"Photos",ondown : "weeklyfashion", onmouseout:"Selectout4",onmouseover:"Selecton4"}, // 사진 4
                                     	            	                	              ]
                                     	            	                },
                                     	            	                {kind : "FittableColumns", style : "margin-top : 200px;",
                                     	            	                	components : [
-                                    	            	                	              {kind : "moon.Image",name : "img5",classes:"bottomPhoto",ontap : "Stfashion", onmouseout:"Selectout5",onmouseover:"Selecton5"},
-                                    	            	                	              {kind : "moon.Image",name : "img6",classes:"bottomPhoto",ontap : "Stfashion", onmouseout:"Selectout6",onmouseover:"Selecton6"},
-                                    	            	                	              {kind : "moon.Image",name : "img7",classes:"bottomPhoto",ontap : "Stfashion", onmouseout:"Selectout7",onmouseover:"Selecton7"},
+                                    	            	                	              {kind : "moon.Image",name : "img5",classes:"bottomPhoto",ondown : "Stfashion", onmouseout:"Selectout5",onmouseover:"Selecton5"},
+                                    	            	                	              {kind : "moon.Image",name : "img6",classes:"bottomPhoto",ondown : "Stfashion", onmouseout:"Selectout6",onmouseover:"Selecton6"},
+                                    	            	                	              {kind : "moon.Image",name : "img7",classes:"bottomPhoto",ondown : "Stfashion", onmouseout:"Selectout7",onmouseover:"Selecton7"},
                                     	            	                	              ]
                                     	            	                },
                                     	            	                ],
@@ -46,14 +46,14 @@ enyo.kind({
                                     	            	                	            	              ondown: "gonews"},
                                     	            	                	            	              {style:"margin-top:100px;",
                                     	            	                	            	            	  components :[
-                                    	            	                	            	            	               {kind: "moon.Icon", icon: "arrowsmallleft", style:"margin-top : 10px;margin-left : 280px; color : black;",small: false, ontap: "previous"},
-                                    	            	                	            	            	               {kind: "moon.Icon", icon: "arrowsmallright", style:"margin-top : 10px; color : black;",small: false, ontap: "next"},
+                                    	            	                	            	            	               {kind: "moon.Icon", icon: "arrowsmallleft", style:"margin-top : 10px;margin-left : 280px; color : black;",small: false, ondown: "previous"},
+                                    	            	                	            	            	               {kind: "moon.Icon", icon: "arrowsmallright", style:"margin-top : 10px; color : black;",small: false, ondown: "next"},
                                     	            	                	            	            	               // 화살표
                                     	            	                	            	            	               ]
                                     	            	                	            	              },
                                     	            	                	            	              {kind: "FittableColumns",style:"margin-top:10px;margin-left : -80px;",//style:"background-color: black;",
                                     	            	                	            	            	  components :[
-                                    	            	                	            	            	               {kind : "moon.Image",classes:"fsimage",name : "fsimage",ontap : "fashionnew",onmouseout:"Selectoff_fsimg",onmouseover:"Selecton_fsimg"},
+                                    	            	                	            	            	               {kind : "moon.Image",classes:"fsimage",name : "fsimage",ondown : "fashionnew",onmouseout:"Selectoff_fsimg",onmouseover:"Selecton_fsimg"},
                                     	            	                	            	            	               {kind: "FittableRows",
                                     	            	                	            	            	            	   components :[
                                     	            	                	            	            	            	                {name : "fshead",classes:"fstext"},
@@ -69,16 +69,19 @@ enyo.kind({
                                       ]
         },
         ],
-   Stfashion : function()
-      {
-         location = "http://www.thesartorialist.com/";
-         return true;
-      },
-   fashionnew :  function()
-      {
-         location = "http://www.musinsa.com/index.php?m=news&cat=FASHION";
-         return true;
-      },
+        weeklyfashion :  function()
+        {
+        	window.open('http://www.syoff.com/node/snaps',"syoff",'scrollbars=yes,menubar=no');
+        },
+        Stfashion : function()
+        {
+        	window.open('http://www.thesartorialist.com/',"thesartorialist",'scrollbars=yes,menubar=no');
+        },
+      	fashionnew :  function()
+      	{
+      		window.open('http://www.musinsa.com/index.php?m=news&uid=14304',"musinsa",'scrollbars=yes,menubar=no');
+      	},
+      	
       Selecton1: function(inSender, inEvent)
 	   {
 	      this.$.img1.setSrc("assets/news/1_modify.jpg");   

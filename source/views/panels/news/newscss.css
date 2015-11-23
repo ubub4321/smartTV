@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
 .News_background{
    background-image: url('background2.png');
    background-size: contain;
@@ -7,6 +8,7 @@
    width: 1920px;
    text-align:center;
 }
+
 .popup_background
 {
    background-image : url('popupback.png');
@@ -14,14 +16,6 @@
    background-repeat : no-repeat;
    height: 1080px;
    width: 1920px;
-}
-.popup_background
-{
-	background-image : url('popupback.png');
-	background-size : contain;
-	background-repeat : no-repeat;
-	height: 1080px;
-	width: 1920px;
 }
 .article
 {

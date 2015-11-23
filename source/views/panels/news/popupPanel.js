@@ -19,7 +19,6 @@ enyo.kind({
 	            	            	   components:[
 	            	            	               {name:"image", kind:"Image", style:"width : 890px;height : 517px;"}, //zoom: 50%;
 	            	            	               {name:"article",classes: "article"},
-	            	            	               {kind:"enyo.Audio",src:'buttonclick.mp3'}
 	            	            	               ]
 	            	               }
 	            	               ]
@@ -78,12 +77,10 @@ enyo.kind({
     	return true;
 	},
 	goHome: function(inSender, inEvent){
-		this.$.audio.play();
 		this.bubbleUp("onGoHome");
 		return true;
 	},
 	goBack: function(inSender, inEvent) {
-		this.$.audio.play();
 		this.bubbleUp("onShowPanel", {name:"news"});
 		return true;
 	},
