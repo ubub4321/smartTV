@@ -19,13 +19,14 @@
 }
 .article
 {
+   background-size: contain;
    width : 900px;
-   font-size : 32px;
+   font-size : 38px;
    margin-left : 40px;
    font-family: 'nanum gothic';
    line-height:130%;
    word-spacing : 4px;
-
+   font-weight:bold;
 }
 .Photos
 {
@@ -81,6 +82,15 @@
    height: 400px;
    width: 600px;
 }
+.headline
+{
+	text-align: center;
+	font-family: 'nanum gothic';
+	font-weight: bold;
+	font-size : 32px;
+	color : #898989;
+}
+
 .fsimage
 {
 	zoom : 45%;
@@ -88,19 +98,18 @@
 }
 .fstext
 {
-   font-size :24px;
-   color : #0080ff;
-}
-.headline
-{
-	text-align: center;
-	font-family: 'nanum gothic';
-	font-weight:bold;
+   font-size :30px;
+   width : 450px;
+   color : #ff0080;
+   font-weight: bold;
+   font-family: 'nanum gothic';
 }
 .fsarticle
 {
-	width : 570px;
+	width : 578px;
 	margin-top : 20px;
-	font-size :23px;
-   color : #0080ff;
+	font-size :28px;
+    color : #898989;
+    font-weight: bold;
+    font-family: 'nanum gothic';
 }

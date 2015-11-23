@@ -20,7 +20,7 @@ enyo.kind({
                                     	               {kind: "FittableRows",
                                     	            	   components: [
                                     	            	                {kind : "FittableColumns",
-                                    	            	                	components : [
+                                    	            	                	components : [//weekly fashion
                                     	            	                	              {kind : "moon.Image",name : "img1", classes:"Photos",ondown : "weeklyfashion", onmouseout:"Selectout1",onmouseover:"Selecton1"}, //사진 1
                                     	            	                	              {kind : "moon.Image",name : "img2",classes:"Photos",ondown : "weeklyfashion", onmouseout:"Selectout2",onmouseover:"Selecton2"}, // 사진 2
                                     	            	                	              {kind : "moon.Image",name : "img3",classes:"Photos",ondown : "weeklyfashion", onmouseout:"Selectout3",onmouseover:"Selecton3"}, // 사진 3
@@ -28,7 +28,7 @@ enyo.kind({
                                     	            	                	              ]
                                     	            	                },
                                     	            	                {kind : "FittableColumns", style : "margin-top : 200px;",
-                                    	            	                	components : [
+                                    	            	                	components : [//weekly fashion
                                     	            	                	              {kind : "moon.Image",name : "img5",classes:"bottomPhoto",ondown : "Stfashion", onmouseout:"Selectout5",onmouseover:"Selecton5"},
                                     	            	                	              {kind : "moon.Image",name : "img6",classes:"bottomPhoto",ondown : "Stfashion", onmouseout:"Selectout6",onmouseover:"Selecton6"},
                                     	            	                	              {kind : "moon.Image",name : "img7",classes:"bottomPhoto",ondown : "Stfashion", onmouseout:"Selectout7",onmouseover:"Selecton7"},
@@ -51,13 +51,14 @@ enyo.kind({
                                     	            	                	            	            	               // 화살표
                                     	            	                	            	            	               ]
                                     	            	                	            	              },
-                                    	            	                	            	              {kind: "FittableColumns",style:"margin-top:10px;margin-left : -80px;",//style:"background-color: black;",
+                                    	            	                	            	              {kind: "FittableColumns",style:"margin-left : -80px;",//style:"background-color: black;",
                                     	            	                	            	            	  components :[
                                     	            	                	            	            	               {kind : "moon.Image",classes:"fsimage",name : "fsimage",ondown : "fashionnew",onmouseout:"Selectoff_fsimg",onmouseover:"Selecton_fsimg"},
+                                    	            	                	            	            	               // 패션 뉴스 이미지
                                     	            	                	            	            	               {kind: "FittableRows",
                                     	            	                	            	            	            	   components :[
-                                    	            	                	            	            	            	                {name : "fshead",classes:"fstext"},
-                                    	            	                	            	            	            	                {name : "article",classes:"fsarticle"}
+                                    	            	                	            	            	            	                {name : "fshead",classes:"fstext"}, //패션 뉴스 헤드라인
+                                    	            	                	            	            	            	                {name : "article",classes:"fsarticle"} //패션 뉴스 기사
                                     	            	                	            	            	            	                ]
                                     	            	                	            	            	               }
                                     	            	                	            	            	               ]
