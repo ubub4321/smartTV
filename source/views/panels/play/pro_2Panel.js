@@ -76,11 +76,13 @@ enyo.kind({
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult1_1",
+			            	            				                	            		 style : "margin-left:300px;",
 			            	            				                	            		 classes : "table",
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 name : "reresult1_2",
 			            	            				                	            		 classes : "table",
+			            	            				                	            		 style : "margin-left:300px;",
 			            	            				                	            		 content : "가격"
 			            	            				                	            	 }]
 			            	            				                	             },
@@ -147,11 +149,13 @@ enyo.kind({
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult2_1",
+			            	            				                	            		 style : "margin-left:260px;",
 			            	            				                	            		 classes : "table",
 			            	            				                	            	 },
 			            	            				                	            	 {
 			            	            				                	            		 name : "reresult2_2",
 			            	            				                	            		 classes : "table",
+			            	            				                	            		 style : "margin-left:290px;",
 			            	            				                	            		 content : "가격"
 			            	            				                	            	 }]
 			            	            				                	             },

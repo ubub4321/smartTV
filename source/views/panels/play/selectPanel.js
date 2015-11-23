@@ -271,6 +271,13 @@ enyo.kind({
    },
     imageClick: function(inSender, inEvent) {
        //alert(inSender.name); // 
+        index = 1;
+       index2 = 1;
+        index3 = 1;
+        tog1 = 0;
+        tog2 = 0;
+        tog3 = 0;
+        
        var name = inSender.name;
        this.bubbleUp("onShowPanel", {name:name});
        return true;
