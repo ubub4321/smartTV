@@ -446,7 +446,7 @@ enyo.kind({
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult6_1",
 			                                                                                      classes : "table",
-			                                                                                      style : "margin-left:60px;",
+			                                                                                      style : "margin-left:210px;",
 
 			                                                                                   },
 			                                                                                   {

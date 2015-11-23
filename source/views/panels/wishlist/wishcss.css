@@ -84,11 +84,9 @@
 }
 .listPan{
    background-size: contain;
-   width: 500px;
-   height: 610px;
+   width: 430px;
+   height: 535px;
    margin: 20px;
-   margin-left: 80px;
-   margin-top: 160px;
    font-family: 'Noto Sans KR', sans-serif;
    font-weight:bold;
 }
@@ -97,7 +95,6 @@
 .panels-sample-flickr-item {
    position: relative;
    border-bottom: 5px solid #0E0E0E;
-   background-color: #222222;
    width: 430px;
 }
 

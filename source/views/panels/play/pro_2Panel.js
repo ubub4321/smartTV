@@ -150,7 +150,7 @@ enyo.kind({
 			            	            				                	             {kind: 'FittableRows', classes: 'fittable-sample-column', style : "width : 130px !important;",
 			            	            				                	            	 components: [{
 			            	            				                	            		 name : "reresult2_1",
-			            	            				                	            		 style : "margin-left:260px;",
+			            	            				                	            		 style : "margin-left:300px;",
 			            	            				                	            		 classes : "table",
 			            	            				                	            	 },
 			            	            				                	            	 {

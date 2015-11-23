@@ -29,17 +29,12 @@ enyo.kind({
                 {layoutKind:"FittableRowsLayout",components:[
                             /*{kind:"onyx.Toolbar",components:[
                                   {name:"searchSpinner",kind:"Image",src:"assets/spinner.gif",showing:false}]},*/
-                            {kind:"FittableRows",classes:"listPan",style:"opacity:0.8;",components:[
-                                  /*{kind:"onyx.Toolbar",components:[
-                                        {kind:"onyx.InputDecorator",layoutKind:"FittableColumnsLayout",components:[
-                                              {name:"searchSpinner",kind:"Image",src:"assets/spinner.gif",showing:false},
-                                              {comtent:"장바구니",onResults:"search"}]}]},*/
-                                  {content:"장바구니",style:"font-family: 'Noto Sans KR', sans-serif;"},
-                                  {kind:"List",touch:true,onSetupItem:"setupItem",components:[
+                            {kind:"FittableRows",style:"margin-left: 60px;margin-top: 160px;",components:[
+                                  {content:"장바구니",style:"font-family: 'Noto Sans KR', sans-serif;font-weight:bold;margin-left:20px;"},
+                                  {kind:"List",touch:true,onSetupItem:"setupItem",classes:"listPan",style:"opacity:0.8;",components:[
                                               {name:"item",layoutKind:"FittableColumnsLayout",fit:true,classes:"panels-sample-flickr-item",ontap:"itemTap",components:[
                                                     {name:"thumbnail",kind:"Image",style:"width:75px;height:75px;",classes:"panels-sample-flickr-thumbnail"},
                                                     {name:"title",style:"width:200px;height:75px;margin-left:40px;margin-top:20px;font-size:24px;"},
-                                                    /*{name:"purchase",kind:"moon.IconButton",src:"assets/addtowhishlist.png",classes:"remove-button-css",ontap:"purchaseTap"},*/
                                                     {name:"remove",kind:"moon.Image",style:"background-image: url('assets/delete.png');width:60px;height:60px;margin-left:30px;",ontap:"removeTap"}]}]}
                                   ]},
                              {name : "home",kind:"moon.Image",ontap:"gohome",style:"margin-left:250px;",src:"assets/HomeButton_wish.png", onmouseout:"Selectout2",onmouseover:"Selecton2"}]},
