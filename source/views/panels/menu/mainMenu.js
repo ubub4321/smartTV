@@ -34,6 +34,11 @@ enyo.kind({
                                        name: "wish",kind:"moon.Image",src:"assets/main/wish.png",style:"margin-left:300px;margin-top:140px;",classes :"wishb", onmouseout:"Wishout",onmouseover:"Wishon",onclick: "imageClick"
                                        }]
                            }]
+               },
+               {
+                  kind: "FittableRows",
+                   components:[{name:"siyeon", kind:"moon.Image",classes:"sdb", style:"margin-left:-300px;margin-bottom:50px;",src:"assets/main/siyeon.jpg",onclick: "imageClick"}]
+                  
                }
                ]
              },
@@ -44,7 +49,7 @@ enyo.kind({
                               components:[{
                                           kind: "FittableRows",
                                           components:[{
-                                                   name: "face",kind:"moon.Image",src:"assets/main/face.jpg",classes :"faceb",onmouseout:"Faceout",onmouseover:"Faceon", onclick: "goface"
+                                                   name: "face",kind:"moon.Image",src:"assets/main/face.jpg",classes :"faceb",onmouseout:"Faceout",onmouseover:"Faceon", onclick: "goinsta"
                                                    }]
                                        }]
                            },
@@ -122,14 +127,14 @@ enyo.kind({
               {
                     this.$.news.setSrc("assets/main/news.png");      
               },
-               goface : function()
+               goinsta : function()
                {
-            	   window.open('https://www.facebook.com/hashtag/%ED%8C%A8%EC%85%98?fref=ts',"facebook",'scrollbars=yes,menubar=no');
+                  window.open("https://instagram.com/explore/tags/%ED%8C%A8%EC%85%98/","scrollbars=yes,menubar=no,fullscreen");
                      return true;
                },
               gotwit : function()
                {
-            	  window.open('https://twitter.com/search?q=fashion&src=tyah',"twit",'scrollbars=yes,menubar=no');
+                 window.open("https://twitter.com/search?q=fashion&src=tyah","scrollbars=yes,menubar=no,fullscreen");
                      return true;
                }
 });

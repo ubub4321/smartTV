@@ -213,7 +213,7 @@ enyo.kind({
          this.setIndex(1);
       }
       var getitem = buyitem;
-      window.open(getitem,"item",'scrollbars=yes,menubar=no');
+      window.open(getitem,"scrollbars=yes,menubar=no,fullscreen");
    },
    gohome: function(inSender,inEvent)
    {

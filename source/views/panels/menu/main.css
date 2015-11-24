@@ -15,6 +15,12 @@
    width: 350px;
    height: 200px;
 }
+.sdb{
+
+   width:300px;
+   height:165px;
+   opacity:0;
+}
 .playb{
    /*background-image: url('play.png');
    background-repeat: no-repeat;*/

@@ -8,7 +8,7 @@ enyo.kind({
 	components:[
 	             {kind : "FittableRows",
 	            	 components : [
-	            	               {name:"backButton", kind:"moon.Image", classes : "buttonback", ontap: "goBack",onmouseout:"Selectout_back",onmouseover:"Selecton_back"},
+	            	               {name:"news", kind:"moon.Image", classes : "buttonback", ontap: "goBack",onmouseout:"Selectout_back",onmouseover:"Selecton_back"},
 	            	               {name:"homeButton", kind:"moon.Image", classes : "buttonhome", ontap: "goHome",onmouseout:"Selectout_home",onmouseover:"Selecton_home"},
 	            	               {kind:"FittableColumns",style : "height : 100px;margin : 110px 0px 0px 70px;",
 	            	            	   components:[
@@ -31,11 +31,11 @@ enyo.kind({
 	    ],
 	    Selectout_back: function(inSender, inEvent)
 		   {
-		      this.$.backButton.setSrc("assets/news/popback_off.jpg");   
+		      this.$.news.setSrc("assets/news/popback_off.jpg");   
 		   },
 		Selecton_back: function(inSender, inEvent)
 		   {   
-		      this.$.backButton.setSrc("assets/news/popback_on.jpg");   
+		      this.$.news.setSrc("assets/news/popback_on.jpg");   
 		   },
 		Selectout_home: function(inSender, inEvent)
 		   {
@@ -81,7 +81,8 @@ enyo.kind({
 		return true;
 	},
 	goBack: function(inSender, inEvent) {
-		this.bubbleUp("onShowPanel", {name:"news"});
+		var name = inSender.name;
+		this.bubbleUp("onShowPanel", {name:name});
 		return true;
 	},
 });

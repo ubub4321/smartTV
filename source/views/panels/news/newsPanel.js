@@ -72,15 +72,18 @@ enyo.kind({
         ],
         weeklyfashion :  function()
         {
-        	window.open('http://www.syoff.com/node/snaps',"syoff",'scrollbars=yes,menubar=no');
+        	//location = 'http://www.syoff.com/node/snaps';
+        	window.open("http://www.syoff.com/node/snaps","scrollbars=yes,menubar=no,fullscreen");
         },
         Stfashion : function()
         {
-        	window.open('http://www.thesartorialist.com/',"thesartorialist",'scrollbars=yes,menubar=no');
+        	//location = 'http://www.thesartorialist.com/';
+        	window.open("http://www.thesartorialist.com/","scrollbars=yes,menubar=no,fullscreen");
         },
       	fashionnew :  function()
       	{
-      		window.open('http://www.musinsa.com/index.php?m=news&uid=14304',"musinsa",'scrollbars=yes,menubar=no');
+      		//location ='http://www.musinsa.com/index.php?m=news&uid=14304';
+      		window.open("http://www.musinsa.com/index.php?m=news&uid=14304","scrollbars=yes,menubar=no,fullscreen");
       	},
       	
       Selecton1: function(inSender, inEvent)
