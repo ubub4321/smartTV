@@ -33,15 +33,16 @@ enyo.kind({
 			            	 components: [
 			            	              {kind: 'enyo.Scroller', classes : "enyo-fit",
 			            	            	  components: [{		
-			            	            		  components : [{							
-			            	            			  components :[
-
+			            	            		  components : [{kind:"FittableRows",							
+			            	            			  components :[{name:"wish_4",kind:"moon.Image",style:"margin-left:620px;",src:"assets/play/towishlist.png",classes:"gtwish",ontap:"imageClick",onmouseout:"Selectout_wish",onmouseover:"Selecton_wish"},
+			            	            			               
 			            	            			               {
 			            	            			            	   name : "homeButton",
 			            	            			            	   kind:"moon.Image",
 			            	            			            	   src:"assets/play/back.png",
 			            	            			            	   classes:"resize_back",
 			            	            			            	   ontap : "goBack",
+			            	            			            	   style:"margin-left:-10px;",
 			            	            			            	   onmouseout:"Selectout",
 			            	            			            	   onmouseover:"Selecton"
 			            	            			               }
@@ -481,6 +482,12 @@ enyo.kind({
 			xmlhttp.send();
 		}
 	},
+	imageClick: function(inSender, inEvent) {
+		this.$.player.unload();
+        var name = inSender.name;
+        this.bubbleUp("onShowPanel", {name:name});
+        return true;
+     },
 	goHome : function(inSender, inEvent) {
 		this.$.player.unload();
 		this.bubbleUp("onGoHome", {
@@ -550,6 +557,14 @@ enyo.kind({
 		this.$.drawer4.setOpen(false);
 		return true;
 	},
+	Selecton_wish: function(inSender, inEvent)
+	   {
+	         this.$.wish_4.setSrc("assets/play/towishlist_modify.png");   
+	   },
+	   Selectout_wish: function(inSender, inEvent)
+	   {
+	         this.$.wish_4.setSrc("assets/play/towishlist.png");      
+	   },
 	Selecton: function(inSender, inEvent)
     {
           this.$.homeButton.setSrc("assets/play/back_modify.png");   

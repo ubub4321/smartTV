@@ -31,7 +31,7 @@ enyo.kind({
 			            	            	  components: [{		
 			            	            		  components : [{							
 			            	            			  components :[
-
+			            	            			               	{name:"goToWish",kind:"moon.Image",style:"margin-top:50px;margin-left:680px;",src:"assets/addtowhishlist.png"},
 			            	            			               {
 			            	            			            	   name : "homeButton",
 			            	            			            	   kind : "moon.Image",

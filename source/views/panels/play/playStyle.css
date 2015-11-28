@@ -51,11 +51,13 @@ font-family: 'Jeju Gothic', sans-serif;
 /*	 background-image: url('back.png');
    background-size: contain;
    background-repeat: no-repeat;*/
-   margin-top:50px : 40px;
-   margin-left:700px;
    width: 90px;
    height: 90px;
 	
+}
+.gtwish{
+	width:90px; 
+	height:90px;
 }
 .S_Home{
  /*	  background-image: url('HomeButton.png');

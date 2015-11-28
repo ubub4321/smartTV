@@ -10,5 +10,14 @@ enyo.depends(
 		"star_2Panel.js",
 		"star_3Panel.js",
 		"selectPanel.js",
+		"wish_1Panel.js",
+		"wish_2Panel.js",
+		"wish_3Panel.js",
+		"wish_4Panel.js",
+		"wish_5Panel.js",
+		"wish_6Panel.js",
+		"wish_7Panel.js",
+		"wish_8Panel.js",
+		"wish_9Panel.js",
 		"playStyle.css"
 );

@@ -31,14 +31,15 @@ enyo.kind({
                          components: [
                                       {kind: 'enyo.Scroller', classes : "enyo-fit",
                                          components: [{      
-                                            components : [{                     
-                                               components :[
-                                                {
+                                        	 components : [{kind:"FittableRows",							
+		            	            			  components :[{name:"wish_2",kind:"moon.Image",style:"margin-left:620px;",src:"assets/play/towishlist.png",classes:"gtwish",ontap:"imageClick",onmouseout:"Selectout_wish",onmouseover:"Selecton_wish"},
+		            	            			                {
                                                    name : "homeButton",
                                                    kind:"moon.Image",
                                                    src:"assets/play/back.png",
                                                    classes:"resize_back",
                                                    ontap : "goBack",
+    	            			            	   style:"margin-left:-10px;",
                                                    onmouseout:"Selectout",
                                                    onmouseover:"Selecton"
                                                 }
@@ -225,6 +226,12 @@ enyo.kind({
    },
 
    ],
+	imageClick: function(inSender, inEvent) {
+		this.$.player.unload();
+        var name = inSender.name;
+        this.bubbleUp("onShowPanel", {name:name});
+        return true;
+     },
    rendered: enyo.inherit(function(sup) {
       return function() {
          sup.apply(this, arguments);
@@ -336,6 +343,14 @@ enyo.kind({
    closeDrawer2 : function(inSender, inEvent) {
       this.$.drawer2.setOpen(false);
       return true;
+   },
+   Selecton_wish: function(inSender, inEvent)
+   {
+         this.$.wish_2.setSrc("assets/play/towishlist_modify.png");   
+   },
+   Selectout_wish: function(inSender, inEvent)
+   {
+         this.$.wish_2.setSrc("assets/play/towishlist.png");      
    },
    Selecton: function(inSender, inEvent)
    {

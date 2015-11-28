@@ -89,7 +89,7 @@ enyo.kind({
               },
               Faceon: function(inSender, inEvent)
               {
-                    this.$.face.setSrc("assets/main/facet.png");   
+                    this.$.face.setSrc("assets/main/facet.jpg");   
               },
               Faceout: function(inSender, inEvent)
               {
